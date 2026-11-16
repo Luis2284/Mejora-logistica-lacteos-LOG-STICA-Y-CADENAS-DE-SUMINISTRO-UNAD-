@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="#144233" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Milk bottle -->
+  <path d="M12 12V8a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v4" />
+  <path d="M10 12h14l3 5v19a4 4 0 0 1-4 4H11a4 4 0 0 1-4-4V17l3-5z" />
+  <line x1="8" y1="24" x2="26" y2="24" stroke-dasharray="2 2" stroke="#2d7a58" />
+  <!-- Cheese wedge -->
+  <path d="M22 36l18-4v-8l-18-4v16z" fill="#fef9e7" fill-opacity="0.6" />
+  <circle cx="28" cy="27" r="1.5" fill="#e5a93c" stroke="none" />
+  <circle cx="34" cy="29" r="1.2" fill="#e5a93c" stroke="none" />
+  <circle cx="30" cy="33" r="1" fill="#e5a93c" stroke="none" />
+</svg>
+

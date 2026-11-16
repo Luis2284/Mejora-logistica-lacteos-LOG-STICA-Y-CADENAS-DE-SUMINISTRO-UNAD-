@@ -1,0 +1,1666 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Lácteos en Movimiento - Propuesta de mejora integral del almacenamiento y manipulación de productos lácteos en Becerril, Cesar. Universidad Nacional Abierta y a Distancia (UNAD).">
+  <title>Lácteos en Movimiento | Logística y Cadenas de Suministro - UNAD</title>
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+    rel="stylesheet">
+
+  <!-- Hoja de estilos del proyecto -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <!-- Barra Superior de Notificación Académica Institucional -->
+  <header class="academic-notice-bar">
+    <span>Universidad Nacional Abierta y a Distancia — UNAD</span>
+    <span class="notice-separator" aria-hidden="true">•</span>
+    <span class="badge-course">Curso: Logística y Cadenas de Suministro</span>
+    <span class="notice-separator" aria-hidden="true">•</span>
+    <span>Grupo: 212029 - 40 · Becerril, Cesar</span>
+  </header>
+
+  <div class="app-container">
+
+    <!-- Encabezado Principal y Menú Superior Flotante -->
+    <header class="main-header">
+      <nav class="nav-shell" aria-label="Navegación principal del proyecto">
+
+        <!-- Logotipo e Identidad -->
+        <a href="#inicio" class="brand-link" data-target="inicio">
+          <div class="brand-icon-wrapper">
+            <img src="assets/img/logo-vaca-verde.png" alt="Logotipo Lácteos en Movimiento" width="32" height="32">
+          </div>
+          <div class="brand-text-group">
+            <span class="brand-title">Lácteos en Movimiento</span>
+            <span class="brand-subtitle-mini">Propuesta Académica · UNAD</span>
+          </div>
+        </a>
+
+        <!-- Botón Hamburguesa Móvil -->
+        <button class="menu-toggle-btn" aria-label="Abrir menú de navegación" type="button" aria-expanded="false"
+          aria-controls="mainNavMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- Menú de Enlaces de Secciones -->
+        <ul class="nav-menu" id="mainNavMenu">
+          <li><a href="#inicio" class="nav-link active" data-target="inicio">Inicio</a></li>
+          <li><a href="#diagnostico" class="nav-link" data-target="diagnostico">Diagnóstico</a></li>
+          <li><a href="#estrategias" class="nav-link" data-target="estrategias">Estrategias</a></li>
+          <li><a href="#implementacion" class="nav-link" data-target="implementacion">Implementación</a></li>
+          <li><a href="#evaluacion" class="nav-link" data-target="evaluacion">Evaluación</a></li>
+          <li><a href="#referencias" class="nav-link" data-target="referencias">Referencias</a></li>
+        </ul>
+
+      </nav>
+    </header>
+
+    <!-- ==========================================================================
+         SECCIÓN 1: INICIO (HERO, ELEMENTOS HORIZONTALES, PREVIEWS Y CONTEXTO)
+         ========================================================================== -->
+    <main id="inicio" class="page-section active-section">
+
+      <!-- Distribución Principal: Estilo Fiel a la Referencia Visual -->
+      <div class="home-layout-grid">
+
+        <!-- Columna Izquierda: Hero Card + Fila de 3 Elementos Horizontales -->
+        <div class="home-left-col">
+
+          <!-- Hero Card Principal -->
+          <article class="hero-card">
+
+            <div class="hero-content">
+              <span class="hero-eyebrow">PROPUESTA DE MEJORA</span>
+              <h1 class="hero-title">Lácteos en<br>Movimiento</h1>
+              <p class="hero-subtitle">
+                Propuesta de mejora integral del almacenamiento y manipulación de productos lácteos.
+              </p>
+
+              <div class="hero-location-text">
+                Becerril, Cesar, Colombia
+              </div>
+
+              <!-- Botón de Acción -->
+              <div class="hero-action-buttons">
+                <button class="btn-secondary btn-open-modal" type="button">
+                  <span class="btn-icon-circle" aria-hidden="true">▶</span>
+                  <span>Conocer el proyecto</span>
+                </button>
+              </div>
+            </div>
+
+          </article>
+
+          <!-- Tres Elementos Horizontales Debajo de la Portada -->
+          <section class="hero-highlights-row" aria-label="Pilares fundamentales del proyecto">
+
+            <!-- Elemento 1: Eficiencia -->
+            <div class="highlight-card">
+              <div class="highlight-icon-circle">
+                <img src="assets/icons/efficiency.svg" alt="Icono Eficiencia">
+              </div>
+              <div class="highlight-text">
+                <span class="highlight-title">Eficiencia</span>
+                <span class="highlight-desc">Mejor flujo y rotación de inventario.</span>
+              </div>
+            </div>
+
+            <!-- Elemento 2: Trazabilidad -->
+            <div class="highlight-card">
+              <div class="highlight-icon-circle">
+                <img src="assets/icons/traceability.svg" alt="Icono Trazabilidad">
+              </div>
+              <div class="highlight-text">
+                <span class="highlight-title">Trazabilidad</span>
+                <span class="highlight-desc">Mayor control y seguridad del producto.</span>
+              </div>
+            </div>
+
+            <!-- Elemento 3: Sostenibilidad -->
+            <div class="highlight-card">
+              <div class="highlight-icon-circle">
+                <img src="assets/icons/sustainability.svg" alt="Icono Sostenibilidad">
+              </div>
+              <div class="highlight-text">
+                <span class="highlight-title">Sostenibilidad</span>
+                <span class="highlight-desc">Menor desperdicio y uso responsable de recursos.</span>
+              </div>
+            </div>
+
+          </section>
+
+        </div>
+
+        <!-- Columna Derecha: Bento de Vista Previa Rápida -->
+        <aside class="home-right-col" aria-label="Resumen ejecutivo del proyecto">
+
+          <!-- Fotografía Protagonista: Cadena de Suministro Láctea (Silueta Orgánica Coolechera) -->
+          <div class="home-photo-showcase">
+            <svg width="0" height="0" class="svg-clip-defs" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden; pointer-events: none;">
+              <defs>
+                <clipPath id="milk-drop-clip" clipPathUnits="objectBoundingBox">
+                  <path d="M 0.00,0.40 C 0.00,0.20 0.05,0.07 0.18,0.09 C 0.28,0.11 0.34,0.17 0.44,0.11 C 0.50,0.04 0.55,0.02 0.64,0.07 C 0.75,0.14 0.86,0.22 0.95,0.38 C 1.00,0.48 0.98,0.62 0.90,0.70 C 0.82,0.77 0.72,0.76 0.62,0.81 C 0.52,0.86 0.46,0.99 0.32,0.98 C 0.18,0.96 0.06,0.90 0.02,0.76 C 0.00,0.62 0.00,0.50 0.00,0.40 Z" />
+                </clipPath>
+              </defs>
+            </svg>
+            <div class="photo-milk-drop-frame">
+              <img src="assets/img/cadena-suministro-lactea.png"
+                alt="Cadena de suministro láctea: productor rural, acopio de leche en cantinas y ganado bovino en Becerril, Cesar"
+                class="photo-milk-drop-img"
+                loading="eager">
+            </div>
+          </div>
+
+          <!-- Card Bento 3: Beneficios Esperados -->
+          <div class="bento-card" data-bento-link="evaluacion">
+            <div class="bento-card-header">
+              <div class="bento-card-title">
+                <span>Beneficios esperados</span>
+              </div>
+            </div>
+            <div class="bento-impact-body">
+
+              <!-- Donut Metric Preview -->
+              <div class="impact-metric-circle">
+                <div class="donut-preview-box" title="Mejora de la eficiencia logística">
+                  <svg class="donut-track-svg" viewBox="0 0 36 36" aria-hidden="true">
+                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none"
+                      stroke="#e8f5ee" stroke-width="4.5" />
+                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831" fill="none" stroke="#2d7a58"
+                      stroke-width="4.5" stroke-dasharray="75, 100" stroke-linecap="round" />
+                  </svg>
+                  <div class="donut-icon-center" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                      <polyline points="17 6 23 6 23 12"></polyline>
+                    </svg>
+                  </div>
+                </div>
+                <div class="donut-label">
+                  <strong>Mejora de la</strong><br>eficiencia logística
+                </div>
+              </div>
+
+              <!-- Recuadro de Ahorro y Optimización -->
+              <div class="impact-saving-box">
+                <span class="saving-label">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M14.8 9A2 2 0 0 0 13 8h-2a2 2 0 1 0 0 4h2a2 2 0 1 1 0 4h-2a2 2 0 0 1-1.8-1" />
+                    <path d="M12 6v2m0 8v2" />
+                  </svg>
+                  Ahorro y optimización
+                </span>
+                <div class="saving-value">Optimización de costos y recursos</div>
+                <div class="saving-subnote">[Enfoque cualitativo de la propuesta]</div>
+              </div>
+
+            </div>
+          </div>
+
+        </aside>
+
+      </div>
+
+      <!-- Bloque Integrado: Contextualización de la Cadena de Suministro -->
+      <section class="supply-chain-context-card">
+        <span class="section-tag">Contextualización Logística</span>
+        <h2 class="section-main-heading">Cadena de Suministro de Productos Lácteos</h2>
+        <p class="section-main-subheading">
+          Estructura del flujo logístico en el municipio de Becerril (Cesar). La propuesta centra su alcance técnico en
+          la etapa crítica de almacenamiento y conservación de la cadena de frío para mitigar pérdidas y optimizar
+          tiempos.
+        </p>
+
+        <!-- Pasos del Flujo Logístico -->
+        <div class="chain-steps-flow">
+
+          <div class="chain-step-card">
+            <div class="step-number-badge">1</div>
+            <h3 class="step-card-title">Producción y Acopio</h3>
+            <p class="step-card-desc">
+              Ordeño diario en fincas y asociaciones ganaderas de Becerril. Traslado primario a centros de recolección
+              local.
+            </p>
+            <span class="step-tag-pill">Origen local</span>
+          </div>
+
+          <div class="chain-step-card">
+            <div class="step-number-badge">2</div>
+            <h3 class="step-card-title">Transporte Primario</h3>
+            <p class="step-card-desc">
+              Movilización hacia planta de procesamiento lácteo en vehículos isotérmicos con control inicial de
+              temperatura.
+            </p>
+            <span class="step-tag-pill">Cadena de frío</span>
+          </div>
+
+          <div class="chain-step-card">
+            <div class="step-number-badge">3</div>
+            <h3 class="step-card-title">Almacenamiento y Conservación</h3>
+            <p class="step-card-desc">
+              Recepción, clasificación térmica de quesos y derivados, rotación estricta (FIFO/FEFO) y estibado seguro.
+            </p>
+            <span class="step-tag-pill">★ Foco de la Propuesta</span>
+          </div>
+
+          <div class="chain-step-card">
+            <div class="step-number-badge">4</div>
+            <h3 class="step-card-title">Distribución y Despacho</h3>
+            <p class="step-card-desc">
+              Rutas de entrega a puntos minoristas, supermercados y consumidores finales en la subregión del Cesar.
+            </p>
+            <span class="step-tag-pill">Destino final</span>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ==========================================================================
+         SECCIÓN 2: DIAGNÓSTICO DE LA PROBLEMÁTICA
+         ========================================================================== -->
+    <section id="diagnostico" class="page-section">
+      <div class="section-wrapper">
+
+        <!-- 1. Banner Panorámico Dual (Composición 50/50: Envasado y Almacenamiento Lácteo) -->
+        <div class="diag-banner-cover">
+          <div class="diag-banner-pane diag-banner-pane--left">
+            <img src="assets/img/banner-produccion-lactea.png"
+              alt="Operarias trabajando en la línea de envasado y procesamiento de productos lácteos"
+              class="diag-banner-photo diag-banner-photo--left"
+              loading="eager">
+          </div>
+          <div class="diag-banner-pane diag-banner-pane--right">
+            <img src="assets/img/banner-almacenamiento-lacteo.png"
+              alt="Tanques industriales de almacenamiento y procesamiento lácteo"
+              class="diag-banner-photo diag-banner-photo--right"
+              loading="eager">
+          </div>
+        </div>
+
+        <!-- 2. Bloque de Texto del Encabezado (Fondo Blanco, Debajo de la Fotografía) -->
+        <div class="section-header-box diag-text-header">
+          <span class="section-tag">Análisis Situacional</span>
+          <h2 class="section-main-heading">Diagnóstico del Almacenamiento y Manipulación</h2>
+          <p class="section-main-subheading">
+            Análisis de las posibles fallas relacionadas con la capacidad, los tiempos de permanencia y la organización
+            de cajas de queso y yogur durante su almacenamiento previo al despacho, en la cadena de suministro estudiada
+            en Becerril, Cesar.
+          </p>
+        </div>
+
+        <!-- Bloque de Contextualización del Problema -->
+        <div class="diag-context-card">
+          <h3 class="diag-context-title">Contexto Operacional en Becerril (Cesar)</h3>
+          <p class="diag-context-text">
+            La cadena de suministro de leche y derivados lácteos requiere una adecuada coordinación entre recepción,
+            almacenamiento y despacho para mantener un flujo organizado de productos como el queso y el yogur. En la
+            Tarea 3 se analizaron tres posibles dificultades: capacidad insuficiente ante altos volúmenes, tiempos
+            elevados de permanencia y deficiencias en la organización y manipulación. Estas situaciones constituyen
+            oportunidades de mejora en la distribución del espacio, la rotación del inventario y el control de las
+            operaciones.
+          </p>
+        </div>
+
+        <!-- Tres Tarjetas de Fallas Identificadas -->
+        <div class="diag-failures-grid">
+
+          <!-- Tarjeta 1 – CAPACIDAD -->
+          <article class="failure-card">
+            <div>
+              <div class="failure-card-header">
+                <div class="failure-icon-wrap">
+                  <img src="assets/icons/operations.svg" alt="Icono Capacidad">
+                </div>
+                <span class="failure-tag">Capacidad</span>
+              </div>
+              <h3 class="failure-title">Posibles limitaciones de capacidad de almacenamiento</h3>
+              <p class="failure-desc">
+                Cuando los volúmenes recibidos superan temporalmente el espacio disponible, podría producirse
+                acumulación de cajas y dificultarse su ubicación en los racks.
+              </p>
+            </div>
+            <ul class="failure-detail-list">
+              <li>Capacidad limitada ante aumentos de recepción.</li>
+              <li>Posible acumulación de cajas.</li>
+              <li>Dificultades para aprovechar el espacio disponible.</li>
+            </ul>
+          </article>
+
+          <!-- Tarjeta 2 – PERMANENCIA -->
+          <article class="failure-card">
+            <div>
+              <div class="failure-card-header">
+                <div class="failure-icon-wrap">
+                  <img src="assets/icons/calendar.svg" alt="Icono Permanencia">
+                </div>
+                <span class="failure-tag">Permanencia</span>
+              </div>
+              <h3 class="failure-title">Riesgo de tiempos elevados de permanencia</h3>
+              <p class="failure-desc">
+                La permanencia prolongada de cajas de queso y yogur podría dificultar la rotación del inventario y
+                limitar la disponibilidad de espacio para nuevos productos.
+              </p>
+            </div>
+            <ul class="failure-detail-list">
+              <li>Control insuficiente de tiempos de almacenamiento.</li>
+              <li>Posibles dificultades de rotación.</li>
+              <li>Necesidad de seguimiento de lotes y vencimientos.</li>
+            </ul>
+          </article>
+
+          <!-- Tarjeta 3 – ORGANIZACIÓN -->
+          <article class="failure-card">
+            <div>
+              <div class="failure-card-header">
+                <div class="failure-icon-wrap">
+                  <img src="assets/icons/circular.svg" alt="Icono Organización">
+                </div>
+                <span class="failure-tag">Organización</span>
+              </div>
+              <h3 class="failure-title">Posibles deficiencias en organización y manipulación</h3>
+              <p class="failure-desc">
+                Las dificultades de coordinación entre recepción, almacenamiento y despacho podrían afectar la
+                identificación, ubicación y salida ordenada de los productos.
+              </p>
+            </div>
+            <ul class="failure-detail-list">
+              <li>Ubicación inadecuada de cajas en los racks.</li>
+              <li>Posibles errores de identificación y despacho.</li>
+              <li>Coordinación insuficiente entre áreas operativas.</li>
+            </ul>
+          </article>
+
+        </div>
+
+        <!-- Problemática Delimitada -->
+        <div class="problem-statement-card">
+          <div class="problem-statement-header">
+            <span class="problem-statement-badge">Problemática propuesta</span>
+            <h3 class="problem-statement-title">«Riesgo de acumulación y permanencia prolongada de cajas de queso y
+              yogur en los racks antes del despacho»</h3>
+          </div>
+          <p class="problem-statement-desc">
+            Esta problemática reúne y sintetiza las tres posibles fallas analizadas anteriormente (limitaciones de
+            capacidad, tiempos elevados de permanencia y deficiencias en organización y manipulación), delimitando el
+            alcance del estudio en torno a riesgos operacionales a mitigar sin asumir pérdidas no verificadas.
+          </p>
+        </div>
+
+        <!-- Espacio Amplio para el Diagrama de Ishikawa -->
+        <article class="ishikawa-section-card">
+          <div class="bento-card-header">
+            <div class="bento-card-title">
+              <span>Diagrama de Causa y Efecto (Ishikawa)</span>
+            </div>
+            <div class="bento-accent-line"></div>
+          </div>
+
+          <div class="ishikawa-canvas">
+            <div class="ishikawa-image-wrapper" id="ishikawaTrigger" role="button" tabindex="0" aria-haspopup="dialog"
+              aria-expanded="false" aria-label="Ampliar Diagrama de Ishikawa en vista completa"
+              title="Haz clic para ampliar el diagrama">
+              <img src="assets/img/ishikawa-corregido.png"
+                alt="Diagrama de causa y efecto de Ishikawa sobre el riesgo de acumulación y permanencia prolongada de cajas de queso y yogur en los racks antes del despacho"
+                class="ishikawa-img">
+              <div class="ishikawa-zoom-hint" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  <line x1="11" y1="8" x2="11" y2="14"></line>
+                  <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+                <span>Clic para ampliar</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Nota Académica Discreta -->
+          <div class="ishikawa-academic-note">
+            <p>
+              «Diagrama de Ishikawa elaborado a partir de las posibles fallas identificadas en la Tarea 3 y ajustado
+              para delimitar la problemática de almacenamiento y manipulación de queso y yogur».
+            </p>
+          </div>
+        </article>
+
+        <!-- Pie de Navegación Rápida -->
+        <div class="section-nav-footer">
+          <button class="btn-nav-prev" data-step-target="inicio" type="button">
+            ← Volver al Inicio
+          </button>
+          <button class="btn-nav-next" data-step-target="estrategias" type="button">
+            Ir a Estrategias y Tendencias →
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN 3: ESTRATEGIAS Y TENDENCIAS LOGÍSTICAS
+         ========================================================================== -->
+    <section id="estrategias" class="page-section">
+      <div class="section-wrapper">
+
+        <div class="section-header-box">
+          <span class="section-tag">Propuesta de Solución</span>
+          <h2 class="section-main-heading">Estrategias y Tendencias Logísticas</h2>
+          <p class="section-main-subheading">
+            Tres pilares articulados para modernizar la manipulación de lácteos perecederos, garantizando inocuidad,
+            eficiencia en costos y reducción de impacto ambiental.
+          </p>
+        </div>
+
+        <!-- Tres Tarjetas Principales -->
+        <div class="strategies-triad-grid">
+
+          <!-- Pilar 1: Tecnológica -->
+          <article class="strategy-full-card card-tech">
+            <div>
+              <div class="strategy-header-top">
+                <div class="strategy-icon-box">
+                  <img src="assets/icons/tech.svg" alt="Pilar Tecnológico">
+                </div>
+                <span class="strategy-pillar-badge">Tendencia Tecnológica</span>
+              </div>
+              <h3 class="strategy-card-title">Digitalización y Trazabilidad del Inventario</h3>
+              <p class="strategy-card-desc">
+                Implementación de dispositivos de registro continuo de temperatura y humedad, asociados a etiquetas de
+                identificación por lote para trazabilidad de punta a punta.
+              </p>
+              <ul class="strategy-keypoints-list">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Dataloggers y sensores de frío en tiempo real.
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Códigos DataMatrix / QR para identificación de lote.
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Sistema WMS simplificado para control de entradas/salidas.
+                </li>
+              </ul>
+            </div>
+            <div>
+              <button class="strategy-expand-action" type="button">
+                <span>[ Ver detalle tecnológico · Fase 2 ]</span>
+                <span>→</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Pilar 2: Ambiental -->
+          <article class="strategy-full-card card-env">
+            <div>
+              <div class="strategy-header-top">
+                <div class="strategy-icon-box">
+                  <img src="assets/icons/circular.svg" alt="Pilar Ambiental">
+                </div>
+                <span class="strategy-pillar-badge">Tendencia Ambiental</span>
+              </div>
+              <h3 class="strategy-card-title">Economía Circular y Embalajes Reutilizables</h3>
+              <p class="strategy-card-desc">
+                Transición de cajas de un solo uso hacia contenedores plásticos reutilizables (RPC) con ventilación
+                perimetral para optimizar el flujo térmico y reducir residuos.
+              </p>
+              <ul class="strategy-keypoints-list">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Canastillas plásticas sanitarias colapsables y lavables.
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Reducción de huella de carbono y residuos de embalaje.
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Diseño que favorece la convección del frío en estibas.
+                </li>
+              </ul>
+            </div>
+            <div>
+              <button class="strategy-expand-action" type="button">
+                <span>[ Ver detalle ambiental · Fase 2 ]</span>
+                <span>→</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Pilar 3: Operacional -->
+          <article class="strategy-full-card card-ops">
+            <div>
+              <div class="strategy-header-top">
+                <div class="strategy-icon-box">
+                  <img src="assets/icons/operations.svg" alt="Pilar Operacional">
+                </div>
+                <span class="strategy-pillar-badge">Tendencia Operacional</span>
+              </div>
+              <h3 class="strategy-card-title">Almacenamiento Inteligente y Rotación FIFO / FEFO</h3>
+              <p class="strategy-card-desc">
+                Reorganización física de cuartos fríos mediante zonificación térmica por tipo de derivado lácteo y
+                protocolo estricto FEFO (First Expired, First Out).
+              </p>
+              <ul class="strategy-keypoints-list">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Demarcación de zonas: quesos madurados vs. frescos.
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Señalética cromática para prioridades de despacho.
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Procedimientos Operativos Estandarizados (POE).
+                </li>
+              </ul>
+            </div>
+            <div>
+              <button class="strategy-expand-action" type="button">
+                <span>[ Ver detalle operacional · Fase 2 ]</span>
+                <span>→</span>
+              </button>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Pie de Navegación Rápida -->
+        <div class="section-nav-footer">
+          <button class="btn-nav-prev" data-step-target="diagnostico" type="button">
+            ← Volver a Diagnóstico
+          </button>
+          <button class="btn-nav-next" data-step-target="implementacion" type="button">
+            Ir a Plan de Implementación →
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN 4: IMPLEMENTACIÓN
+         ========================================================================== -->
+    <section id="implementacion" class="page-section">
+      <div class="section-wrapper">
+
+        <div class="section-header-box">
+          <span class="section-tag">Hoja de Ruta</span>
+          <h2 class="section-main-heading">Plan de Implementación y Recursos</h2>
+          <p class="section-main-subheading">
+            Secuencia metodológica por etapas para ejecutar la propuesta, definiendo los requerimientos técnicos,
+            humanos y los beneficios operativos esperados.
+          </p>
+        </div>
+
+        <!-- Línea de Tiempo Limpia por Etapas -->
+        <div class="bento-card-header">
+          <div class="bento-card-title">
+            <span>Fases del Plan de Trabajo</span>
+            <span class="placeholder-indicator">Línea de Tiempo</span>
+          </div>
+          <div class="bento-accent-line"></div>
+        </div>
+
+        <div class="timeline-stages-wrapper">
+          <div class="timeline-stages-grid">
+
+            <div class="timeline-stage-item">
+              <div class="stage-bubble-node">01</div>
+              <h4 class="stage-title">Estandarización</h4>
+              <span class="stage-duration">Etapa Inicial</span>
+              <p class="stage-desc">Mapeo térmico de bodega y redacción de protocolos FEFO.</p>
+            </div>
+
+            <div class="timeline-stage-item">
+              <div class="stage-bubble-node">02</div>
+              <h4 class="stage-title">Adecuación Física</h4>
+              <span class="stage-duration">Etapa 2</span>
+              <p class="stage-desc">Instalación de estanterías y dotación de canastillas plásticas sanitarias.</p>
+            </div>
+
+            <div class="timeline-stage-item">
+              <div class="stage-bubble-node">03</div>
+              <h4 class="stage-title">Despliegue IoT</h4>
+              <span class="stage-duration">Etapa 3</span>
+              <p class="stage-desc">Instalación de sensores de frío y terminales para lectura por código de lote.</p>
+            </div>
+
+            <div class="timeline-stage-item">
+              <div class="stage-bubble-node">04</div>
+              <h4 class="stage-title">Capacitación</h4>
+              <span class="stage-duration">Etapa 4</span>
+              <p class="stage-desc">Talleres prácticos con operarios sobre buenas prácticas y software.</p>
+            </div>
+
+            <div class="timeline-stage-item">
+              <div class="stage-bubble-node">05</div>
+              <h4 class="stage-title">Marcha Blanca</h4>
+              <span class="stage-duration">Etapa Final</span>
+              <p class="stage-desc">Puesta a punto, medición de KPIs y calibración de alertas.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Matriz de Recursos Requeridos -->
+        <div class="bento-card-header" style="margin-top: 36px;">
+          <div class="bento-card-title">
+            <span>Matriz de Recursos Requeridos</span>
+            <span class="placeholder-indicator">Requerimientos</span>
+          </div>
+          <div class="bento-accent-line"></div>
+        </div>
+
+        <div class="resources-matrix-grid">
+
+          <div class="resource-column-card">
+            <div class="resource-header">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+              <span>Recursos Humanos</span>
+            </div>
+            <ul class="resource-items-list">
+              <li>Coordinador de logística y cadena de frío.</li>
+              <li>Operarios de bodega capacitados en FEFO.</li>
+              <li>Técnico especialista en refrigeración para calibración periódica.</li>
+            </ul>
+          </div>
+
+          <div class="resource-column-card">
+            <div class="resource-header">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" />
+              </svg>
+              <span>Recursos Tecnológicos</span>
+            </div>
+            <ul class="resource-items-list">
+              <li>Dataloggers registradores continuos con conexión remota.</li>
+              <li>Lectoras portátiles de códigos QR / DataMatrix.</li>
+              <li>Software ligero para control de inventario y alertas tempranas.</li>
+            </ul>
+          </div>
+
+          <div class="resource-column-card">
+            <div class="resource-header">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path
+                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+              </svg>
+              <span>Recursos Físicos y Locativos</span>
+            </div>
+            <ul class="resource-items-list">
+              <li>Lote de canastillas plásticas reutilizables (RPC).</li>
+              <li>Cortinas térmicas hawaianas para contención del frío.</li>
+              <li>Estanterías modulares sanitarias en acero inoxidable / polímero.</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Pie de Navegación Rápida -->
+        <div class="section-nav-footer">
+          <button class="btn-nav-prev" data-step-target="estrategias" type="button">
+            ← Volver a Estrategias
+          </button>
+          <button class="btn-nav-next" data-step-target="evaluacion" type="button">
+            Ir a Evaluación y Control →
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN 5: EVALUACIÓN
+         ========================================================================== -->
+    <section id="evaluacion" class="page-section">
+      <div class="section-wrapper">
+
+        <div class="section-header-box">
+          <span class="section-tag">Medición y Factibilidad</span>
+          <h2 class="section-main-heading">Evaluación Económica, KPIs y Seguimiento</h2>
+          <p class="section-main-subheading">
+            Panel ejecutivo para la estimación presupuestal por estrategia y el seguimiento de la mejora continua frente
+            al riesgo de acumulación y permanencia prolongada de cajas de queso y yogur en racks antes del despacho.
+          </p>
+        </div>
+
+        <!-- ====================================================================
+             BLOQUE 1: EVALUACIÓN ECONÓMICA Y PRESUPUESTO
+             ==================================================================== -->
+        <div class="dashboard-block-section">
+
+          <div class="dashboard-block-header">
+            <div class="dashboard-block-title-group">
+              <span class="dashboard-badge-pill">Módulo Financiero</span>
+              <h3 class="dashboard-section-title">Análisis de Costos de Implementación y Operación</h3>
+            </div>
+            <span class="dashboard-status-indicator">
+              <span class="status-pulse-dot"></span>
+              Estructura presupuestal por estrategia
+            </span>
+          </div>
+
+          <!-- Tarjetas Superiores de Resumen Presupuestal -->
+          <div class="financial-summary-grid">
+
+            <div class="financial-metric-card">
+              <div class="financial-metric-header">
+                <span class="financial-metric-label">Inversión Inicial Total (CAPEX)</span>
+                <span class="budget-badge capex">CAPEX</span>
+              </div>
+              <div class="financial-metric-value" id="capexTotalDisplay">Pendiente de cotización</div>
+              <p class="financial-metric-subtext">
+                Equipos de lectura de códigos, lote de canastillas plásticas reutilizables y demarcación de racks.
+              </p>
+              <div class="financial-card-footer">
+                <span class="data-state-tag">Datos por consolidar</span>
+              </div>
+            </div>
+
+            <div class="financial-metric-card">
+              <div class="financial-metric-header">
+                <span class="financial-metric-label">Costo Operativo Mensual (OPEX)</span>
+                <span class="budget-badge opex">OPEX</span>
+              </div>
+              <div class="financial-metric-value" id="opexMonthlyDisplay">Pendiente de cotización</div>
+              <p class="financial-metric-subtext">
+                Suministro de etiquetas para lotes, sanitización de canastillas y programa de capacitación.
+              </p>
+              <div class="financial-card-footer">
+                <span class="data-state-tag">Costos recurrentes</span>
+              </div>
+            </div>
+
+            <div class="financial-metric-card highlight-card-metric">
+              <div class="financial-metric-header">
+                <span class="financial-metric-label">Costo Estimado Primer Año</span>
+                <span class="budget-badge formula">Proyección</span>
+              </div>
+              <div class="financial-metric-value" id="yearOneTotalDisplay">Por consolidar</div>
+              <p class="financial-metric-subtext">
+                Cálculo proyectado: Inversión Inicial (CAPEX) + 12 meses de costo operativo (OPEX).
+              </p>
+              <div class="financial-card-footer">
+                <span class="data-state-tag">Cálculo automatizado</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Tabla Presupuestal Detallada por Estrategia -->
+          <div class="budget-table-container">
+            <div class="budget-table-toolbar">
+              <h4 class="budget-table-title">Desglose Presupuestal por Estrategia Logística</h4>
+              <span class="budget-table-note">Moneda: COP (Pesos Colombianos) · Valores pendientes de cotización
+                formal</span>
+            </div>
+
+            <div class="table-responsive-wrapper">
+              <table class="executive-budget-table" id="budgetTable">
+                <thead>
+                  <tr>
+                    <th>Concepto de Inversión</th>
+                    <th>Estrategia Asociada</th>
+                    <th class="text-center">Cant.</th>
+                    <th class="text-right">Costo Unitario (COP)</th>
+                    <th class="text-right">Subtotal (COP)</th>
+                    <th class="text-center">Tipo</th>
+                    <th>Fuente / Cotización y Fecha</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Estrategia 1: Tecnológica -->
+                  <tr class="row-tech" data-capex="0" data-opex="0">
+                    <td>
+                      <strong>Terminales lectoras de códigos de barras</strong>
+                      <span class="item-concept-sub">Lectura óptica de cajas en racks para registro ágil de
+                        entrada/salida</span>
+                    </td>
+                    <td><span class="strategy-badge tech">Tecnológica</span></td>
+                    <td class="text-center">2 unid.</td>
+                    <td class="text-right pending-val">Pendiente de cotización</td>
+                    <td class="text-right pending-val">Por consolidar</td>
+                    <td class="text-center"><span class="budget-badge capex">CAPEX</span></td>
+                    <td class="source-cell">Cotizaciones de proveedores hardware logístico (Nov. 2026)</td>
+                  </tr>
+
+                  <tr class="row-tech" data-capex="0" data-opex="0">
+                    <td>
+                      <strong>Rollos de etiquetas adhesivas para lotes</strong>
+                      <span class="item-concept-sub">Identificación visual y fecha de vencimiento por caja de queso y
+                        yogur</span>
+                    </td>
+                    <td><span class="strategy-badge tech">Tecnológica</span></td>
+                    <td class="text-center">50 rollos</td>
+                    <td class="text-right pending-val">Pendiente de cotización</td>
+                    <td class="text-right pending-val">Por consolidar</td>
+                    <td class="text-center"><span class="budget-badge opex">OPEX</span></td>
+                    <td class="source-cell">Distribuidor mayorista de insumos industriales (Nov. 2026)</td>
+                  </tr>
+
+                  <tr class="row-tech" data-capex="0" data-opex="0">
+                    <td>
+                      <strong>Herramienta digital básica de control de inventario</strong>
+                      <span class="item-concept-sub">Plantilla estructurada / software ligero para registro de lotes y
+                        fechas</span>
+                    </td>
+                    <td><span class="strategy-badge tech">Tecnológica</span></td>
+                    <td class="text-center">1 lic./impl.</td>
+                    <td class="text-right pending-val">Pendiente de cotización</td>
+                    <td class="text-right pending-val">Por consolidar</td>
+                    <td class="text-center"><span class="budget-badge capex">CAPEX</span></td>
+                    <td class="source-cell">Desarrollo interno / código abierto (Nov. 2026)</td>
+                  </tr>
+
+                  <!-- Estrategia 2: Ambiental -->
+                  <tr class="row-env" data-capex="0" data-opex="0">
+                    <td>
+                      <strong>Lote de canastillas plásticas reutilizables (RPC)</strong>
+                      <span class="item-concept-sub">Embalajes secundarios plásticos, sanitarios, apilables y
+                        ventilados</span>
+                    </td>
+                    <td><span class="strategy-badge env">Ambiental</span></td>
+                    <td class="text-center">150 unid.</td>
+                    <td class="text-right pending-val">Pendiente de cotización</td>
+                    <td class="text-right pending-val">Por consolidar</td>
+                    <td class="text-center"><span class="budget-badge capex">CAPEX</span></td>
+                    <td class="source-cell">Fabricante de contenedores plásticos grado alimentario (Nov. 2026)</td>
+                  </tr>
+
+                  <tr class="row-env" data-capex="0" data-opex="0">
+                    <td>
+                      <strong>Lavado y desinfección periódica de canastillas</strong>
+                      <span class="item-concept-sub">Insumos y protocolo de limpieza para garantizar inocuidad en cada
+                        ciclo</span>
+                    </td>
+                    <td><span class="strategy-badge env">Ambiental</span></td>
+                    <td class="text-center">Servicio mensual</td>
+                    <td class="text-right pending-val">Pendiente de cotización</td>
+                    <td class="text-right pending-val">Por consolidar</td>
+                    <td class="text-center"><span class="budget-badge opex">OPEX</span></td>
+                    <td class="source-cell">Protocolo interno de higiene y desinfección (Nov. 2026)</td>
+                  </tr>
+
+                  <!-- Estrategia 3: Operacional -->
+                  <tr class="row-ops" data-capex="0" data-opex="0">
+                    <td>
+                      <strong>Demarcación física y señalización de racks</strong>
+                      <span class="item-concept-sub">Señalética por colores para clasificación de fechas de vencimiento
+                        (FEFO)</span>
+                    </td>
+                    <td><span class="strategy-badge ops">Operacional</span></td>
+                    <td class="text-center">1 adecuación</td>
+                    <td class="text-right pending-val">Pendiente de cotización</td>
+                    <td class="text-right pending-val">Por consolidar</td>
+                    <td class="text-center"><span class="budget-badge capex">CAPEX</span></td>
+                    <td class="source-cell">Proveedor local de señalética industrial en Cesar (Nov. 2026)</td>
+                  </tr>
+
+                  <tr class="row-ops" data-capex="0" data-opex="0">
+                    <td>
+                      <strong>Programa de capacitación operativa en FEFO</strong>
+                      <span class="item-concept-sub">Talleres para operarios sobre buenas prácticas de almacenamiento y
+                        rotación</span>
+                    </td>
+                    <td><span class="strategy-badge ops">Operacional</span></td>
+                    <td class="text-center">3 sesiones</td>
+                    <td class="text-right pending-val">Pendiente de cotización</td>
+                    <td class="text-right pending-val">Por consolidar</td>
+                    <td class="text-center"><span class="budget-badge opex">OPEX</span></td>
+                    <td class="source-cell">Plan de formación interna / equipo académico UNAD (Nov. 2026)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Gráfico de Barras Horizontales: Comparación de Presupuesto por Estrategia -->
+          <div class="budget-chart-card">
+            <div class="chart-header-row">
+              <div>
+                <h4 class="chart-block-title">Estructura Comparativa del Presupuesto por Estrategia</h4>
+                <p class="chart-block-sub">Distribución conceptual entre costos de implementación (CAPEX) y costos de
+                  operación (OPEX)</p>
+              </div>
+              <div class="chart-legend-row">
+                <span class="legend-chip"><span class="legend-color capex-color"></span> CAPEX (Inversión
+                  Inicial)</span>
+                <span class="legend-chip"><span class="legend-color opex-color"></span> OPEX (Operación /
+                  Insumos)</span>
+              </div>
+            </div>
+
+            <div class="horizontal-bars-container">
+
+              <!-- Fila 1: Tecnológica -->
+              <div class="hbar-item">
+                <div class="hbar-label-group">
+                  <span class="hbar-strategy-name">Estrategia Tecnológica</span>
+                  <span class="hbar-subtext">Digitalización y trazabilidad</span>
+                </div>
+                <div class="hbar-track">
+                  <div class="hbar-segment capex-bar" style="width: 55%;"
+                    title="CAPEX Tecnológico: Lectores y herramienta digital">
+                    <span>CAPEX</span>
+                  </div>
+                  <div class="hbar-segment opex-bar" style="width: 45%;" title="OPEX Tecnológico: Rollos de etiquetas">
+                    <span>OPEX</span>
+                  </div>
+                </div>
+                <div class="hbar-status-badge">
+                  <span>En cotización</span>
+                </div>
+              </div>
+
+              <!-- Fila 2: Ambiental -->
+              <div class="hbar-item">
+                <div class="hbar-label-group">
+                  <span class="hbar-strategy-name">Estrategia Ambiental</span>
+                  <span class="hbar-subtext">Embalajes reutilizables</span>
+                </div>
+                <div class="hbar-track">
+                  <div class="hbar-segment capex-bar" style="width: 70%;"
+                    title="CAPEX Ambiental: Lote canastillas plásticas RPC">
+                    <span>CAPEX</span>
+                  </div>
+                  <div class="hbar-segment opex-bar" style="width: 30%;"
+                    title="OPEX Ambiental: Insumos de sanitización">
+                    <span>OPEX</span>
+                  </div>
+                </div>
+                <div class="hbar-status-badge">
+                  <span>En cotización</span>
+                </div>
+              </div>
+
+              <!-- Fila 3: Operacional -->
+              <div class="hbar-item">
+                <div class="hbar-label-group">
+                  <span class="hbar-strategy-name">Estrategia Operacional</span>
+                  <span class="hbar-subtext">Almacenamiento inteligente FEFO</span>
+                </div>
+                <div class="hbar-track">
+                  <div class="hbar-segment capex-bar" style="width: 40%;"
+                    title="CAPEX Operacional: Señalización de racks">
+                    <span>CAPEX</span>
+                  </div>
+                  <div class="hbar-segment opex-bar" style="width: 60%;"
+                    title="OPEX Operacional: Capacitación del personal">
+                    <span>OPEX</span>
+                  </div>
+                </div>
+                <div class="hbar-status-badge">
+                  <span>En cotización</span>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="chart-footer-note">
+              <span>Nota académica: Las barras representan la distribución cualitativa de componentes de inversión
+                frente a gastos operativos. Las proporciones numéricas definitivas se actualizarán automáticamente una
+                vez se incorporen las cotizaciones formales.</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ====================================================================
+             BLOQUE 2: INDICADORES DE DESEMPEÑO Y MEJORA CONTINUA (KPIs)
+             ==================================================================== -->
+        <div class="dashboard-block-section" style="margin-top: 36px;">
+
+          <div class="dashboard-block-header">
+            <div class="dashboard-block-title-group">
+              <span class="dashboard-badge-pill">Mejora Continua</span>
+              <h3 class="dashboard-section-title">Tablero Ejecutivo de Indicadores de Desempeño (KPIs)</h3>
+            </div>
+            <span class="dashboard-status-indicator">
+              <span class="status-pulse-dot"></span>
+              Sistema de monitoreo para la fase piloto
+            </span>
+          </div>
+
+          <!-- Indicador Principal: Cumplimiento de Rotación FEFO (%) -->
+          <div class="main-kpi-executive-panel">
+
+            <div class="kpi-panel-top-row">
+              <div class="kpi-main-identity">
+                <span class="kpi-primary-tag">Indicador Clave de Éxito</span>
+                <h4 class="kpi-main-title">Cumplimiento de Rotación FEFO (%)</h4>
+                <p class="kpi-main-purpose">
+                  <strong>Objetivo:</strong> Medir la proporción de despachos de queso y yogur que respetan la prioridad
+                  por fecha de vencimiento más próxima (First Expired, First Out), garantizando la adecuada rotación y
+                  eliminando el riesgo de cajas rezagadas en los racks.
+                </p>
+              </div>
+
+              <div class="kpi-score-box">
+                <span class="kpi-score-label">Resultado Registrado</span>
+                <div class="kpi-score-value">Pendiente</div>
+                <span class="kpi-score-badge">Fase de preparación</span>
+              </div>
+            </div>
+
+            <!-- Fórmula Matemática del Indicador -->
+            <div class="kpi-formula-box">
+              <span class="formula-tag">Fórmula de Cálculo:</span>
+              <div class="formula-display">
+                <span class="formula-term">Cumplimiento FEFO (%)</span>
+                <span class="formula-equal">=</span>
+                <div class="formula-fraction">
+                  <span class="fraction-numerator">Número de despachos evaluados que respetan el orden FEFO</span>
+                  <span class="fraction-line"></span>
+                  <span class="fraction-denominator">Total de despachos evaluados</span>
+                </div>
+                <span class="formula-mult">× 100</span>
+              </div>
+            </div>
+
+            <!-- Ficha de Parámetros del KPI -->
+            <div class="kpi-parameters-grid">
+
+              <div class="kpi-param-item">
+                <span class="kpi-param-label">Línea Base</span>
+                <span class="kpi-param-val">Pendiente de medición</span>
+                <span class="kpi-param-sub">A definir en la semana 1 del piloto</span>
+              </div>
+
+              <div class="kpi-param-item">
+                <span class="kpi-param-label">Meta Propuesta</span>
+                <span class="kpi-param-val">Por definir</span>
+                <span class="kpi-param-sub">Criterio técnico tras línea base</span>
+              </div>
+
+              <div class="kpi-param-item">
+                <span class="kpi-param-label">Frecuencia de Medición</span>
+                <span class="kpi-param-val">Semanal</span>
+                <span class="kpi-param-sub">Auditorías periódicas en despacho</span>
+              </div>
+
+              <div class="kpi-param-item">
+                <span class="kpi-param-label">Responsable</span>
+                <span class="kpi-param-val">Encargado de despacho</span>
+                <span class="kpi-param-sub">Coordinador logístico de bodega</span>
+              </div>
+
+            </div>
+
+            <!-- Interpretación Técnica -->
+            <div class="kpi-interpretation-box">
+              <strong>Interpretación del resultado:</strong> Un porcentaje cercano al 100% confirma que el personal
+              identifica y extrae prioritariamente los lotes de queso y yogur con vencimiento más cercano, mitigando el
+              riesgo de acumulación y permanencia excesiva de cajas en los racks antes de su entrega al transporte.
+            </div>
+
+          </div>
+
+          <!-- Gráfico de Evolución Semanal con Estado Vacío Elegante -->
+          <div class="kpi-evolution-chart-card">
+            <div class="chart-header-row">
+              <div>
+                <h4 class="chart-block-title">Evolución Semanal del Cumplimiento FEFO (Piloto)</h4>
+                <p class="chart-block-sub">Seguimiento temporal del indicador a lo largo de las semanas de auditoría</p>
+              </div>
+              <span class="chart-status-pill">Semana 1 a Semana 6</span>
+            </div>
+
+            <!-- Canvas / Estado Vacío Elegante -->
+            <div class="evolution-canvas-area">
+              <div class="chart-grid-backdrop">
+                <div class="grid-line" style="top: 20%;"><span>100%</span></div>
+                <div class="grid-line" style="top: 40%;"><span>75%</span></div>
+                <div class="grid-line" style="top: 60%;"><span>50%</span></div>
+                <div class="grid-line" style="top: 80%;"><span>25%</span></div>
+              </div>
+
+              <div class="chart-empty-state">
+                <div class="empty-state-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="20" x2="18" y2="10"></line>
+                    <line x1="12" y1="20" x2="12" y2="4"></line>
+                    <line x1="6" y1="20" x2="6" y2="14"></line>
+                  </svg>
+                </div>
+                <h5 class="empty-state-title">Pendiente de medición</h5>
+                <p class="empty-state-text">
+                  El gráfico trazará automáticamente la curva de tendencia una vez se registren los datos de las
+                  auditorías de despacho durante el piloto en Becerril (Cesar). No se dibujan tendencias simuladas para
+                  respetar el rigor académico.
+                </p>
+                <div class="empty-state-tags">
+                  <span>Sin datos ficticios</span>
+                  <span>Marco metodológico UNAD</span>
+                </div>
+              </div>
+
+              <!-- Eje de Semanas -->
+              <div class="timeline-weeks-axis">
+                <div class="week-node">Semana 1 (Línea Base)</div>
+                <div class="week-node">Semana 2</div>
+                <div class="week-node">Semana 3</div>
+                <div class="week-node">Semana 4</div>
+                <div class="week-node">Semana 5</div>
+                <div class="week-node">Semana 6</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Indicadores Complementarios -->
+          <div class="complementary-kpis-wrapper">
+            <h4 class="complementary-title">Indicadores Complementarios de Control Operativo</h4>
+            <p class="complementary-sub">Variables adicionales que se consolidarán durante la implementación:</p>
+
+            <div class="complementary-grid">
+
+              <div class="complementary-card">
+                <div class="comp-card-header">
+                  <span class="comp-tag">Permanencia</span>
+                  <span class="comp-status-dot"></span>
+                </div>
+                <h5 class="comp-card-title">Tiempo Promedio de Permanencia en Racks</h5>
+                <p class="comp-card-desc">Duración promedio (horas/días) de las cajas de queso y yogur desde su
+                  recepción hasta su salida.</p>
+                <div class="comp-card-footer">
+                  <span class="comp-state-label">Estado:</span>
+                  <span class="comp-state-val">Pendiente de cronometraje</span>
+                </div>
+              </div>
+
+              <div class="complementary-card">
+                <div class="comp-card-header">
+                  <span class="comp-tag">Embalaje</span>
+                  <span class="comp-status-dot"></span>
+                </div>
+                <h5 class="comp-card-title">Ciclos de Rotación de Canastillas (RPC)</h5>
+                <p class="comp-card-desc">Cantidad de usos y retornos efectivos de las canastillas plásticas
+                  reutilizables por ciclo de despacho.</p>
+                <div class="comp-card-footer">
+                  <span class="comp-state-label">Estado:</span>
+                  <span class="comp-state-val">Pendiente de registro de retornos</span>
+                </div>
+              </div>
+
+              <div class="complementary-card">
+                <div class="comp-card-header">
+                  <span class="comp-tag">Capacidad</span>
+                  <span class="comp-status-dot"></span>
+                </div>
+                <h5 class="comp-card-title">Tasa de Ocupación Efectiva de Racks</h5>
+                <p class="comp-card-desc">Porcentaje de aprovechamiento volumétrico de los racks sin generar sobrestock
+                  ni obstaculizar la ventilación.</p>
+                <div class="comp-card-footer">
+                  <span class="comp-state-label">Estado:</span>
+                  <span class="comp-state-val">Pendiente de cubicaje</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Matriz de Riesgos y Limitaciones Operativas (Alineada con Tarea 3) -->
+          <div class="risks-container" style="margin-top: 32px;">
+            <div class="eval-block-header" style="border: none; margin-bottom: 6px;">
+              <span class="eval-block-title">Matriz de Riesgos Operacionales y Acciones Preventivas</span>
+              <span class="placeholder-indicator">Gestión de Contingencias</span>
+            </div>
+            <p style="font-size: 0.84rem; color: var(--color-text-muted); margin-bottom: 14px;">
+              Identificación de posibles dificultades durante el almacenamiento y manipulación de queso y yogur en
+              Becerril y sus medidas de control:
+            </p>
+
+            <div class="risk-rows-list">
+
+              <div class="risk-item-row">
+                <span class="risk-level-tag medium">Riesgo de Capacidad</span>
+                <span class="risk-name">Aumentos temporales en los volúmenes recibidos que saturen el espacio de
+                  racks</span>
+                <span class="risk-mitigation"><strong>Acción preventiva:</strong> Programación escalonada de recepción y
+                  zonificación prioritaria de estibas para evitar congestión en pasillos.</span>
+              </div>
+
+              <div class="risk-item-row">
+                <span class="risk-level-tag medium">Riesgo de Permanencia</span>
+                <span class="risk-name">Demoras en la rotación que provoquen acumulación prolongada de lotes en
+                  racks</span>
+                <span class="risk-mitigation"><strong>Acción preventiva:</strong> Auditorías semanales mediante el KPI
+                  FEFO y señalética visual con código de colores por fecha de vencimiento.</span>
+              </div>
+
+              <div class="risk-item-row">
+                <span class="risk-level-tag low">Riesgo de Organización</span>
+                <span class="risk-name">Ubicación incorrecta de cajas en racks o errores en la identificación durante el
+                  despacho</span>
+                <span class="risk-mitigation"><strong>Acción preventiva:</strong> Capacitación periódica a operarios y
+                  verificación de etiquetas legibles antes de la salida de mercancía.</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Pie de Navegación Rápida -->
+        <div class="section-nav-footer">
+          <button class="btn-nav-prev" data-step-target="implementacion" type="button">
+            ← Volver a Implementación
+          </button>
+          <button class="btn-nav-next" data-step-target="referencias" type="button">
+            Ir a Referencias y Créditos →
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN 6: REFERENCIAS Y CRÉDITOS ACADÉMICOS
+         ========================================================================== -->
+    <section id="referencias" class="page-section">
+      <div class="section-wrapper">
+
+        <div class="section-header-box">
+          <span class="section-tag">Fundamentación Teórica</span>
+          <h2 class="section-main-heading">Referencias Bibliográficas y Créditos</h2>
+          <p class="section-main-subheading">
+            Fuentes documentales estructuradas bajo normas APA y ficha institucional del proyecto académico de la UNAD.
+          </p>
+        </div>
+
+        <div class="references-layout">
+
+          <!-- Fuentes Bibliográficas APA -->
+          <div class="apa-sources-list">
+
+            <article class="apa-card">
+              <span class="apa-category-tag">Cadena de Frío y Alimentos Perecederos</span>
+              <p class="apa-citation-text">
+                Ballou, R. H. (2004). <em>Logística: Administración de la cadena de suministro</em> (5.ª ed.). Pearson
+                Educación.
+              </p>
+              <span class="placeholder-indicator" style="margin-top: 6px;">Referencia base del curso</span>
+            </article>
+
+            <article class="apa-card">
+              <span class="apa-category-tag">Economía Circular y Envases Reutilizables</span>
+              <p class="apa-citation-text">
+                Bowersox, D. J., Closs, D. J., & Cooper, M. B. (2013). <em>Supply chain logistics management</em> (4th
+                ed.). McGraw-Hill Education.
+              </p>
+              <span class="placeholder-indicator" style="margin-top: 6px;">[ Fuente pendiente de formato APA definitivo
+                ]</span>
+            </article>
+
+            <article class="apa-card">
+              <span class="apa-category-tag">Normatividad Sanitaria Colombia</span>
+              <p class="apa-citation-text">
+                Ministerio de Salud y Protección Social. (2013). <em>Resolución 2674 de 2013: Requisitos sanitarios para
+                  la fabricación, procesamiento y almacenamiento de alimentos</em>. Diario Oficial 48860.
+              </p>
+              <span class="placeholder-indicator" style="margin-top: 6px;">Marco regulatorio Invima</span>
+            </article>
+
+            <article class="apa-card">
+              <span class="apa-category-tag">Guías Académicas UNAD</span>
+              <p class="apa-citation-text">
+                Universidad Nacional Abierta y a Distancia [UNAD]. (2026). <em>Guía de actividades y rúbrica de
+                  evaluación: Curso Logística y Cadenas de Suministro (212029)</em>. Escuela de Ciencias Básicas,
+                Tecnología e Ingeniería (ECBTI).
+              </p>
+            </article>
+
+          </div>
+
+          <!-- Ficha Institucional UNAD -->
+          <aside class="institutional-spec-card">
+
+            <div class="spec-logo-banner">
+              <img src="assets/icons/logo.svg" alt="Icono del Proyecto" width="36" height="36">
+              <div>
+                <strong style="color: var(--color-primary); font-size: 0.95rem;">Lácteos en Movimiento</strong>
+                <div style="font-size: 0.74rem; color: var(--color-text-muted);">Ficha Técnica Académica</div>
+              </div>
+            </div>
+
+            <div class="spec-list">
+
+              <div class="spec-item">
+                <span class="spec-item-label">Institución</span>
+                <span class="spec-item-value">Universidad Nacional Abierta y a Distancia (UNAD)</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-item-label">Escuela</span>
+                <span class="spec-item-value">Escuela de Ciencias Básicas, Tecnología e Ingeniería (ECBTI)</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-item-label">Programa</span>
+                <span class="spec-item-value">Ingeniería Industrial</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-item-label">Curso Académico</span>
+                <span class="spec-item-value">Logística y Cadenas de Suministro (212029)</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-item-label">Grupo Colaborativo</span>
+                <span class="spec-item-value">212029_40</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-item-label">Localización del Caso</span>
+                <span class="spec-item-value">Municipio de Becerril, Cesar, Colombia</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-item-label">Docente / Tutora</span>
+                <span class="spec-item-value">[ Asignada en campus UNAD ]</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-item-label">Estado de la Entrega</span>
+                <span class="spec-item-value" style="color: var(--color-accent); font-weight: 700;">Fase 1: Estructura y
+                  Diseño Visual Aprobada</span>
+              </div>
+
+            </div>
+
+          </aside>
+
+        </div>
+
+        <!-- Pie de Navegación Rápida -->
+        <div class="section-nav-footer">
+          <button class="btn-nav-prev" data-step-target="evaluacion" type="button">
+            ← Volver a Evaluación
+          </button>
+          <button class="btn-nav-next" data-step-target="inicio" type="button">
+            Volver a la Portada de Inicio ⌂
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         MODAL INFORMATIVO: CONOCER EL PROYECTO
+         ========================================================================== -->
+    <div id="projectModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-window">
+        <button class="modal-close-btn" aria-label="Cerrar ventana modal" type="button">&times;</button>
+
+        <div class="modal-brand-header">
+          <div class="modal-brand-badge" aria-hidden="true">
+            <img src="assets/img/logo-vaca-verde.png" alt="Logotipo Lácteos en Movimiento" class="modal-brand-logo-img"
+              width="38" height="38">
+          </div>
+          <h3 id="modalTitle" class="section-main-heading modal-brand-title">
+            Lácteos en Movimiento
+          </h3>
+        </div>
+
+        <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 16px;">
+          Propuesta académica de mejora integral para el almacenamiento y manipulación de cajas de queso y yogur en la
+          cadena de suministro de productos lácteos del municipio de Becerril, Cesar.
+        </p>
+
+        <div
+          style="background-color: var(--color-secondary-subtle); padding: 16px; border-radius: var(--radius-inner); margin-bottom: 16px;">
+          <strong style="color: var(--color-primary); font-size: 0.86rem; display: block; margin-bottom: 4px;">Objetivo
+            de la propuesta:</strong>
+          <span style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.55; display: block;">
+            Diseñar estrategias de mejora para el almacenamiento y manipulación de cajas de queso y yogur en Becerril,
+            Cesar, mediante la trazabilidad del inventario, el uso de embalajes reutilizables y la gestión de rotación
+            FIFO/FEFO, con el propósito de reducir los riesgos de acumulación y permanencia prolongada antes del
+            despacho.
+          </span>
+        </div>
+
+        <ul class="modal-meta-list">
+          <li class="modal-meta-item">
+            <span class="modal-meta-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </span>
+            <span><strong>Ubicación:</strong> Becerril, Departamento del Cesar, Colombia</span>
+          </li>
+          <li class="modal-meta-item">
+            <span class="modal-meta-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                <path d="M6 12v5c3 3 9 3 12 0v-5" />
+              </svg>
+            </span>
+            <span><strong>Institución:</strong> Universidad Nacional Abierta y a Distancia (UNAD)</span>
+          </li>
+          <li class="modal-meta-item">
+            <span class="modal-meta-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+              </svg>
+            </span>
+            <span><strong>Curso:</strong> Logística y Cadenas de Suministro (212029)</span>
+          </li>
+          <li class="modal-meta-item">
+            <span class="modal-meta-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </span>
+            <span><strong>Grupo:</strong> 212029_40</span>
+          </li>
+          <li class="modal-meta-item">
+            <span class="modal-meta-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 16v-4" />
+                <path d="M12 8h.01" />
+              </svg>
+            </span>
+            <span><strong>Enfoque:</strong> Solución académica, no representa una empresa comercial activa.</span>
+          </li>
+        </ul>
+
+        <div style="text-align: right;">
+          <button class="btn-primary" style="padding: 10px 22px; font-size: 0.85rem;"
+            onclick="document.getElementById('projectModal').classList.remove('active'); document.body.style.overflow = '';">
+            Entendido
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         LIGHTBOX: VISTA AMPLIADA DEL DIAGRAMA DE ISHIKAWA
+         ========================================================================== -->
+    <div id="ishikawaLightbox" class="lightbox-overlay" role="dialog" aria-modal="true"
+      aria-label="Vista ampliada del Diagrama de Ishikawa" tabindex="-1">
+      <button class="lightbox-close-btn" aria-label="Cerrar vista ampliada" type="button"
+        title="Cerrar (Esc)">&times;</button>
+      <div class="lightbox-content">
+        <div class="lightbox-img-wrapper">
+          <img src="assets/img/ishikawa-corregido.png"
+            alt="Vista ampliada del diagrama de causa y efecto de Ishikawa sobre el riesgo de acumulación y permanencia prolongada de cajas de queso y yogur en los racks antes del despacho"
+            class="lightbox-img">
+        </div>
+        <p class="lightbox-caption">
+          Diagrama de Causa y Efecto (Ishikawa) · Presiona <kbd>Esc</kbd> o haz clic afuera para cerrar
+        </p>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         PIE DE PÁGINA (FOOTER)
+         ========================================================================== -->
+    <footer class="main-footer">
+      <div class="footer-inner">
+
+        <div class="footer-academic-meta">
+          <img src="assets/icons/logo.svg" alt="Lácteos en Movimiento" width="22" height="22">
+          <span><strong>Lácteos en Movimiento</strong> · Proyecto Académico UNAD · 2026</span>
+        </div>
+
+        <ul class="footer-nav-links">
+          <li><a href="#inicio" data-target="inicio">Inicio</a></li>
+          <li><a href="#diagnostico" data-target="diagnostico">Diagnóstico</a></li>
+          <li><a href="#estrategias" data-target="estrategias">Estrategias</a></li>
+          <li><a href="#implementacion" data-target="implementacion">Implementación</a></li>
+          <li><a href="#evaluacion" data-target="evaluacion">Evaluación</a></li>
+          <li><a href="#referencias" data-target="referencias">Referencias</a></li>
+        </ul>
+
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ==========================================================================
+       ASISTENTE VIRTUAL INTERACTIVO CON VAQUITA 3D Y WHATSAPP
+       ========================================================================== -->
+  <div id="cowAssistantContainer" class="cow-assistant-widget" aria-label="Asistente virtual Lácteos en Movimiento">
+
+    <!-- Ventana Flotante de Sugerencias (Rediseño Compacto: Hellen) -->
+    <aside id="cowAssistantChat" class="cow-assistant-chat" role="dialog" aria-modal="false" aria-labelledby="assistantChatTitle" hidden>
+      
+      <!-- Encabezado de la Ventana: Simple y Elegante -->
+      <div class="assistant-chat-header">
+        <h3 id="assistantChatTitle" class="assistant-chat-title">Soy Hellen, tu asistente virtual</h3>
+        <button type="button" id="assistantCloseBtn" class="assistant-close-btn" aria-label="Cerrar ventana de Hellen" title="Cerrar (Esc)">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Cuerpo de la Ventana / Diálogo Compacto -->
+      <div class="assistant-chat-body">
+        <span class="assistant-sender-tag">HELLEN:</span>
+        <div class="assistant-speech-bubble" role="status">
+          <p>¡Hola! ¿Tienes alguna sugerencia para mejorar nuestro proyecto «Lácteos en Movimiento»?</p>
+        </div>
+
+        <!-- Formulario Compacto Integrado con Botón Circular WhatsApp -->
+        <form id="assistantSuggestionForm" class="assistant-form" novalidate>
+          <div class="assistant-input-row">
+            <textarea
+              id="assistantSuggestionInput"
+              class="assistant-textarea"
+              rows="2"
+              placeholder="Escribe tu mensaje aquí..."
+              aria-label="Escribe tu mensaje aquí"
+              aria-required="true"
+              maxlength="1000"></textarea>
+
+            <button type="submit" id="assistantSendBtn" class="btn-assistant-send-circle" aria-label="Enviar sugerencia por WhatsApp" title="Enviar por WhatsApp">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.23 8.23 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.4-1.76-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.23.9 2.43 1.03 2.6.13.17 1.77 2.7 4.28 3.78.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.17-.48-.29" />
+              </svg>
+            </button>
+          </div>
+
+          <div id="assistantValidationMsg" class="assistant-validation-msg" role="alert" aria-live="polite" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+            <span>Por favor, escribe una sugerencia antes de enviar.</span>
+          </div>
+        </form>
+      </div>
+
+    </aside>
+
+    <!-- Botón Flotante de Mascota Vaquita 3D -->
+    <button
+      type="button"
+      id="cowMascotTrigger"
+      class="cow-mascot-trigger"
+      aria-label="Abrir asistente virtual para enviar sugerencias por WhatsApp"
+      aria-haspopup="dialog"
+      aria-expanded="false">
+      <span class="cow-mascot-speech-tip" aria-hidden="true">¿Sugerencias? Escríbenos 💬</span>
+      <div class="cow-mascot-img-wrap">
+        <img
+          src="assets/img/asistente-vaca.png"
+          alt="Mascota virtual vaquita 3D Lácteos en Movimiento"
+          class="cow-mascot-img cow-mascot-img--idle"
+          id="cowMascotImgIdle">
+        <img
+          src="assets/img/asistente-vaca-frontal.png"
+          alt="Mascota virtual vaquita 3D en postura frontal de bienvenida"
+          class="cow-mascot-img cow-mascot-img--active"
+          id="cowMascotImgActive"
+          aria-hidden="true">
+      </div>
+    </button>
+
+  </div>
+
+  <!-- Script interactivo -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>

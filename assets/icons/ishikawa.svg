@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#144233" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Central spine -->
+  <line x1="2" y1="12" x2="19" y2="12" stroke-width="2.5" />
+  <!-- Fish head arrow -->
+  <polyline points="15 8 19 12 15 16" stroke-width="2.5" stroke="#e5a93c" />
+  <!-- Diagonal bones -->
+  <line x1="6" y1="12" x2="10" y2="5" />
+  <line x1="12" y1="12" x2="16" y2="5" />
+  <line x1="6" y1="12" x2="10" y2="19" />
+  <line x1="12" y1="12" x2="16" y2="19" />
+  <!-- Small nodes -->
+  <circle cx="10" cy="5" r="1.5" fill="#2d7a58" />
+  <circle cx="16" cy="5" r="1.5" fill="#2d7a58" />
+  <circle cx="10" cy="19" r="1.5" fill="#2d7a58" />
+  <circle cx="16" cy="19" r="1.5" fill="#2d7a58" />
+</svg>
+
