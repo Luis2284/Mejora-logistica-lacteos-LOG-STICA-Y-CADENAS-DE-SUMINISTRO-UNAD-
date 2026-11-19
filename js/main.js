@@ -260,53 +260,426 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- Módulo Financiero: Cálculo Presupuestal Automático (Solo con valores sustentados) ---
+  // --- Módulo Financiero: Fuente Única de Datos Presupuestales y Sincronización Automática ---
+  const BUDGET_DATA = {
+    tech: {
+      key: 'tech',
+      name: 'Estrategia Tecnológica',
+      capex: 359900,
+      opexMonthly: 50000,
+      get opexAnnual() { return this.opexMonthly * 12; },
+      get yearOneTotal() { return this.capex + this.opexAnnual; },
+      get capexPercent() { return Number(((this.capex / this.yearOneTotal) * 100).toFixed(1)); },
+      get opexPercent() { return Number(((this.opexAnnual / this.yearOneTotal) * 100).toFixed(1)); }
+    },
+    env: {
+      key: 'env',
+      name: 'Estrategia Ambiental',
+      capex: 469800,
+      opexMonthly: 39900,
+      get opexAnnual() { return this.opexMonthly * 12; },
+      get yearOneTotal() { return this.capex + this.opexAnnual; },
+      get capexPercent() { return Number(((this.capex / this.yearOneTotal) * 100).toFixed(1)); },
+      get opexPercent() { return Number(((this.opexAnnual / this.yearOneTotal) * 100).toFixed(1)); }
+    },
+    ops: {
+      key: 'ops',
+      name: 'Estrategia Operacional',
+      capex: 65800,
+      opexMonthly: 40000,
+      get opexAnnual() { return this.opexMonthly * 12; },
+      get yearOneTotal() { return this.capex + this.opexAnnual; },
+      get capexPercent() { return Number(((this.capex / this.yearOneTotal) * 100).toFixed(1)); },
+      get opexPercent() { return Number(((this.opexAnnual / this.yearOneTotal) * 100).toFixed(1)); }
+    },
+    get totalCapex() {
+      return this.tech.capex + this.env.capex + this.ops.capex;
+    },
+    get totalOpexMonthly() {
+      return this.tech.opexMonthly + this.env.opexMonthly + this.ops.opexMonthly;
+    },
+    get totalOpexAnnual() {
+      return this.totalOpexMonthly * 12;
+    },
+    get totalYearOne() {
+      return this.totalCapex + this.totalOpexAnnual;
+    }
+  };
+
   function calculateBudgetSummary() {
-    const table = document.getElementById('budgetTable');
-    if (!table) return;
+    const formatCOP = (val) => '$ ' + val.toLocaleString('es-CO');
+    const formatCOPFull = (val) => '$ ' + val.toLocaleString('es-CO') + ' COP';
 
-    const rows = table.querySelectorAll('tbody tr');
-    let totalCapex = 0;
-    let totalOpexMonthly = 0;
-    let hasCapexNumeric = false;
-    let hasOpexNumeric = false;
-
-    rows.forEach(row => {
-      const capexVal = parseFloat(row.getAttribute('data-capex') || '0');
-      const opexVal = parseFloat(row.getAttribute('data-opex') || '0');
-
-      if (!isNaN(capexVal) && capexVal > 0) {
-        totalCapex += capexVal;
-        hasCapexNumeric = true;
-      }
-      if (!isNaN(opexVal) && opexVal > 0) {
-        totalOpexMonthly += opexVal;
-        hasOpexNumeric = true;
-      }
-    });
-
+    // 1. Tarjetas Superiores (Panel Ejecutivo Financiero)
     const capexDisplay = document.getElementById('capexTotalDisplay');
     const opexDisplay = document.getElementById('opexMonthlyDisplay');
     const yearOneDisplay = document.getElementById('yearOneTotalDisplay');
 
-    const formatCurrency = (val) => {
-      return '$ ' + val.toLocaleString('es-CO') + ' COP';
-    };
+    if (capexDisplay) {
+      capexDisplay.textContent = formatCOP(BUDGET_DATA.totalCapex);
+      capexDisplay.classList.remove('value-pending');
+    }
+    if (opexDisplay) {
+      opexDisplay.textContent = formatCOP(BUDGET_DATA.totalOpexMonthly);
+      opexDisplay.classList.remove('value-pending');
+    }
+    if (yearOneDisplay) {
+      yearOneDisplay.textContent = formatCOP(BUDGET_DATA.totalYearOne);
+      yearOneDisplay.classList.remove('value-pending');
+    }
 
-    if (hasCapexNumeric && capexDisplay) {
-      capexDisplay.textContent = formatCurrency(totalCapex);
+    // 2. Resumen Consolidado debajo de la Tabla
+    const summaryTechTotal = document.getElementById('summaryTechTotal');
+    const summaryTechSub = document.getElementById('summaryTechSub');
+    if (summaryTechTotal) summaryTechTotal.textContent = formatCOPFull(BUDGET_DATA.tech.yearOneTotal);
+    if (summaryTechSub) {
+      summaryTechSub.textContent = `CAPEX: ${formatCOP(BUDGET_DATA.tech.capex)} · OPEX anual: ${formatCOP(BUDGET_DATA.tech.opexAnnual)}`;
     }
-    if (hasOpexNumeric && opexDisplay) {
-      opexDisplay.textContent = formatCurrency(totalOpexMonthly) + ' / mes';
+
+    const summaryEnvTotal = document.getElementById('summaryEnvTotal');
+    const summaryEnvSub = document.getElementById('summaryEnvSub');
+    if (summaryEnvTotal) summaryEnvTotal.textContent = formatCOPFull(BUDGET_DATA.env.yearOneTotal);
+    if (summaryEnvSub) {
+      summaryEnvSub.textContent = `CAPEX: ${formatCOP(BUDGET_DATA.env.capex)} · OPEX anual: ${formatCOP(BUDGET_DATA.env.opexAnnual)}`;
     }
-    if ((hasCapexNumeric || hasOpexNumeric) && yearOneDisplay) {
-      const yearOneTotal = totalCapex + (totalOpexMonthly * 12);
-      yearOneDisplay.textContent = formatCurrency(yearOneTotal);
+
+    const summaryOpsTotal = document.getElementById('summaryOpsTotal');
+    const summaryOpsSub = document.getElementById('summaryOpsSub');
+    if (summaryOpsTotal) summaryOpsTotal.textContent = formatCOPFull(BUDGET_DATA.ops.yearOneTotal);
+    if (summaryOpsSub) {
+      summaryOpsSub.textContent = `CAPEX: ${formatCOP(BUDGET_DATA.ops.capex)} · OPEX anual: ${formatCOP(BUDGET_DATA.ops.opexAnnual)}`;
+    }
+
+    const summaryCapexTotal = document.getElementById('summaryCapexTotal');
+    if (summaryCapexTotal) summaryCapexTotal.textContent = formatCOPFull(BUDGET_DATA.totalCapex);
+
+    const summaryYearOneTotal = document.getElementById('summaryYearOneTotal');
+    const summaryYearOneSub = document.getElementById('summaryYearOneSub');
+    if (summaryYearOneTotal) summaryYearOneTotal.textContent = formatCOPFull(BUDGET_DATA.totalYearOne);
+    if (summaryYearOneSub) {
+      summaryYearOneSub.textContent = `CAPEX (${formatCOP(BUDGET_DATA.totalCapex)}) + OPEX anual (${formatCOP(BUDGET_DATA.totalOpexAnnual)})`;
+    }
+
+    // 3. Gráfico de Barras Horizontales Comparativas (CAPEX vs OPEX anual)
+    ['tech', 'env', 'ops'].forEach(stratKey => {
+      const strat = BUDGET_DATA[stratKey];
+      const barItem = document.querySelector(`.hbar-item[data-strategy="${stratKey}"]`);
+      if (!barItem) return;
+
+      const capexBar = barItem.querySelector('.capex-bar');
+      const opexBar = barItem.querySelector('.opex-bar');
+      const badge = barItem.querySelector('.hbar-status-badge span');
+      const subtext = barItem.querySelector('.hbar-subtext');
+
+      if (capexBar) {
+        capexBar.style.width = `${strat.capexPercent}%`;
+        capexBar.setAttribute('title', `CAPEX: ${formatCOPFull(strat.capex)} (${strat.capexPercent}%)`);
+      }
+      if (opexBar) {
+        opexBar.style.width = `${strat.opexPercent}%`;
+        opexBar.setAttribute('title', `OPEX Anual: ${formatCOPFull(strat.opexAnnual)} (${strat.opexPercent}%)`);
+      }
+      if (badge) {
+        badge.textContent = `${strat.capexPercent}% / ${strat.opexPercent}%`;
+      }
+      if (subtext) {
+        subtext.textContent = `${formatCOP(strat.capex)} (CAPEX) / ${formatCOP(strat.opexAnnual)} (OPEX anual)`;
+      }
+    });
+
+    // 4. Conexión del valor CAPEX en el Tablero de KPIs
+    const kpiCapexVal = document.getElementById('kpiCapexVal');
+    if (kpiCapexVal) {
+      kpiCapexVal.textContent = formatCOP(BUDGET_DATA.totalCapex);
     }
   }
 
-  // Inicializar cálculo si existen datos
+  // Inicializar sincronización del módulo presupuestal
   calculateBudgetSummary();
+
+  // --- Módulo de KPIs: Sistema Dinámico de Registro y Cálculo del Piloto ---
+  function initKpiDynamicSystem() {
+    const toggleBtn = document.getElementById('toggleKpiLoggerBtn');
+    const drawer = document.getElementById('kpiLoggerDrawer');
+    if (toggleBtn && drawer) {
+      toggleBtn.addEventListener('click', () => {
+        const isHidden = drawer.style.display === 'none' || drawer.style.display === '';
+        drawer.style.display = isHidden ? 'block' : 'none';
+        toggleBtn.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+      });
+    }
+
+    const fefoValid = document.getElementById('fefoValidCount');
+    const fefoTotal = document.getElementById('fefoTotalCount');
+    const fefoCalcDisplay = document.getElementById('fefoCalculatedVal');
+
+    const invValid = document.getElementById('invValidUnits');
+    const invTotal = document.getElementById('invTotalUnits');
+    const invCalcDisplay = document.getElementById('invCalculatedVal');
+
+    const stayRecorded = document.getElementById('stayRecordedMin');
+
+    function computeFefo() {
+      if (!fefoValid || !fefoTotal || !fefoCalcDisplay) return null;
+      const valid = parseFloat(fefoValid.value);
+      const total = parseFloat(fefoTotal.value);
+      if (!isNaN(valid) && !isNaN(total) && total > 0 && valid <= total) {
+        const pct = (valid / total) * 100;
+        fefoCalcDisplay.textContent = `${pct.toFixed(1)} %`;
+        return pct;
+      }
+      fefoCalcDisplay.textContent = 'Sin calcular';
+      return null;
+    }
+
+    function computeInv() {
+      if (!invValid || !invTotal || !invCalcDisplay) return null;
+      const valid = parseFloat(invValid.value);
+      const total = parseFloat(invTotal.value);
+      if (!isNaN(valid) && !isNaN(total) && total > 0 && valid <= total) {
+        const pct = (valid / total) * 100;
+        invCalcDisplay.textContent = `${pct.toFixed(1)} %`;
+        return pct;
+      }
+      invCalcDisplay.textContent = 'Sin calcular';
+      return null;
+    }
+
+    if (fefoValid && fefoTotal) {
+      fefoValid.addEventListener('input', computeFefo);
+      fefoTotal.addEventListener('input', computeFefo);
+    }
+
+    if (invValid && invTotal) {
+      invValid.addEventListener('input', computeInv);
+      invTotal.addEventListener('input', computeInv);
+    }
+
+    const applyBtn = document.getElementById('applyKpiDataBtn');
+    const resetBtn = document.getElementById('resetKpiDataBtn');
+
+    if (applyBtn) {
+      applyBtn.addEventListener('click', () => {
+        const fefoPct = computeFefo();
+        const invPct = computeInv();
+
+        const kpiFefoVal = document.getElementById('kpiFefoVal');
+        const kpiFefoDesc = document.getElementById('kpiFefoDesc');
+        const badgeFefo = document.getElementById('badgeFefo');
+        if (fefoPct !== null && kpiFefoVal && badgeFefo) {
+          kpiFefoVal.textContent = `${fefoPct.toFixed(1)} %`;
+          kpiFefoVal.classList.remove('val-pending');
+          if (kpiFefoDesc) {
+            kpiFefoDesc.textContent = 'Resultado real (Meta: 100 %)';
+          }
+          badgeFefo.textContent = `Medido (${fefoPct.toFixed(1)} %)`;
+          badgeFefo.className = 'status-pill pill-measured';
+        }
+
+        const kpiInvVal = document.getElementById('kpiInventoryAccuracyVal');
+        const kpiInvDesc = document.getElementById('kpiInventoryAccuracyDesc');
+        const badgeInv = document.getElementById('badgeInventoryAccuracy');
+        if (invPct !== null && kpiInvVal && badgeInv) {
+          kpiInvVal.textContent = `${invPct.toFixed(1)} %`;
+          kpiInvVal.classList.remove('val-pending');
+          if (kpiInvDesc) {
+            kpiInvDesc.textContent = 'Resultado real (Meta: ≥98 %)';
+          }
+          badgeInv.textContent = `Medido (${invPct.toFixed(1)} %)`;
+          badgeInv.className = 'status-pill pill-measured';
+        }
+
+        const kpiStayAvg = document.getElementById('kpiStayAvgVal');
+        if (stayRecorded && stayRecorded.value.trim() !== '' && kpiStayAvg) {
+          const stayVal = parseFloat(stayRecorded.value);
+          if (!isNaN(stayVal) && stayVal > 0) {
+            kpiStayAvg.textContent = `${stayVal.toFixed(2).replace('.', ',')} min`;
+          }
+        }
+      });
+    }
+
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        if (fefoValid) fefoValid.value = '';
+        if (fefoTotal) fefoTotal.value = '';
+        if (fefoCalcDisplay) fefoCalcDisplay.textContent = 'Sin calcular';
+
+        if (invValid) invValid.value = '';
+        if (invTotal) invTotal.value = '';
+        if (invCalcDisplay) invCalcDisplay.textContent = 'Sin calcular';
+
+        if (stayRecorded) stayRecorded.value = '';
+
+        const kpiFefoVal = document.getElementById('kpiFefoVal');
+        const kpiFefoDesc = document.getElementById('kpiFefoDesc');
+        const badgeFefo = document.getElementById('badgeFefo');
+        if (kpiFefoVal && badgeFefo) {
+          kpiFefoVal.textContent = '100 %';
+          kpiFefoVal.classList.add('val-pending');
+          if (kpiFefoDesc) kpiFefoDesc.textContent = 'Meta propuesta';
+          badgeFefo.textContent = 'Resultado por medir';
+          badgeFefo.className = 'status-pill pill-pending';
+        }
+
+        const kpiInvVal = document.getElementById('kpiInventoryAccuracyVal');
+        const kpiInvDesc = document.getElementById('kpiInventoryAccuracyDesc');
+        const badgeInv = document.getElementById('badgeInventoryAccuracy');
+        if (kpiInvVal && badgeInv) {
+          kpiInvVal.textContent = '≥98 %';
+          kpiInvVal.classList.add('val-pending');
+          if (kpiInvDesc) kpiInvDesc.textContent = 'Meta propuesta';
+          badgeInv.textContent = 'Resultado por medir';
+          badgeInv.className = 'status-pill pill-pending';
+        }
+
+        const kpiStayAvg = document.getElementById('kpiStayAvgVal');
+        if (kpiStayAvg) {
+          kpiStayAvg.textContent = '5,14 min';
+        }
+      });
+    }
+  }
+
+  initKpiDynamicSystem();
+
+  // --- Módulo: Matriz Dinámica de Riesgos Operacionales ---
+  function initRiskMatrixDynamicSystem() {
+    const risks = {
+      R1: { prob: 4, impact: 5, name: 'Acumulación prolongada y deterioro del producto' },
+      R2: { prob: 3, impact: 4, name: 'Saturación de capacidad de los racks' },
+      R3: { prob: 3, impact: 3, name: 'Errores de ubicación e identificación' }
+    };
+
+    function getLevelInfo(score) {
+      if (score >= 17) {
+        return { key: 'critico', label: 'Crítico', pillClass: 'badge-critico', idClass: 'id-critico' };
+      } else if (score >= 10) {
+        return { key: 'alto', label: 'Alto', pillClass: 'badge-alto', idClass: 'id-alto' };
+      } else if (score >= 6) {
+        return { key: 'moderado', label: 'Moderado', pillClass: 'badge-moderado', idClass: 'id-moderado' };
+      } else if (score >= 3) {
+        return { key: 'bajo', label: 'Bajo', pillClass: 'badge-bajo', idClass: 'id-bajo' };
+      } else {
+        return { key: 'muy-bajo', label: 'Muy bajo', pillClass: 'badge-muy-bajo', idClass: 'id-muy-bajo' };
+      }
+    }
+
+    function updateRiskUI(riskId) {
+      const risk = risks[riskId];
+      if (!risk) return;
+
+      const score = risk.prob * risk.impact;
+      const levelInfo = getLevelInfo(score);
+
+      // 1. Actualizar Badge de Nivel en la tabla
+      const badge = document.getElementById(`riskBadge-${riskId}`);
+      if (badge) {
+        badge.textContent = `${levelInfo.label} (${score})`;
+        badge.className = `risk-level-badge ${levelInfo.pillClass}`;
+      }
+
+      // 2. Actualizar ID Pill en la tabla
+      const idPill = document.getElementById(`riskIdPill-${riskId}`);
+      if (idPill) {
+        idPill.className = `risk-id-pill ${levelInfo.idClass}`;
+      }
+
+      // 3. Mover Pin en el Mapa de Calor
+      let pin = document.getElementById(`pin-${riskId}`);
+      if (!pin) {
+        pin = document.createElement('span');
+        pin.id = `pin-${riskId}`;
+        pin.className = 'hm-risk-pin';
+        pin.textContent = riskId;
+      }
+      pin.setAttribute('title', `${riskId}: ${risk.name} (P=${risk.prob}, I=${risk.impact}, Score=${score})`);
+
+      const targetCell = document.querySelector(`.hm-cell[data-row="${risk.prob}"][data-col="${risk.impact}"]`);
+      if (targetCell) {
+        targetCell.appendChild(pin);
+      }
+
+      // 4. Actualizar Resumen Numérico por Categoría
+      updateSummaryCounts();
+    }
+
+    function updateSummaryCounts() {
+      const counts = {
+        critico: 0,
+        alto: 0,
+        moderado: 0,
+        bajo: 0,
+        'muy-bajo': 0
+      };
+
+      Object.keys(risks).forEach(id => {
+        const r = risks[id];
+        const score = r.prob * r.impact;
+        const info = getLevelInfo(score);
+        counts[info.key]++;
+      });
+
+      const countCrit = document.getElementById('summaryCountCritico');
+      const countAlt = document.getElementById('summaryCountAlto');
+      const countMod = document.getElementById('summaryCountModerado');
+      const countBaj = document.getElementById('summaryCountBajo');
+      const countMuyBaj = document.getElementById('summaryCountMuyBajo');
+      const totalDisplay = document.getElementById('summaryTotalRisks');
+
+      if (countCrit) countCrit.textContent = counts.critico;
+      if (countAlt) countAlt.textContent = counts.alto;
+      if (countMod) countMod.textContent = counts.moderado;
+      if (countBaj) countBaj.textContent = counts.bajo;
+      if (countMuyBaj) countMuyBaj.textContent = counts['muy-bajo'];
+      if (totalDisplay) totalDisplay.textContent = Object.keys(risks).length;
+    }
+
+    // Escuchar cambios en los selectores de la tabla
+    const selects = document.querySelectorAll('.risk-select-score');
+    selects.forEach(sel => {
+      sel.addEventListener('change', (e) => {
+        const riskId = e.target.getAttribute('data-risk-id');
+        const param = e.target.getAttribute('data-param');
+        const val = parseInt(e.target.value, 10);
+
+        if (risks[riskId] && (param === 'prob' || param === 'impact')) {
+          risks[riskId][param] = val;
+          updateRiskUI(riskId);
+        }
+      });
+    });
+
+    // Botón de restablecimiento
+    const resetBtn = document.getElementById('resetRiskMatrixBtn');
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        risks.R1.prob = 4;
+        risks.R1.impact = 5;
+
+        risks.R2.prob = 3;
+        risks.R2.impact = 4;
+
+        risks.R3.prob = 3;
+        risks.R3.impact = 3;
+
+        document.querySelectorAll('.risk-select-score').forEach(sel => {
+          const rId = sel.getAttribute('data-risk-id');
+          const p = sel.getAttribute('data-param');
+          if (risks[rId] && risks[rId][p]) {
+            sel.value = String(risks[rId][p]);
+          }
+        });
+
+        Object.keys(risks).forEach(updateRiskUI);
+      });
+    }
+
+    // Inicializar visualización de riesgos
+    Object.keys(risks).forEach(updateRiskUI);
+  }
+
+  initRiskMatrixDynamicSystem();
 
   // --- Manejo del Hash Inicial y Botones Atrás/Adelante del Navegador ---
   function handleUrlHash() {

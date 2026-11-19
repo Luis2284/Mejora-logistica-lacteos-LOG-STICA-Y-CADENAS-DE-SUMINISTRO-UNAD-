@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88 64" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Filtros de sombra y resplandor -->
+    <filter id="env-blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+    <filter id="env-soft" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="1"/>
+    </filter>
+
+    <!-- PLÁSTICO VERDE INDUSTRIAL - CARAS DE LA CANASTILLA -->
+    <!-- Borde superior / marco -->
+    <linearGradient id="env-rim-top" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4ade80"/>
+      <stop offset="25%" stop-color="#22c55e"/>
+      <stop offset="70%" stop-color="#16a34a"/>
+      <stop offset="100%" stop-color="#15803d"/>
+    </linearGradient>
+
+    <!-- Cara frontal de la canastilla (iluminada) -->
+    <linearGradient id="env-front-face" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="40%" stop-color="#16a34a"/>
+      <stop offset="100%" stop-color="#14532d"/>
+    </linearGradient>
+
+    <!-- Cara lateral derecha (sombra propia perspectiva 3D) -->
+    <linearGradient id="env-side-face" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#15803d"/>
+      <stop offset="50%" stop-color="#14532d"/>
+      <stop offset="100%" stop-color="#052e16"/>
+    </linearGradient>
+
+    <!-- Interior en sombra de la canastilla -->
+    <linearGradient id="env-interior" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#052e16"/>
+      <stop offset="60%" stop-color="#0a3d20"/>
+      <stop offset="100%" stop-color="#062815"/>
+    </linearGradient>
+
+    <!-- Nervaduras y celosías plásticas -->
+    <linearGradient id="env-grid-bar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4ade80"/>
+      <stop offset="100%" stop-color="#15803d"/>
+    </linearGradient>
+
+    <!-- HOJAS BOTÁNICAS -->
+    <linearGradient id="env-leaf-main" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#86efac"/>
+      <stop offset="40%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#15803d"/>
+    </linearGradient>
+    <linearGradient id="env-leaf-sec" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4ade80"/>
+      <stop offset="50%" stop-color="#16a34a"/>
+      <stop offset="100%" stop-color="#14532d"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ================= SOMBRA DE CONTACTO BASE ================= -->
+  <ellipse cx="37" cy="57" rx="31" ry="4" fill="#052e16" opacity="0.28" filter="url(#env-blur)"/>
+  <ellipse cx="68" cy="56" rx="14" ry="3" fill="#052e16" opacity="0.2" filter="url(#env-blur)"/>
+  <ellipse cx="36" cy="57" rx="26" ry="2.2" fill="#021f0e" opacity="0.25"/>
+
+  <!-- ================= CANASTILLA PLÁSTICA REUTILIZABLE 3D ================= -->
+  <!-- Perspectiva isométrica suave: frente [X: 8 a 50], lateral derecha [X: 50 a 64] -->
+  <g>
+    <!-- Hueco interior (visible por la boca superior) -->
+    <polygon points="12,18 48,15 62,20 26,23" fill="url(#env-interior)"/>
+
+    <!-- Fondo de las perforaciones de la cara frontal (se ve oscuridad del interior) -->
+    <polygon points="10,21 48,17 48,51 10,54" fill="#062815"/>
+    <!-- Fondo perforaciones cara lateral -->
+    <polygon points="48,17 62,22 62,47 48,51" fill="#031a0d"/>
+
+    <!-- CARA LATERAL DERECHA (Perspectiva y sombra) -->
+    <!-- Marco y superficie sólida lateral -->
+    <polygon points="48,17 62,22 62,47 48,51" fill="url(#env-side-face)"/>
+
+    <!-- Asa o manija lateral derecha -->
+    <path d="M 52,28 L 58,30 C 59,30.5 59,32 58,32.5 L 52,30.5 C 51,30 51,28.5 52,28 Z" fill="#062815" stroke="#16a34a" stroke-width="0.6"/>
+
+    <!-- Nervaduras estructurales del lateral -->
+    <line x1="51" y1="21" x2="51" y2="49" stroke="#16a34a" stroke-width="1.2"/>
+    <line x1="55" y1="22.5" x2="55" y2="48" stroke="#16a34a" stroke-width="1.2"/>
+    <line x1="59" y1="24" x2="59" y2="46.5" stroke="#14532d" stroke-width="1.2"/>
+    <line x1="48" y1="36" x2="62" y2="34" stroke="#16a34a" stroke-width="1"/>
+    <line x1="48" y1="44" x2="62" y2="41" stroke="#14532d" stroke-width="1"/>
+
+    <!-- CARA FRONTAL (Iluminada y en primer plano) -->
+    <!-- Marco perimetral frontal -->
+    <polygon points="10,21 48,17 48,51 10,54" fill="url(#env-front-face)"/>
+
+    <!-- Hendidura / manija central frontal -->
+    <path d="M 23,24 L 35,22.8 C 36.5,22.6 37,24 36.5,25.2 L 24.5,26.4 C 23,26.6 22,25.2 23,24 Z" fill="#052e16" stroke="#4ade80" stroke-width="0.6"/>
+
+    <!-- Celosías / Rejillas de ventilación perimetral (característica lechera) -->
+    <!-- Fila 1 de perforaciones -->
+    <g fill="#073019">
+      <rect x="13" y="28.5" width="4.5" height="4.5" rx="0.8"/>
+      <rect x="19.5" y="28" width="4.5" height="4.5" rx="0.8"/>
+      <rect x="34" y="26.8" width="4.5" height="4.5" rx="0.8"/>
+      <rect x="40.5" y="26.2" width="4.5" height="4.5" rx="0.8"/>
+
+      <!-- Fila 2 de perforaciones -->
+      <rect x="13" y="35" width="4.5" height="5" rx="0.8"/>
+      <rect x="19.5" y="34.5" width="4.5" height="5" rx="0.8"/>
+      <rect x="34" y="33.2" width="4.5" height="5" rx="0.8"/>
+      <rect x="40.5" y="32.6" width="4.5" height="5" rx="0.8"/>
+
+      <!-- Fila 3 de perforaciones -->
+      <rect x="13" y="42" width="4.5" height="5.5" rx="0.8"/>
+      <rect x="19.5" y="41.5" width="4.5" height="5.5" rx="0.8"/>
+      <rect x="34" y="40" width="4.5" height="5.5" rx="0.8"/>
+      <rect x="40.5" y="39.4" width="4.5" height="5.5" rx="0.8"/>
+    </g>
+
+    <!-- Nervaduras verticales frontales (relieve plástico 3D) -->
+    <line x1="18.5" y1="21.5" x2="18.5" y2="52.5" stroke="#4ade80" stroke-width="1.2" opacity="0.85"/>
+    <line x1="25" y1="21" x2="25" y2="52" stroke="#4ade80" stroke-width="1.2" opacity="0.85"/>
+    <line x1="33" y1="20" x2="33" y2="51" stroke="#4ade80" stroke-width="1.2" opacity="0.85"/>
+    <line x1="39.5" y1="19.5" x2="39.5" y2="50.5" stroke="#4ade80" stroke-width="1.2" opacity="0.85"/>
+
+    <!-- Nervadura horizontal media frontal -->
+    <line x1="10" y1="34" x2="48" y2="30" stroke="#4ade80" stroke-width="1.3" opacity="0.9"/>
+    <line x1="10" y1="41" x2="48" y2="37" stroke="#16a34a" stroke-width="1.3"/>
+
+    <!-- Zócalo / base inferior reforzada -->
+    <polygon points="10,50 48,46.5 48,51 10,54" fill="#14532d"/>
+    <polygon points="48,46.5 62,43.5 62,47 48,51" fill="#052e16"/>
+
+    <!-- REBORDE SUPERIOR ROBUSTO (BOCA DE ENCAJE APILABLE) -->
+    <polygon points="9,19 12,17 48,13.5 49,15.5 10,21" fill="url(#env-rim-top)" stroke="#86efac" stroke-width="0.5"/>
+    <polygon points="48,13.5 63,18 62,22 49,15.5" fill="#15803d" stroke="#4ade80" stroke-width="0.5"/>
+    <!-- Esquinas reforzadas -->
+    <rect x="9.5" y="19" width="3" height="34" fill="#22c55e" opacity="0.4"/>
+    <rect x="46.5" y="16" width="2.5" height="34" fill="#16a34a" opacity="0.5"/>
+
+    <!-- ================= SÍMBOLO DE RECICLAJE / ECONOMÍA CIRCULAR (BLANCO) ================= -->
+    <!-- Ubicado en el panel central de la canastilla -->
+    <g transform="translate(29, 36) scale(0.72)">
+      <!-- Círculo sutil de respaldo -->
+      <circle cx="0" cy="0" r="8.5" fill="#14532d" opacity="0.75"/>
+      <circle cx="0" cy="0" r="7.5" fill="#16a34a" opacity="0.85"/>
+
+      <!-- 3 Flechas en bucle continuo (Möbius Recycling Loop) -->
+      <!-- Flecha 1 (Superior izquierda hacia abajo) -->
+      <path d="M -1,-6 L 2,-6 C 4,-6 5.5,-4.5 5.5,-2.5 L 5.5,-1" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+      <polygon points="7.5,-2 5.5,0.8 3.5,-2" fill="#ffffff"/>
+
+      <!-- Flecha 2 (Derecha hacia abajo e izquierda) -->
+      <path d="M 4.5,2 L 3,4.5 C 1.5,6 -0.5,6 -2.5,5 L -3.5,4.5" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+      <polygon points="-3,6.8 -5.5,4 -2,3.2" fill="#ffffff"/>
+
+      <!-- Flecha 3 (Izquierda hacia arriba y derecha) -->
+      <path d="M -4.5,0.5 L -3.5,-2 C -2,-4.5 0,-5.5 2,-5" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+      <polygon points="0.8,-7.2 2.8,-4.2 0,-3.5" fill="#ffffff"/>
+    </g>
+  </g>
+
+  <!-- ================= HOJAS VERDES DISCRETAS (NATURALES Y ECOLÓGICAS) ================= -->
+  <!-- Rama y hojas orgánicas emergiendo al costado derecho -->
+  <g transform="translate(58, 26)">
+    <!-- Tallo suave -->
+    <path d="M 0,22 Q 4,14 10,8" stroke="#15803d" stroke-width="1.4" stroke-linecap="round" fill="none"/>
+
+    <!-- Hoja principal grande superior -->
+    <g transform="translate(10, 8) rotate(-22)">
+      <!-- Silueta de la hoja -->
+      <path d="M 0,0 C 7,-4 14,-3 19,-1 C 18,6 12,11 0,0 Z" fill="url(#env-leaf-main)" filter="url(#env-soft)"/>
+      <path d="M 0,0 C 7,-4 14,-3 19,-1 C 18,6 12,11 0,0 Z" fill="url(#env-leaf-main)" stroke="#15803d" stroke-width="0.5"/>
+      <!-- Nervadura central -->
+      <path d="M 0,0 Q 10,-1 19,-1" stroke="#bbf7d0" stroke-width="0.8" stroke-linecap="round" fill="none"/>
+      <!-- Nervaduras secundarias -->
+      <path d="M 5,-0.5 Q 7,-2.5 9,-2.8" stroke="#86efac" stroke-width="0.5" stroke-linecap="round"/>
+      <path d="M 9,-0.8 Q 12,-2.5 14,-2.2" stroke="#86efac" stroke-width="0.5" stroke-linecap="round"/>
+      <path d="M 6,0.2 Q 9,2.5 12,3" stroke="#86efac" stroke-width="0.5" stroke-linecap="round"/>
+    </g>
+
+    <!-- Hoja secundaria inferior -->
+    <g transform="translate(6, 17) rotate(15)">
+      <path d="M 0,0 C 6,-3 11,-2 15,0 C 13,5 9,9 0,0 Z" fill="url(#env-leaf-sec)"/>
+      <path d="M 0,0 C 6,-3 11,-2 15,0 C 13,5 9,9 0,0 Z" stroke="#14532d" stroke-width="0.5"/>
+      <path d="M 0,0 Q 8,-0.5 15,0" stroke="#86efac" stroke-width="0.7" stroke-linecap="round" fill="none"/>
+    </g>
+
+    <!-- Pequeño brote tierno -->
+    <path d="M 2,12 C 4,9 7,9 9,10 C 8,13 5,14 2,12 Z" fill="#86efac" opacity="0.9"/>
+  </g>
+</svg>

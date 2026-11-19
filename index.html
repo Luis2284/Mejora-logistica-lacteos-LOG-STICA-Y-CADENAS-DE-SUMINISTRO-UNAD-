@@ -300,9 +300,9 @@
           <span class="section-tag">Análisis Situacional</span>
           <h2 class="section-main-heading">Diagnóstico del Almacenamiento y Manipulación</h2>
           <p class="section-main-subheading">
-            Análisis de las posibles fallas relacionadas con la capacidad, los tiempos de permanencia y la organización
-            de cajas de queso y yogur durante su almacenamiento previo al despacho, en la cadena de suministro estudiada
-            en Becerril, Cesar.
+            Análisis de las posibles fallas relacionadas con la capacidad de almacenamiento, los tiempos de permanencia y
+            la organización y manipulación de cajas de queso y yogur durante su almacenamiento previo al despacho, en la
+            cadena de suministro de leche y derivados lácteos estudiada en Becerril, Cesar.
           </p>
         </div>
 
@@ -317,6 +317,12 @@
             oportunidades de mejora en la distribución del espacio, la rotación del inventario y el control de las
             operaciones.
           </p>
+          <p class="diag-context-text">
+            Como antecedente del diagnóstico, el análisis de sensibilidad desarrollado en FlexSim durante la Tarea 3 mostró
+            que, al aumentar de 5 a 10 minutos el tiempo mínimo de permanencia en el Rack Yogur 1, el tiempo promedio
+            simulado pasó de 5,14 a 10,14 minutos. Este resultado permite analizar el efecto de una mayor permanencia sobre
+            el almacenamiento, pero corresponde exclusivamente al modelo de simulación y no a mediciones de una empresa real.
+          </p>
         </div>
 
         <!-- Tres Tarjetas de Fallas Identificadas -->
@@ -327,7 +333,7 @@
             <div>
               <div class="failure-card-header">
                 <div class="failure-icon-wrap">
-                  <img src="assets/icons/operations.svg" alt="Icono Capacidad">
+                  <img src="assets/icons/rack-capacidad.svg" alt="Ilustración 3D estantería industrial con cajas">
                 </div>
                 <span class="failure-tag">Capacidad</span>
               </div>
@@ -338,9 +344,9 @@
               </p>
             </div>
             <ul class="failure-detail-list">
-              <li>Capacidad limitada ante aumentos de recepción.</li>
+              <li>Posibles limitaciones de capacidad ante aumentos de recepción.</li>
               <li>Posible acumulación de cajas.</li>
-              <li>Dificultades para aprovechar el espacio disponible.</li>
+              <li>Riesgo de aprovechamiento insuficiente del espacio disponible.</li>
             </ul>
           </article>
 
@@ -349,7 +355,7 @@
             <div>
               <div class="failure-card-header">
                 <div class="failure-icon-wrap">
-                  <img src="assets/icons/calendar.svg" alt="Icono Permanencia">
+                  <img src="assets/icons/cronometro-permanencia.svg" alt="Ilustración 3D cronómetro metálico con cajas">
                 </div>
                 <span class="failure-tag">Permanencia</span>
               </div>
@@ -360,7 +366,7 @@
               </p>
             </div>
             <ul class="failure-detail-list">
-              <li>Control insuficiente de tiempos de almacenamiento.</li>
+              <li>Posible insuficiencia en el control de tiempos de almacenamiento.</li>
               <li>Posibles dificultades de rotación.</li>
               <li>Necesidad de seguimiento de lotes y vencimientos.</li>
             </ul>
@@ -371,7 +377,7 @@
             <div>
               <div class="failure-card-header">
                 <div class="failure-icon-wrap">
-                  <img src="assets/icons/circular.svg" alt="Icono Organización">
+                  <img src="assets/icons/scanner-organizacion.svg" alt="Ilustración 3D lector de códigos de barras con haz láser">
                 </div>
                 <span class="failure-tag">Organización</span>
               </div>
@@ -382,9 +388,9 @@
               </p>
             </div>
             <ul class="failure-detail-list">
-              <li>Ubicación inadecuada de cajas en los racks.</li>
+              <li>Posible ubicación inadecuada de cajas en los racks.</li>
               <li>Posibles errores de identificación y despacho.</li>
-              <li>Coordinación insuficiente entre áreas operativas.</li>
+              <li>Posibles dificultades de coordinación entre áreas operativas.</li>
             </ul>
           </article>
 
@@ -436,8 +442,9 @@
           <!-- Nota Académica Discreta -->
           <div class="ishikawa-academic-note">
             <p>
-              «Diagrama de Ishikawa elaborado a partir de las posibles fallas identificadas en la Tarea 3 y ajustado
-              para delimitar la problemática de almacenamiento y manipulación de queso y yogur».
+              «Diagrama de Ishikawa elaborado a partir de las tres posibles fallas identificadas en la Tarea 3. Las causas
+              representadas constituyen hipótesis de análisis para orientar la propuesta de mejora y no deben
+              interpretarse como hallazgos verificados en una empresa real».
             </p>
           </div>
         </article>
@@ -465,8 +472,9 @@
           <span class="section-tag">Propuesta de Solución</span>
           <h2 class="section-main-heading">Estrategias y Tendencias Logísticas</h2>
           <p class="section-main-subheading">
-            Tres pilares articulados para modernizar la manipulación de lácteos perecederos, garantizando inocuidad,
-            eficiencia en costos y reducción de impacto ambiental.
+            Tres tendencias logísticas orientadas a mejorar el control del inventario, optimizar los tiempos de permanencia
+            y fortalecer la organización del almacenamiento de queso y yogur, incorporando criterios de sostenibilidad y
+            eficiencia operacional.
           </p>
         </div>
 
@@ -475,131 +483,109 @@
 
           <!-- Pilar 1: Tecnológica -->
           <article class="strategy-full-card card-tech">
-            <div>
-              <div class="strategy-header-top">
-                <div class="strategy-icon-box">
-                  <img src="assets/icons/tech.svg" alt="Pilar Tecnológico">
-                </div>
-                <span class="strategy-pillar-badge">Tendencia Tecnológica</span>
+            <div class="strategy-header-top">
+              <div class="strategy-icon-box">
+                <img src="assets/icons/estrategia-tecnologica.svg" alt="Ilustración 3D digitalización y trazabilidad del inventario">
               </div>
-              <h3 class="strategy-card-title">Digitalización y Trazabilidad del Inventario</h3>
-              <p class="strategy-card-desc">
-                Implementación de dispositivos de registro continuo de temperatura y humedad, asociados a etiquetas de
-                identificación por lote para trazabilidad de punta a punta.
-              </p>
-              <ul class="strategy-keypoints-list">
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                  Dataloggers y sensores de frío en tiempo real.
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                  Códigos DataMatrix / QR para identificación de lote.
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                  Sistema WMS simplificado para control de entradas/salidas.
-                </li>
-              </ul>
+              <span class="strategy-pillar-badge">Tendencia Tecnológica</span>
             </div>
-            <div>
-              <button class="strategy-expand-action" type="button">
-                <span>[ Ver detalle tecnológico · Fase 2 ]</span>
-                <span>→</span>
-              </button>
-            </div>
+            <h3 class="strategy-card-title">Digitalización y Trazabilidad del Inventario</h3>
+            <p class="strategy-card-desc">
+              Implementación de herramientas digitales para identificar y registrar cajas y lotes de queso y yogur durante
+              su recepción, almacenamiento y despacho, facilitando el seguimiento del inventario y los tiempos de permanencia.
+            </p>
+            <ul class="strategy-keypoints-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                Identificación de cajas y lotes mediante códigos de barras o QR.
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                Registro digital de entradas, ubicaciones y salidas de productos.
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                Seguimiento de tiempos de permanencia mediante un sistema de inventario simplificado.
+              </li>
+            </ul>
           </article>
 
           <!-- Pilar 2: Ambiental -->
           <article class="strategy-full-card card-env">
-            <div>
-              <div class="strategy-header-top">
-                <div class="strategy-icon-box">
-                  <img src="assets/icons/circular.svg" alt="Pilar Ambiental">
-                </div>
-                <span class="strategy-pillar-badge">Tendencia Ambiental</span>
+            <div class="strategy-header-top">
+              <div class="strategy-icon-box">
+                <img src="assets/icons/estrategia-ambiental.svg" alt="Ilustración 3D economía circular y embalajes reutilizables">
               </div>
-              <h3 class="strategy-card-title">Economía Circular y Embalajes Reutilizables</h3>
-              <p class="strategy-card-desc">
-                Transición de cajas de un solo uso hacia contenedores plásticos reutilizables (RPC) con ventilación
-                perimetral para optimizar el flujo térmico y reducir residuos.
-              </p>
-              <ul class="strategy-keypoints-list">
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                  Canastillas plásticas sanitarias colapsables y lavables.
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                  Reducción de huella de carbono y residuos de embalaje.
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                  Diseño que favorece la convección del frío en estibas.
-                </li>
-              </ul>
+              <span class="strategy-pillar-badge">Tendencia Ambiental</span>
             </div>
-            <div>
-              <button class="strategy-expand-action" type="button">
-                <span>[ Ver detalle ambiental · Fase 2 ]</span>
-                <span>→</span>
-              </button>
-            </div>
+            <h3 class="strategy-card-title">Economía Circular y Embalajes Reutilizables</h3>
+            <p class="strategy-card-desc">
+              Propuesta de utilización de canastillas plásticas reutilizables, aptas para el manejo de productos lácteos
+              empacados, con el propósito de disminuir la dependencia de embalajes desechables y favorecer una organización más
+              eficiente del almacenamiento.
+            </p>
+            <ul class="strategy-keypoints-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                Canastillas reutilizables, resistentes y de fácil limpieza.
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                Estandarización de dimensiones para aprovechar mejor el espacio de almacenamiento.
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                Procedimientos de limpieza, reutilización y control de los embalajes.
+              </li>
+            </ul>
           </article>
 
           <!-- Pilar 3: Operacional -->
           <article class="strategy-full-card card-ops">
-            <div>
-              <div class="strategy-header-top">
-                <div class="strategy-icon-box">
-                  <img src="assets/icons/operations.svg" alt="Pilar Operacional">
-                </div>
-                <span class="strategy-pillar-badge">Tendencia Operacional</span>
+            <div class="strategy-header-top">
+              <div class="strategy-icon-box">
+                <img src="assets/icons/estrategia-operacional.svg" alt="Ilustración 3D almacenamiento inteligente y rotación FIFO / FEFO">
               </div>
-              <h3 class="strategy-card-title">Almacenamiento Inteligente y Rotación FIFO / FEFO</h3>
-              <p class="strategy-card-desc">
-                Reorganización física de cuartos fríos mediante zonificación térmica por tipo de derivado lácteo y
-                protocolo estricto FEFO (First Expired, First Out).
-              </p>
-              <ul class="strategy-keypoints-list">
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                  Demarcación de zonas: quesos madurados vs. frescos.
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                  Señalética cromática para prioridades de despacho.
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                  Procedimientos Operativos Estandarizados (POE).
-                </li>
-              </ul>
+              <span class="strategy-pillar-badge">Tendencia Operacional</span>
             </div>
-            <div>
-              <button class="strategy-expand-action" type="button">
-                <span>[ Ver detalle operacional · Fase 2 ]</span>
-                <span>→</span>
-              </button>
-            </div>
+            <h3 class="strategy-card-title">Almacenamiento Inteligente y Rotación FIFO / FEFO</h3>
+            <p class="strategy-card-desc">
+              Reorganización de las zonas de almacenamiento y establecimiento de procedimientos de rotación FIFO y FEFO,
+              según las características de los productos y sus fechas de vencimiento, para favorecer la ubicación ordenada y el
+              despacho oportuno de queso y yogur.
+            </p>
+            <ul class="strategy-keypoints-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                Delimitación y señalización de zonas de almacenamiento para queso y yogur.
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                Aplicación de criterios FIFO y FEFO para organizar la rotación y priorizar el despacho.
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                Procedimientos operativos estandarizados para recepción, ubicación y salida de productos.
+              </li>
+            </ul>
           </article>
 
         </div>
@@ -648,35 +634,35 @@
               <div class="stage-bubble-node">01</div>
               <h4 class="stage-title">Estandarización</h4>
               <span class="stage-duration">Etapa Inicial</span>
-              <p class="stage-desc">Mapeo térmico de bodega y redacción de protocolos FEFO.</p>
+              <p class="stage-desc">Diagnóstico del flujo logístico, identificación de lotes y definición del protocolo de rotación FEFO.</p>
             </div>
 
             <div class="timeline-stage-item">
               <div class="stage-bubble-node">02</div>
               <h4 class="stage-title">Adecuación Física</h4>
               <span class="stage-duration">Etapa 2</span>
-              <p class="stage-desc">Instalación de estanterías y dotación de canastillas plásticas sanitarias.</p>
+              <p class="stage-desc">Organización de racks existentes, incorporación de canastillas reutilizables y demarcación de zonas de almacenamiento.</p>
             </div>
 
             <div class="timeline-stage-item">
               <div class="stage-bubble-node">03</div>
-              <h4 class="stage-title">Despliegue IoT</h4>
+              <h4 class="stage-title">Trazabilidad Digital</h4>
               <span class="stage-duration">Etapa 3</span>
-              <p class="stage-desc">Instalación de sensores de frío y terminales para lectura por código de lote.</p>
+              <p class="stage-desc">Implementación del lector de códigos 2D, etiquetado de cajas y registro de movimientos y lotes.</p>
             </div>
 
             <div class="timeline-stage-item">
               <div class="stage-bubble-node">04</div>
               <h4 class="stage-title">Capacitación</h4>
               <span class="stage-duration">Etapa 4</span>
-              <p class="stage-desc">Talleres prácticos con operarios sobre buenas prácticas y software.</p>
+              <p class="stage-desc">Formación del personal en rotación FEFO, manejo de canastillas, trazabilidad y control de inventarios.</p>
             </div>
 
             <div class="timeline-stage-item">
               <div class="stage-bubble-node">05</div>
-              <h4 class="stage-title">Marcha Blanca</h4>
+              <h4 class="stage-title">Prueba Piloto y Seguimiento</h4>
               <span class="stage-duration">Etapa Final</span>
-              <p class="stage-desc">Puesta a punto, medición de KPIs y calibración de alertas.</p>
+              <p class="stage-desc">Verificación de las mejoras, medición de KPIs y comparación de los resultados con la simulación FlexSim.</p>
             </div>
 
           </div>
@@ -705,9 +691,10 @@
               <span>Recursos Humanos</span>
             </div>
             <ul class="resource-items-list">
-              <li>Coordinador de logística y cadena de frío.</li>
-              <li>Operarios de bodega capacitados en FEFO.</li>
-              <li>Técnico especialista en refrigeración para calibración periódica.</li>
+              <li>Coordinador logístico de bodega.</li>
+              <li>Operarios responsables del almacenamiento y despacho.</li>
+              <li>Responsable del control de inventarios y seguimiento de KPIs.</li>
+              <li>Personal encargado de capacitación interna.</li>
             </ul>
           </div>
 
@@ -722,9 +709,10 @@
               <span>Recursos Tecnológicos</span>
             </div>
             <ul class="resource-items-list">
-              <li>Dataloggers registradores continuos con conexión remota.</li>
-              <li>Lectoras portátiles de códigos QR / DataMatrix.</li>
-              <li>Software ligero para control de inventario y alertas tempranas.</li>
+              <li>Lector de códigos de barras 2D.</li>
+              <li>Hojas adhesivas para identificación de lotes.</li>
+              <li>Herramienta digital para el registro de movimientos del inventario.</li>
+              <li>Equipo de cómputo disponible para seguimiento logístico.</li>
             </ul>
           </div>
 
@@ -738,9 +726,10 @@
               <span>Recursos Físicos y Locativos</span>
             </div>
             <ul class="resource-items-list">
-              <li>Lote de canastillas plásticas reutilizables (RPC).</li>
-              <li>Cortinas térmicas hawaianas para contención del frío.</li>
-              <li>Estanterías modulares sanitarias en acero inoxidable / polímero.</li>
+              <li>Racks de almacenamiento existentes.</li>
+              <li>Canastillas plásticas reutilizables.</li>
+              <li>Cintas para demarcación y señalización.</li>
+              <li>Insumos para sanitización de canastillas.</li>
             </ul>
           </div>
 
@@ -790,48 +779,51 @@
             </span>
           </div>
 
-          <!-- Tarjetas Superiores de Resumen Presupuestal -->
+          <!-- Tarjetas Superiores de Resumen Presupuestal - Panel Ejecutivo -->
           <div class="financial-summary-grid">
 
-            <div class="financial-metric-card">
+            <!-- 1. Tarjeta CAPEX (Turquesa suave) -->
+            <div class="financial-metric-card card-capex-theme">
               <div class="financial-metric-header">
                 <span class="financial-metric-label">Inversión Inicial Total (CAPEX)</span>
-                <span class="budget-badge capex">CAPEX</span>
+                <span class="budget-badge badge-capex-theme">CAPEX</span>
               </div>
-              <div class="financial-metric-value" id="capexTotalDisplay">Pendiente de cotización</div>
+              <div class="financial-metric-value" id="capexTotalDisplay">$ 895.500</div>
               <p class="financial-metric-subtext">
-                Equipos de lectura de códigos, lote de canastillas plásticas reutilizables y demarcación de racks.
+                Equipos de lectura, canastillas reutilizables y demarcación de racks.
               </p>
               <div class="financial-card-footer">
-                <span class="data-state-tag">Datos por consolidar</span>
+                <span class="data-state-tag tag-capex-theme">Presupuesto estimado</span>
               </div>
             </div>
 
-            <div class="financial-metric-card">
+            <!-- 2. Tarjeta OPEX (Aguamarina suave) -->
+            <div class="financial-metric-card card-opex-theme">
               <div class="financial-metric-header">
                 <span class="financial-metric-label">Costo Operativo Mensual (OPEX)</span>
-                <span class="budget-badge opex">OPEX</span>
+                <span class="budget-badge badge-opex-theme">OPEX</span>
               </div>
-              <div class="financial-metric-value" id="opexMonthlyDisplay">Pendiente de cotización</div>
+              <div class="financial-metric-value" id="opexMonthlyDisplay">$ 129.900</div>
               <p class="financial-metric-subtext">
-                Suministro de etiquetas para lotes, sanitización de canastillas y programa de capacitación.
+                Etiquetado periódico, sanitización y otros costos recurrentes. Proyección anual: $ 1.558.800 COP.
               </p>
               <div class="financial-card-footer">
-                <span class="data-state-tag">Costos recurrentes</span>
+                <span class="data-state-tag tag-opex-theme">Presupuesto estimado</span>
               </div>
             </div>
 
-            <div class="financial-metric-card highlight-card-metric">
+            <!-- 3. Tarjeta PROYECCIÓN (Fondo claro con acento en mostaza/naranja suave) -->
+            <div class="financial-metric-card card-proy-theme">
               <div class="financial-metric-header">
                 <span class="financial-metric-label">Costo Estimado Primer Año</span>
-                <span class="budget-badge formula">Proyección</span>
+                <span class="budget-badge badge-proy-theme">PROYECCIÓN</span>
               </div>
-              <div class="financial-metric-value" id="yearOneTotalDisplay">Por consolidar</div>
+              <div class="financial-metric-value" id="yearOneTotalDisplay">$ 2.454.300</div>
               <p class="financial-metric-subtext">
-                Cálculo proyectado: Inversión Inicial (CAPEX) + 12 meses de costo operativo (OPEX).
+                Inversión Inicial CAPEX ($ 895.500) + 12 meses de OPEX acumulado ($ 1.558.800).
               </p>
               <div class="financial-card-footer">
-                <span class="data-state-tag">Cálculo automatizado</span>
+                <span class="data-state-tag tag-proy-theme">Cálculo automatizado</span>
               </div>
             </div>
 
@@ -841,126 +833,251 @@
           <div class="budget-table-container">
             <div class="budget-table-toolbar">
               <h4 class="budget-table-title">Desglose Presupuestal por Estrategia Logística</h4>
-              <span class="budget-table-note">Moneda: COP (Pesos Colombianos) · Valores pendientes de cotización
-                formal</span>
+              <span class="budget-table-note">Moneda: COP (Pesos Colombianos) · Piloto académico de pequeña escala (Precios de referencia verificados a Nov. 2026)</span>
             </div>
 
             <div class="table-responsive-wrapper">
               <table class="executive-budget-table" id="budgetTable">
+                <colgroup>
+                  <col class="col-budget-concept" style="width: 25%;">
+                  <col class="col-budget-strategy" style="width: 10.5%;">
+                  <col class="col-budget-qty" style="width: 7.5%;">
+                  <col class="col-budget-unit" style="width: 11.5%;">
+                  <col class="col-budget-subtotal" style="width: 11.5%;">
+                  <col class="col-budget-type" style="width: 10%;">
+                  <col class="col-budget-source" style="width: 24%;">
+                </colgroup>
                 <thead>
                   <tr>
-                    <th>Concepto de Inversión</th>
-                    <th>Estrategia Asociada</th>
-                    <th class="text-center">Cant.</th>
-                    <th class="text-right">Costo Unitario (COP)</th>
-                    <th class="text-right">Subtotal (COP)</th>
-                    <th class="text-center">Tipo</th>
-                    <th>Fuente / Cotización y Fecha</th>
+                    <th class="col-budget-concept">Concepto de Inversión</th>
+                    <th class="text-center col-budget-strategy">Estrategia Asociada</th>
+                    <th class="text-center col-budget-qty">Cant.</th>
+                    <th class="text-right col-budget-unit">Costo Unitario (COP)</th>
+                    <th class="text-right col-budget-subtotal">Subtotal (COP)</th>
+                    <th class="text-center col-budget-type">Tipo</th>
+                    <th class="col-budget-source">Fuente / Cotización y Fecha</th>
                   </tr>
                 </thead>
                 <tbody>
                   <!-- Estrategia 1: Tecnológica -->
-                  <tr class="row-tech" data-capex="0" data-opex="0">
-                    <td>
-                      <strong>Terminales lectoras de códigos de barras</strong>
-                      <span class="item-concept-sub">Lectura óptica de cajas en racks para registro ágil de
-                        entrada/salida</span>
+                  <tr class="row-tech" data-strategy="tech" data-type="capex" data-amount="359900">
+                    <td class="col-budget-concept">
+                      <strong>Lector de códigos de barras 2D</strong>
+                      <span class="item-concept-sub">Lector de códigos de barras 2D para registrar e identificar cajas y lotes durante la recepción y el despacho. Ref. comercial Jaltech Jal-plus 01 2D</span>
                     </td>
-                    <td><span class="strategy-badge tech">Tecnológica</span></td>
-                    <td class="text-center">2 unid.</td>
-                    <td class="text-right pending-val">Pendiente de cotización</td>
-                    <td class="text-right pending-val">Por consolidar</td>
-                    <td class="text-center"><span class="budget-badge capex">CAPEX</span></td>
-                    <td class="source-cell">Cotizaciones de proveedores hardware logístico (Nov. 2026)</td>
+                    <td class="text-center col-budget-strategy"><span class="strategy-badge tech">Tecnológica</span></td>
+                    <td class="text-center col-budget-qty">1 unid.</td>
+                    <td class="text-right col-budget-unit">$ 359.900</td>
+                    <td class="text-right col-budget-subtotal"><strong>$ 359.900</strong></td>
+                    <td class="text-center col-budget-type">
+                      <div class="budget-type-stack">
+                        <span class="budget-badge capex">CAPEX</span>
+                        <span class="budget-subtag capex-sub">Referencial</span>
+                      </div>
+                    </td>
+                    <td class="source-cell col-budget-source">
+                      <a href="https://www.homecenter.com.co/homecenter-co/product/3108257/lector-de-codigo-de-barras-jaltech-jal-plus-01-2d/3108257/" target="_blank" rel="noopener noreferrer" class="budget-source-link">Homecenter Colombia ↗</a>
+                      <span class="source-date">Consulta: Nov. 2026</span>
+                    </td>
                   </tr>
 
-                  <tr class="row-tech" data-capex="0" data-opex="0">
-                    <td>
-                      <strong>Rollos de etiquetas adhesivas para lotes</strong>
-                      <span class="item-concept-sub">Identificación visual y fecha de vencimiento por caja de queso y
-                        yogur</span>
+                  <tr class="row-tech" data-strategy="tech" data-type="opex" data-amount="50000">
+                    <td class="col-budget-concept">
+                      <strong>Hojas adhesivas para identificación</strong>
+                      <span class="item-concept-sub">Hojas adhesivas imprimibles para elaborar etiquetas internas con identificación de producto, caja, lote y ubicación (1 paq./mes; anual: $ 600.000). Ref. Papel adhesivo A4 (paquete de 100 hojas)</span>
                     </td>
-                    <td><span class="strategy-badge tech">Tecnológica</span></td>
-                    <td class="text-center">50 rollos</td>
-                    <td class="text-right pending-val">Pendiente de cotización</td>
-                    <td class="text-right pending-val">Por consolidar</td>
-                    <td class="text-center"><span class="budget-badge opex">OPEX</span></td>
-                    <td class="source-cell">Distribuidor mayorista de insumos industriales (Nov. 2026)</td>
+                    <td class="text-center col-budget-strategy"><span class="strategy-badge tech">Tecnológica</span></td>
+                    <td class="text-center col-budget-qty">1 paq. / mes</td>
+                    <td class="text-right col-budget-unit">$ 50.000</td>
+                    <td class="text-right col-budget-subtotal"><strong>$ 50.000 / mes</strong></td>
+                    <td class="text-center col-budget-type">
+                      <div class="budget-type-stack">
+                        <span class="budget-badge opex">OPEX</span>
+                        <span class="budget-subtag opex-sub">Referencial</span>
+                      </div>
+                    </td>
+                    <td class="source-cell col-budget-source">
+                      <a href="https://haplaz.com/etiquetas-adhesivas/968-papel-adhesivo-tamano-a4-210x297mm-100-hojas-etiquetas.html" target="_blank" rel="noopener noreferrer" class="budget-source-link">Haplaz Colombia ↗</a>
+                      <span class="source-date">Consulta: Nov. 2026</span>
+                    </td>
                   </tr>
 
-                  <tr class="row-tech" data-capex="0" data-opex="0">
-                    <td>
-                      <strong>Herramienta digital básica de control de inventario</strong>
-                      <span class="item-concept-sub">Plantilla estructurada / software ligero para registro de lotes y
-                        fechas</span>
+                  <tr class="row-tech" data-strategy="tech" data-type="capex" data-amount="0">
+                    <td class="col-budget-concept">
+                      <strong>Configuración de herramienta digital de inventario</strong>
+                      <span class="item-concept-sub">Alternativa inicial mediante hoja de cálculo estructurada. Aprovechamiento de computador e infraestructura existente sin costo directo adicional</span>
                     </td>
-                    <td><span class="strategy-badge tech">Tecnológica</span></td>
-                    <td class="text-center">1 lic./impl.</td>
-                    <td class="text-right pending-val">Pendiente de cotización</td>
-                    <td class="text-right pending-val">Por consolidar</td>
-                    <td class="text-center"><span class="budget-badge capex">CAPEX</span></td>
-                    <td class="source-cell">Desarrollo interno / código abierto (Nov. 2026)</td>
+                    <td class="text-center col-budget-strategy"><span class="strategy-badge tech">Tecnológica</span></td>
+                    <td class="text-center col-budget-qty">1 config.</td>
+                    <td class="text-right col-budget-unit">$ 0 (Recursos propios)</td>
+                    <td class="text-right col-budget-subtotal"><strong>$ 0</strong></td>
+                    <td class="text-center col-budget-type">
+                      <div class="budget-type-stack">
+                        <span class="budget-badge capex">CAPEX</span>
+                        <span class="budget-subtag capex-sub">Dedicación</span>
+                      </div>
+                    </td>
+                    <td class="source-cell col-budget-source">Recursos propios / Equipo académico (Nov. 2026)</td>
                   </tr>
 
                   <!-- Estrategia 2: Ambiental -->
-                  <tr class="row-env" data-capex="0" data-opex="0">
-                    <td>
-                      <strong>Lote de canastillas plásticas reutilizables (RPC)</strong>
-                      <span class="item-concept-sub">Embalajes secundarios plásticos, sanitarios, apilables y
-                        ventilados</span>
+                  <tr class="row-env" data-strategy="env" data-type="capex" data-amount="469800">
+                    <td class="col-budget-concept">
+                      <strong>Canastillas plásticas reutilizables</strong>
+                      <span class="item-concept-sub">Canastillas plásticas industriales perforadas y apilables, destinadas al movimiento y organización de productos lácteos debidamente empacados. Ref. comercial Energy Plus, paquete de seis canastillas de 60 × 40 × 18 cm</span>
                     </td>
-                    <td><span class="strategy-badge env">Ambiental</span></td>
-                    <td class="text-center">150 unid.</td>
-                    <td class="text-right pending-val">Pendiente de cotización</td>
-                    <td class="text-right pending-val">Por consolidar</td>
-                    <td class="text-center"><span class="budget-badge capex">CAPEX</span></td>
-                    <td class="source-cell">Fabricante de contenedores plásticos grado alimentario (Nov. 2026)</td>
+                    <td class="text-center col-budget-strategy"><span class="strategy-badge env">Ambiental</span></td>
+                    <td class="text-center col-budget-qty">2 paq. (12 unid.)</td>
+                    <td class="text-right col-budget-unit">$ 234.900 / paq.</td>
+                    <td class="text-right col-budget-subtotal"><strong>$ 469.800</strong></td>
+                    <td class="text-center col-budget-type">
+                      <div class="budget-type-stack">
+                        <span class="budget-badge capex">CAPEX</span>
+                        <span class="budget-subtag capex-sub">Referencial*</span>
+                      </div>
+                    </td>
+                    <td class="source-cell col-budget-source">
+                      <a href="https://www.homecenter.com.co/homecenter-co/product/3090128/canastillas-plasticas-industrial-perforada-apilable-60x40x18cm-energy-plus-set-x-6-unidades/3090695/" target="_blank" rel="noopener noreferrer" class="budget-source-link">Homecenter Colombia ↗</a>
+                      <span class="source-date">Consulta: Nov. 2026</span>
+                    </td>
                   </tr>
 
-                  <tr class="row-env" data-capex="0" data-opex="0">
-                    <td>
-                      <strong>Lavado y desinfección periódica de canastillas</strong>
-                      <span class="item-concept-sub">Insumos y protocolo de limpieza para garantizar inocuidad en cada
-                        ciclo</span>
+                  <tr class="row-env" data-strategy="env" data-type="opex" data-amount="39900">
+                    <td class="col-budget-concept">
+                      <strong>Insumos y procedimientos de limpieza de canastillas</strong>
+                      <span class="item-concept-sub">Insumos y protocolo de limpieza y desinfección periódica para garantizar inocuidad en cada ciclo de reutilización (anual: $ 478.800 COP)</span>
                     </td>
-                    <td><span class="strategy-badge env">Ambiental</span></td>
-                    <td class="text-center">Servicio mensual</td>
-                    <td class="text-right pending-val">Pendiente de cotización</td>
-                    <td class="text-right pending-val">Por consolidar</td>
-                    <td class="text-center"><span class="budget-badge opex">OPEX</span></td>
-                    <td class="source-cell">Protocolo interno de higiene y desinfección (Nov. 2026)</td>
+                    <td class="text-center col-budget-strategy"><span class="strategy-badge env">Ambiental</span></td>
+                    <td class="text-center col-budget-qty">1 prot.</td>
+                    <td class="text-right col-budget-unit">$ 39.900</td>
+                    <td class="text-right col-budget-subtotal"><strong>$ 39.900 / mes</strong></td>
+                    <td class="text-center col-budget-type">
+                      <div class="budget-type-stack">
+                        <span class="budget-badge opex">OPEX</span>
+                        <span class="budget-subtag opex-sub">Estimado</span>
+                      </div>
+                    </td>
+                    <td class="source-cell col-budget-source">Protocolo interno de higiene e inocuidad (Estimación Nov. 2026)</td>
                   </tr>
 
                   <!-- Estrategia 3: Operacional -->
-                  <tr class="row-ops" data-capex="0" data-opex="0">
-                    <td>
-                      <strong>Demarcación física y señalización de racks</strong>
-                      <span class="item-concept-sub">Señalética por colores para clasificación de fechas de vencimiento
-                        (FEFO)</span>
+                  <tr class="row-ops" data-strategy="ops" data-type="capex" data-amount="65800">
+                    <td class="col-budget-concept">
+                      <strong>Cinta para demarcación de áreas</strong>
+                      <span class="item-concept-sub">Cinta adhesiva de señalización para delimitar zonas de almacenamiento, circulación y organización FIFO/FEFO. Ref. comercial Cinta de marcación Truper de 33 metros × 48 mm</span>
                     </td>
-                    <td><span class="strategy-badge ops">Operacional</span></td>
-                    <td class="text-center">1 adecuación</td>
-                    <td class="text-right pending-val">Pendiente de cotización</td>
-                    <td class="text-right pending-val">Por consolidar</td>
-                    <td class="text-center"><span class="budget-badge capex">CAPEX</span></td>
-                    <td class="source-cell">Proveedor local de señalética industrial en Cesar (Nov. 2026)</td>
+                    <td class="text-center col-budget-strategy"><span class="strategy-badge ops">Operacional</span></td>
+                    <td class="text-center col-budget-qty">2 unid.</td>
+                    <td class="text-right col-budget-unit">$ 32.900</td>
+                    <td class="text-right col-budget-subtotal"><strong>$ 65.800</strong></td>
+                    <td class="text-center col-budget-type">
+                      <div class="budget-type-stack">
+                        <span class="budget-badge capex">CAPEX</span>
+                        <span class="budget-subtag capex-sub">Referencial</span>
+                      </div>
+                    </td>
+                    <td class="source-cell col-budget-source">
+                      <a href="https://www.homecenter.com.co/homecenter-co/product/574972/cinta-de-marcacion-de-33-mt-x-48-mm-para-delimitar-zonas/574972/" target="_blank" rel="noopener noreferrer" class="budget-source-link">Homecenter Colombia ↗</a>
+                      <span class="source-date">Consulta: Nov. 2026</span>
+                    </td>
                   </tr>
 
-                  <tr class="row-ops" data-capex="0" data-opex="0">
-                    <td>
-                      <strong>Programa de capacitación operativa en FEFO</strong>
-                      <span class="item-concept-sub">Talleres para operarios sobre buenas prácticas de almacenamiento y
-                        rotación</span>
+                  <tr class="row-ops" data-strategy="ops" data-type="opex" data-amount="0">
+                    <td class="col-budget-concept">
+                      <strong>Capacitación del personal</strong>
+                      <span class="item-concept-sub">Capacitación del personal en registro de inventario, identificación de lotes, manejo de canastillas y procedimientos de rotación FIFO / FEFO</span>
                     </td>
-                    <td><span class="strategy-badge ops">Operacional</span></td>
-                    <td class="text-center">3 sesiones</td>
-                    <td class="text-right pending-val">Pendiente de cotización</td>
-                    <td class="text-right pending-val">Por consolidar</td>
-                    <td class="text-center"><span class="budget-badge opex">OPEX</span></td>
-                    <td class="source-cell">Plan de formación interna / equipo académico UNAD (Nov. 2026)</td>
+                    <td class="text-center col-budget-strategy"><span class="strategy-badge ops">Operacional</span></td>
+                    <td class="text-center col-budget-qty">ses. piloto</td>
+                    <td class="text-right col-budget-unit">$ 0 (Plan formativo)</td>
+                    <td class="text-right col-budget-subtotal"><strong>$ 0</strong></td>
+                    <td class="text-center col-budget-type">
+                      <div class="budget-type-stack">
+                        <span class="budget-badge opex">OPEX</span>
+                        <span class="budget-subtag opex-sub">Interno</span>
+                      </div>
+                    </td>
+                    <td class="source-cell col-budget-source">Plan formativo interno / UNAD (Nov. 2026)</td>
+                  </tr>
+
+                  <tr class="row-ops" data-strategy="ops" data-type="opex" data-amount="0">
+                    <td class="col-budget-concept">
+                      <strong>Transporte y entrega de materiales a Becerril, Cesar</strong>
+                      <span class="item-concept-sub">Flete terrestre para entrega de insumos y equipos desde centros de distribución hasta la localidad de Becerril</span>
+                    </td>
+                    <td class="text-center col-budget-strategy"><span class="strategy-badge ops">Operacional</span></td>
+                    <td class="text-center col-budget-qty">env. consol.</td>
+                    <td class="text-right col-budget-unit">Incluido en logística local</td>
+                    <td class="text-right col-budget-subtotal"><strong>Presupuesto estimado</strong></td>
+                    <td class="text-center col-budget-type">
+                      <div class="budget-type-stack">
+                        <span class="budget-badge opex">OPEX</span>
+                        <span class="budget-subtag opex-sub">Logístico</span>
+                      </div>
+                    </td>
+                    <td class="source-cell col-budget-source">Cotización según transportadora y destino (Nov. 2026)</td>
+                  </tr>
+
+                  <tr class="row-ops" data-strategy="ops" data-type="opex" data-amount="40000">
+                    <td class="col-budget-concept">
+                      <strong>Impresión, mantenimiento y reposición de materiales</strong>
+                      <span class="item-concept-sub">Insumos de impresión para rotulado de lotes, mantenimiento menor de lector y reposición de señalización (anual: $ 480.000 COP)</span>
+                    </td>
+                    <td class="text-center col-budget-strategy"><span class="strategy-badge ops">Operacional</span></td>
+                    <td class="text-center col-budget-qty">cons. periódico</td>
+                    <td class="text-right col-budget-unit">$ 40.000 / mes</td>
+                    <td class="text-right col-budget-subtotal"><strong>$ 40.000 / mes</strong></td>
+                    <td class="text-center col-budget-type">
+                      <div class="budget-type-stack">
+                        <span class="budget-badge opex">OPEX</span>
+                        <span class="budget-subtag opex-sub">Estimado</span>
+                      </div>
+                    </td>
+                    <td class="source-cell col-budget-source">Estimación de consumos en planta (Nov. 2026)</td>
                   </tr>
                 </tbody>
               </table>
+            </div>
+
+            <!-- Resumen Financiero Consolidado del Piloto Presupuestal -->
+            <div class="budget-summary-panel">
+              <div class="budget-summary-grid">
+                <div class="budget-summary-card">
+                  <span class="summary-card-label">Estrategia Tecnológica</span>
+                  <span class="summary-card-amount" id="summaryTechTotal">$ 959.900 COP</span>
+                  <span class="summary-card-sub" id="summaryTechSub">CAPEX: $359.900 · OPEX anual: $600.000</span>
+                </div>
+
+                <div class="budget-summary-card">
+                  <span class="summary-card-label">Estrategia Ambiental</span>
+                  <span class="summary-card-amount" id="summaryEnvTotal">$ 948.600 COP</span>
+                  <span class="summary-card-sub" id="summaryEnvSub">CAPEX: $469.800 · OPEX anual: $478.800</span>
+                </div>
+
+                <div class="budget-summary-card">
+                  <span class="summary-card-label">Estrategia Operacional</span>
+                  <span class="summary-card-amount" id="summaryOpsTotal">$ 545.800 COP</span>
+                  <span class="summary-card-sub" id="summaryOpsSub">CAPEX: $65.800 · OPEX anual: $480.000</span>
+                </div>
+
+                <div class="budget-summary-card highlight-card">
+                  <span class="summary-card-label">Inversión Inicial Total (CAPEX)</span>
+                  <span class="summary-card-amount highlight" id="summaryCapexTotal">$ 895.500 COP</span>
+                  <span class="summary-card-sub">Equipos, canastillas y demarcación</span>
+                </div>
+
+                <div class="budget-summary-card">
+                  <span class="summary-card-label">Costo Proyectado Primer Año</span>
+                  <span class="summary-card-amount" id="summaryYearOneTotal" style="color: var(--color-primary); font-weight: 800;">$ 2.454.300 COP</span>
+                  <span class="summary-card-sub" id="summaryYearOneSub">CAPEX ($895.500) + OPEX anual ($1.558.800)</span>
+                </div>
+              </div>
+
+              <div class="budget-academic-note">
+                <p>
+                  «El presupuesto corresponde a un piloto académico de referencia para el almacenamiento y manipulación de queso y yogur en Becerril (Cesar). Los valores se fundamentan en precios comerciales publicados en Colombia y estimaciones operativas a pequeña escala, y no representan gastos contractuales ni ejecutados por una empresa real».
+                </p>
+              </div>
             </div>
           </div>
 
@@ -969,325 +1086,790 @@
             <div class="chart-header-row">
               <div>
                 <h4 class="chart-block-title">Estructura Comparativa del Presupuesto por Estrategia</h4>
-                <p class="chart-block-sub">Distribución conceptual entre costos de implementación (CAPEX) y costos de
-                  operación (OPEX)</p>
+                <p class="chart-block-sub">Distribución porcentual entre inversión inicial (CAPEX) y gasto operativo acumulado (OPEX anual a 12 meses)</p>
               </div>
               <div class="chart-legend-row">
-                <span class="legend-chip"><span class="legend-color capex-color"></span> CAPEX (Inversión
-                  Inicial)</span>
-                <span class="legend-chip"><span class="legend-color opex-color"></span> OPEX (Operación /
-                  Insumos)</span>
+                <span class="legend-chip"><span class="legend-color capex-color"></span> CAPEX (Inversión Inicial)</span>
+                <span class="legend-chip"><span class="legend-color opex-color"></span> OPEX anual (12 meses)</span>
               </div>
             </div>
 
             <div class="horizontal-bars-container">
 
               <!-- Fila 1: Tecnológica -->
-              <div class="hbar-item">
+              <div class="hbar-item" data-strategy="tech">
                 <div class="hbar-label-group">
                   <span class="hbar-strategy-name">Estrategia Tecnológica</span>
-                  <span class="hbar-subtext">Digitalización y trazabilidad</span>
+                  <span class="hbar-subtext">$ 359.900 (CAPEX) / $ 600.000 (OPEX anual)</span>
                 </div>
                 <div class="hbar-track">
-                  <div class="hbar-segment capex-bar" style="width: 55%;"
-                    title="CAPEX Tecnológico: Lectores y herramienta digital">
+                  <div class="hbar-segment capex-bar" style="width: 37.5%;"
+                    title="CAPEX Tecnológico: $ 359.900 COP (37.5%)">
                     <span>CAPEX</span>
                   </div>
-                  <div class="hbar-segment opex-bar" style="width: 45%;" title="OPEX Tecnológico: Rollos de etiquetas">
-                    <span>OPEX</span>
+                  <div class="hbar-segment opex-bar" style="width: 62.5%;"
+                    title="OPEX Anual Tecnológico: $ 600.000 COP (62.5%)">
+                    <span>OPEX anual</span>
                   </div>
                 </div>
                 <div class="hbar-status-badge">
-                  <span>En cotización</span>
+                  <span>37.5% / 62.5%</span>
                 </div>
               </div>
 
               <!-- Fila 2: Ambiental -->
-              <div class="hbar-item">
+              <div class="hbar-item" data-strategy="env">
                 <div class="hbar-label-group">
                   <span class="hbar-strategy-name">Estrategia Ambiental</span>
-                  <span class="hbar-subtext">Embalajes reutilizables</span>
+                  <span class="hbar-subtext">$ 469.800 (CAPEX) / $ 478.800 (OPEX anual)</span>
                 </div>
                 <div class="hbar-track">
-                  <div class="hbar-segment capex-bar" style="width: 70%;"
-                    title="CAPEX Ambiental: Lote canastillas plásticas RPC">
+                  <div class="hbar-segment capex-bar" style="width: 49.5%;"
+                    title="CAPEX Ambiental: $ 469.800 COP (49.5%)">
                     <span>CAPEX</span>
                   </div>
-                  <div class="hbar-segment opex-bar" style="width: 30%;"
-                    title="OPEX Ambiental: Insumos de sanitización">
-                    <span>OPEX</span>
+                  <div class="hbar-segment opex-bar" style="width: 50.5%;"
+                    title="OPEX Anual Ambiental: $ 478.800 COP (50.5%)">
+                    <span>OPEX anual</span>
                   </div>
                 </div>
                 <div class="hbar-status-badge">
-                  <span>En cotización</span>
+                  <span>49.5% / 50.5%</span>
                 </div>
               </div>
 
               <!-- Fila 3: Operacional -->
-              <div class="hbar-item">
+              <div class="hbar-item" data-strategy="ops">
                 <div class="hbar-label-group">
                   <span class="hbar-strategy-name">Estrategia Operacional</span>
-                  <span class="hbar-subtext">Almacenamiento inteligente FEFO</span>
+                  <span class="hbar-subtext">$ 65.800 (CAPEX) / $ 480.000 (OPEX anual)</span>
                 </div>
                 <div class="hbar-track">
-                  <div class="hbar-segment capex-bar" style="width: 40%;"
-                    title="CAPEX Operacional: Señalización de racks">
+                  <div class="hbar-segment capex-bar" style="width: 12.1%;"
+                    title="CAPEX Operacional: $ 65.800 COP (12.1%)">
                     <span>CAPEX</span>
                   </div>
-                  <div class="hbar-segment opex-bar" style="width: 60%;"
-                    title="OPEX Operacional: Capacitación del personal">
-                    <span>OPEX</span>
+                  <div class="hbar-segment opex-bar" style="width: 87.9%;"
+                    title="OPEX Anual Operacional: $ 480.000 COP (87.9%)">
+                    <span>OPEX anual</span>
                   </div>
                 </div>
                 <div class="hbar-status-badge">
-                  <span>En cotización</span>
+                  <span>12.1% / 87.9%</span>
                 </div>
               </div>
 
             </div>
 
             <div class="chart-footer-note">
-              <span>Nota académica: Las barras representan la distribución cualitativa de componentes de inversión
-                frente a gastos operativos. Las proporciones numéricas definitivas se actualizarán automáticamente una
-                vez se incorporen las cotizaciones formales.</span>
+              <span>Nota académica: Las barras comparan la inversión inicial (CAPEX) frente al costo operativo acumulado durante 12 meses (OPEX anual). Los valores representan un presupuesto académico de referencia del proyecto y no compromisos contractuales ni gastos ejecutados.</span>
             </div>
           </div>
 
         </div>
 
         <!-- ====================================================================
-             BLOQUE 2: INDICADORES DE DESEMPEÑO Y MEJORA CONTINUA (KPIs)
+             BLOQUE 2: TABLERO EJECUTIVO DE INDICADORES LOGÍSTICOS (KPIs)
              ==================================================================== -->
-        <div class="dashboard-block-section" style="margin-top: 36px;">
+        <div class="kpi-board-wrapper" id="kpiExecutiveBoard">
 
-          <div class="dashboard-block-header">
-            <div class="dashboard-block-title-group">
-              <span class="dashboard-badge-pill">Mejora Continua</span>
-              <h3 class="dashboard-section-title">Tablero Ejecutivo de Indicadores de Desempeño (KPIs)</h3>
-            </div>
-            <span class="dashboard-status-indicator">
-              <span class="status-pulse-dot"></span>
-              Sistema de monitoreo para la fase piloto
-            </span>
-          </div>
-
-          <!-- Indicador Principal: Cumplimiento de Rotación FEFO (%) -->
-          <div class="main-kpi-executive-panel">
-
-            <div class="kpi-panel-top-row">
-              <div class="kpi-main-identity">
-                <span class="kpi-primary-tag">Indicador Clave de Éxito</span>
-                <h4 class="kpi-main-title">Cumplimiento de Rotación FEFO (%)</h4>
-                <p class="kpi-main-purpose">
-                  <strong>Objetivo:</strong> Medir la proporción de despachos de queso y yogur que respetan la prioridad
-                  por fecha de vencimiento más próxima (First Expired, First Out), garantizando la adecuada rotación y
-                  eliminando el riesgo de cajas rezagadas en los racks.
-                </p>
-              </div>
-
-              <div class="kpi-score-box">
-                <span class="kpi-score-label">Resultado Registrado</span>
-                <div class="kpi-score-value">Pendiente</div>
-                <span class="kpi-score-badge">Fase de preparación</span>
-              </div>
-            </div>
-
-            <!-- Fórmula Matemática del Indicador -->
-            <div class="kpi-formula-box">
-              <span class="formula-tag">Fórmula de Cálculo:</span>
-              <div class="formula-display">
-                <span class="formula-term">Cumplimiento FEFO (%)</span>
-                <span class="formula-equal">=</span>
-                <div class="formula-fraction">
-                  <span class="fraction-numerator">Número de despachos evaluados que respetan el orden FEFO</span>
-                  <span class="fraction-line"></span>
-                  <span class="fraction-denominator">Total de despachos evaluados</span>
-                </div>
-                <span class="formula-mult">× 100</span>
-              </div>
-            </div>
-
-            <!-- Ficha de Parámetros del KPI -->
-            <div class="kpi-parameters-grid">
-
-              <div class="kpi-param-item">
-                <span class="kpi-param-label">Línea Base</span>
-                <span class="kpi-param-val">Pendiente de medición</span>
-                <span class="kpi-param-sub">A definir en la semana 1 del piloto</span>
-              </div>
-
-              <div class="kpi-param-item">
-                <span class="kpi-param-label">Meta Propuesta</span>
-                <span class="kpi-param-val">Por definir</span>
-                <span class="kpi-param-sub">Criterio técnico tras línea base</span>
-              </div>
-
-              <div class="kpi-param-item">
-                <span class="kpi-param-label">Frecuencia de Medición</span>
-                <span class="kpi-param-val">Semanal</span>
-                <span class="kpi-param-sub">Auditorías periódicas en despacho</span>
-              </div>
-
-              <div class="kpi-param-item">
-                <span class="kpi-param-label">Responsable</span>
-                <span class="kpi-param-val">Encargado de despacho</span>
-                <span class="kpi-param-sub">Coordinador logístico de bodega</span>
-              </div>
-
-            </div>
-
-            <!-- Interpretación Técnica -->
-            <div class="kpi-interpretation-box">
-              <strong>Interpretación del resultado:</strong> Un porcentaje cercano al 100% confirma que el personal
-              identifica y extrae prioritariamente los lotes de queso y yogur con vencimiento más cercano, mitigando el
-              riesgo de acumulación y permanencia excesiva de cajas en los racks antes de su entrega al transporte.
-            </div>
-
-          </div>
-
-          <!-- Gráfico de Evolución Semanal con Estado Vacío Elegante -->
-          <div class="kpi-evolution-chart-card">
-            <div class="chart-header-row">
-              <div>
-                <h4 class="chart-block-title">Evolución Semanal del Cumplimiento FEFO (Piloto)</h4>
-                <p class="chart-block-sub">Seguimiento temporal del indicador a lo largo de las semanas de auditoría</p>
-              </div>
-              <span class="chart-status-pill">Semana 1 a Semana 6</span>
-            </div>
-
-            <!-- Canvas / Estado Vacío Elegante -->
-            <div class="evolution-canvas-area">
-              <div class="chart-grid-backdrop">
-                <div class="grid-line" style="top: 20%;"><span>100%</span></div>
-                <div class="grid-line" style="top: 40%;"><span>75%</span></div>
-                <div class="grid-line" style="top: 60%;"><span>50%</span></div>
-                <div class="grid-line" style="top: 80%;"><span>25%</span></div>
-              </div>
-
-              <div class="chart-empty-state">
-                <div class="empty-state-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="18" y1="20" x2="18" y2="10"></line>
-                    <line x1="12" y1="20" x2="12" y2="4"></line>
-                    <line x1="6" y1="20" x2="6" y2="14"></line>
-                  </svg>
-                </div>
-                <h5 class="empty-state-title">Pendiente de medición</h5>
-                <p class="empty-state-text">
-                  El gráfico trazará automáticamente la curva de tendencia una vez se registren los datos de las
-                  auditorías de despacho durante el piloto en Becerril (Cesar). No se dibujan tendencias simuladas para
-                  respetar el rigor académico.
-                </p>
-                <div class="empty-state-tags">
-                  <span>Sin datos ficticios</span>
-                  <span>Marco metodológico UNAD</span>
-                </div>
-              </div>
-
-              <!-- Eje de Semanas -->
-              <div class="timeline-weeks-axis">
-                <div class="week-node">Semana 1 (Línea Base)</div>
-                <div class="week-node">Semana 2</div>
-                <div class="week-node">Semana 3</div>
-                <div class="week-node">Semana 4</div>
-                <div class="week-node">Semana 5</div>
-                <div class="week-node">Semana 6</div>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Indicadores Complementarios -->
-          <div class="complementary-kpis-wrapper">
-            <h4 class="complementary-title">Indicadores Complementarios de Control Operativo</h4>
-            <p class="complementary-sub">Variables adicionales que se consolidarán durante la implementación:</p>
-
-            <div class="complementary-grid">
-
-              <div class="complementary-card">
-                <div class="comp-card-header">
-                  <span class="comp-tag">Permanencia</span>
-                  <span class="comp-status-dot"></span>
-                </div>
-                <h5 class="comp-card-title">Tiempo Promedio de Permanencia en Racks</h5>
-                <p class="comp-card-desc">Duración promedio (horas/días) de las cajas de queso y yogur desde su
-                  recepción hasta su salida.</p>
-                <div class="comp-card-footer">
-                  <span class="comp-state-label">Estado:</span>
-                  <span class="comp-state-val">Pendiente de cronometraje</span>
-                </div>
-              </div>
-
-              <div class="complementary-card">
-                <div class="comp-card-header">
-                  <span class="comp-tag">Embalaje</span>
-                  <span class="comp-status-dot"></span>
-                </div>
-                <h5 class="comp-card-title">Ciclos de Rotación de Canastillas (RPC)</h5>
-                <p class="comp-card-desc">Cantidad de usos y retornos efectivos de las canastillas plásticas
-                  reutilizables por ciclo de despacho.</p>
-                <div class="comp-card-footer">
-                  <span class="comp-state-label">Estado:</span>
-                  <span class="comp-state-val">Pendiente de registro de retornos</span>
-                </div>
-              </div>
-
-              <div class="complementary-card">
-                <div class="comp-card-header">
-                  <span class="comp-tag">Capacidad</span>
-                  <span class="comp-status-dot"></span>
-                </div>
-                <h5 class="comp-card-title">Tasa de Ocupación Efectiva de Racks</h5>
-                <p class="comp-card-desc">Porcentaje de aprovechamiento volumétrico de los racks sin generar sobrestock
-                  ni obstaculizar la ventilación.</p>
-                <div class="comp-card-footer">
-                  <span class="comp-state-label">Estado:</span>
-                  <span class="comp-state-val">Pendiente de cubicaje</span>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          <!-- Matriz de Riesgos y Limitaciones Operativas (Alineada con Tarea 3) -->
-          <div class="risks-container" style="margin-top: 32px;">
-            <div class="eval-block-header" style="border: none; margin-bottom: 6px;">
-              <span class="eval-block-title">Matriz de Riesgos Operacionales y Acciones Preventivas</span>
-              <span class="placeholder-indicator">Gestión de Contingencias</span>
-            </div>
-            <p style="font-size: 0.84rem; color: var(--color-text-muted); margin-bottom: 14px;">
-              Identificación de posibles dificultades durante el almacenamiento y manipulación de queso y yogur en
-              Becerril y sus medidas de control:
+          <!-- ENCABEZADO -->
+          <div class="kpi-board-header">
+            <div class="kpi-board-eyebrow">EVALUACIÓN Y MEJORA CONTINUA</div>
+            <h3 class="kpi-board-title">Tablero de indicadores logísticos</h3>
+            <p class="kpi-board-subtitle">
+              Seguimiento de la permanencia, ocupación, rotación FEFO y exactitud del inventario de cajas de queso y yogur en racks antes del despacho.
             </p>
+          </div>
 
-            <div class="risk-rows-list">
+          <!-- Fila 1: Seis Indicadores Clave -->
+          <div class="kpi-metrics-row-1">
 
-              <div class="risk-item-row">
-                <span class="risk-level-tag medium">Riesgo de Capacidad</span>
-                <span class="risk-name">Aumentos temporales en los volúmenes recibidos que saturen el espacio de
-                  racks</span>
-                <span class="risk-mitigation"><strong>Acción preventiva:</strong> Programación escalonada de recepción y
-                  zonificación prioritaria de estibas para evitar congestión en pasillos.</span>
+            <!-- 1. Permanencia promedio -->
+            <div class="kpi-metric-card-mini" title="Escenario inicial FlexSim">
+              <div class="kpi-icon-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="9"/>
+                  <path d="M12 7v5l3 2"/>
+                </svg>
               </div>
-
-              <div class="risk-item-row">
-                <span class="risk-level-tag medium">Riesgo de Permanencia</span>
-                <span class="risk-name">Demoras en la rotación que provoquen acumulación prolongada de lotes en
-                  racks</span>
-                <span class="risk-mitigation"><strong>Acción preventiva:</strong> Auditorías semanales mediante el KPI
-                  FEFO y señalética visual con código de colores por fecha de vencimiento.</span>
-              </div>
-
-              <div class="risk-item-row">
-                <span class="risk-level-tag low">Riesgo de Organización</span>
-                <span class="risk-name">Ubicación incorrecta de cajas en racks o errores en la identificación durante el
-                  despacho</span>
-                <span class="risk-mitigation"><strong>Acción preventiva:</strong> Capacitación periódica a operarios y
-                  verificación de etiquetas legibles antes de la salida de mercancía.</span>
-              </div>
-
+              <div class="kpi-metric-val" id="kpiStayAvgVal">5,14 min</div>
+              <span class="kpi-metric-desc">Permanencia promedio</span>
             </div>
+
+            <!-- 2. Ocupación media rack -->
+            <div class="kpi-metric-card-mini" title="Equivalente al 17 %">
+              <div class="kpi-icon-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2l8 4.5v9L12 20l-8-4.5v-9L12 2z"/>
+                  <path d="M12 11l8-4.5M12 11v9M12 11L4 6.5"/>
+                </svg>
+              </div>
+              <div class="kpi-metric-val">0,17</div>
+              <span class="kpi-metric-desc">Ocupación media rack</span>
+            </div>
+
+            <!-- 3. Escenario comparado -->
+            <div class="kpi-metric-card-mini" title="Análisis de sensibilidad">
+              <div class="kpi-icon-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 20V10M12 20V4M6 20v6"/>
+                </svg>
+              </div>
+              <div class="kpi-metric-val">10,14 min</div>
+              <span class="kpi-metric-desc">Escenario comparado</span>
+            </div>
+
+            <!-- 4. Exactitud del inventario -->
+            <div class="kpi-metric-card-mini" title="Exactitud del inventario: meta académica propuesta ≥98 % (Resultado por medir)">
+              <div class="kpi-icon-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M4 16v3a1 1 0 0 0 1 1h3M16 20h3a1 1 0 0 0 1-1v-3"/>
+                  <circle cx="12" cy="12" r="2.5"/>
+                </svg>
+              </div>
+              <div class="kpi-metric-val val-pending" id="kpiInventoryAccuracyVal">≥98 %</div>
+              <span class="kpi-metric-desc" id="kpiInventoryAccuracyDesc">Meta propuesta</span>
+            </div>
+
+            <!-- 5. Cumplimiento FEFO -->
+            <div class="kpi-metric-card-mini" title="Cumplimiento FEFO: meta académica propuesta 100 % (Resultado por medir)">
+              <div class="kpi-icon-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 6h11M9 12h11M9 18h11M4 6l1.5 1.5L7 5M4 12l1.5 1.5L7 11M4 18l1.5 1.5L7 17"/>
+                </svg>
+              </div>
+              <div class="kpi-metric-val val-pending" id="kpiFefoVal">100 %</div>
+              <span class="kpi-metric-desc" id="kpiFefoDesc">Meta propuesta</span>
+            </div>
+
+            <!-- 6. Inversión CAPEX -->
+            <div class="kpi-metric-card-mini" title="Presupuesto académico referencial">
+              <div class="kpi-icon-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v20M17 6.5a4 4 0 0 0-4-2H10a4 4 0 0 0 0 8h4a4 4 0 0 1 0 8h-3a4 4 0 0 1-4-3"/>
+                </svg>
+              </div>
+              <div class="kpi-metric-val" id="kpiCapexVal">$ 895.500</div>
+              <span class="kpi-metric-desc">Inversión CAPEX</span>
+            </div>
+
+          </div>
+
+          <!-- Fila 2: Tres Tarjetas Analíticas -->
+          <div class="kpi-analytics-row-2">
+
+            <!-- Tarjeta 1: Ocupación media del rack (Dona) -->
+            <div class="kpi-analytics-card">
+              <div class="kpi-card-header">
+                <h4 class="kpi-card-title">Ocupación media del rack</h4>
+                <span class="kpi-card-sub">Valor reportado en FlexSim</span>
+              </div>
+              <div class="donut-chart-container">
+                <div class="donut-svg-wrap">
+                  <svg viewBox="0 0 120 120">
+                    <circle cx="60" cy="60" r="46" stroke="#d1ebd9" stroke-width="14" fill="none"/>
+                    <circle cx="60" cy="60" r="46" stroke="#165b40" stroke-width="14" fill="none"
+                      stroke-dasharray="289" stroke-dashoffset="240" stroke-linecap="round"/>
+                  </svg>
+                  <div class="donut-center-text">
+                    <span class="donut-center-val">0,17</span>
+                  </div>
+                </div>
+                <div class="donut-legend-col">
+                  <div class="donut-legend-item">
+                    <span class="donut-legend-dot dot-occupied"></span>
+                    <span>Ocupado 0,17</span>
+                  </div>
+                  <div class="donut-legend-item">
+                    <span class="donut-legend-dot dot-available"></span>
+                    <span>Disponible 0,83</span>
+                  </div>
+                </div>
+              </div>
+              <p class="kpi-card-footnote">Fuente: escenario inicial de FlexSim (17 % de capacidad media utilizada).</p>
+            </div>
+
+            <!-- Tarjeta 2: Permanencia en Rack Yogur 1 (Barras comparativas) -->
+            <div class="kpi-analytics-card">
+              <div class="kpi-card-header">
+                <h4 class="kpi-card-title">Permanencia en Rack Yogur 1</h4>
+                <span class="kpi-card-sub">Escenarios de la Tarea 3 en FlexSim</span>
+              </div>
+              <div class="kpi-comp-bars-container">
+                <div class="comp-bar-item">
+                  <div class="comp-bar-meta">
+                    <span class="bar-label">Escenario base</span>
+                    <span class="bar-val">5,14 min</span>
+                  </div>
+                  <div class="comp-bar-track">
+                    <div class="comp-bar-fill fill-base" style="width: 50.7%;" title="Escenario base: 5,14 min"></div>
+                  </div>
+                </div>
+
+                <div class="comp-bar-item">
+                  <div class="comp-bar-meta">
+                    <span class="bar-label">Escenario comparado</span>
+                    <span class="bar-val">10,14 min</span>
+                  </div>
+                  <div class="comp-bar-track">
+                    <div class="comp-bar-fill fill-sensitivity" style="width: 100%;" title="Análisis de sensibilidad: 10,14 min"></div>
+                  </div>
+                </div>
+
+                <div class="comp-bar-stats">
+                  <span>Variación absoluta: <strong>+5,00 min</strong></span>
+                  <span>Ocupación: <strong>0,17 → 0,34</strong></span>
+                </div>
+              </div>
+              <p class="kpi-card-footnote">Análisis de sensibilidad: simula mayor retención y acumulación, no una mejora operativa.</p>
+            </div>
+
+            <!-- Tarjeta 3: Estado del seguimiento -->
+            <div class="kpi-analytics-card">
+              <div class="kpi-card-header">
+                <h4 class="kpi-card-title">Estado del seguimiento</h4>
+                <span class="kpi-card-sub">Indicadores del panel</span>
+              </div>
+              <div class="kpi-status-list">
+                <div class="kpi-status-item">
+                  <span class="status-item-name">Permanencia promedio</span>
+                  <span class="status-pill pill-measured">Medido</span>
+                </div>
+                <div class="kpi-status-item">
+                  <span class="status-item-name">Ocupación del rack</span>
+                  <span class="status-pill pill-measured">Medido</span>
+                </div>
+                <div class="kpi-status-item">
+                  <span class="status-item-name">Exactitud del inventario</span>
+                  <span class="status-pill pill-pending" id="badgeInventoryAccuracy">Resultado por medir</span>
+                </div>
+                <div class="kpi-status-item">
+                  <span class="status-item-name">Cumplimiento FEFO</span>
+                  <span class="status-pill pill-pending" id="badgeFefo">Resultado por medir</span>
+                </div>
+              </div>
+              <p class="kpi-card-footnote">Verde: datos de simulación FlexSim. Mostaza: mediciones pendientes del piloto.</p>
+            </div>
+
+          </div>
+
+          <!-- Fila 3: Tres Paneles de Seguimiento -->
+          <div class="kpi-tracking-row-3">
+
+            <!-- Panel 1: Permanencia por semana -->
+            <div class="kpi-tracking-card">
+              <div class="kpi-card-header">
+                <h4 class="kpi-card-title">Permanencia por semana</h4>
+                <span class="kpi-card-sub">Tendencia de cajas en rack</span>
+              </div>
+              <div class="kpi-chart-preview-area">
+                <svg viewBox="0 0 280 90" class="chart-svg-preview" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="areaGradKpi" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#b8e2ce" stop-opacity="0.65"/>
+                      <stop offset="100%" stop-color="#ebf7f0" stop-opacity="0.1"/>
+                    </linearGradient>
+                  </defs>
+                  <line x1="0" y1="65" x2="280" y2="65" stroke="#7ab89b" stroke-dasharray="3,3" stroke-width="1.2"/>
+                  <text x="6" y="60" font-size="8.5" fill="#4a7d65" font-weight="600" font-family="Poppins, sans-serif">Línea base: 5,14 min</text>
+                  <path d="M0,72 Q40,68 70,62 T140,50 T210,58 T280,45 L280,90 L0,90 Z" fill="url(#areaGradKpi)"/>
+                  <path d="M0,72 Q40,68 70,62 T140,50 T210,58 T280,45" fill="none" stroke="#68b08e" stroke-width="2"/>
+                  <circle cx="70" cy="62" r="3" fill="#165b40"/>
+                  <circle cx="140" cy="50" r="3" fill="#165b40"/>
+                  <circle cx="210" cy="58" r="3" fill="#165b40"/>
+                  <circle cx="280" cy="45" r="3" fill="#165b40"/>
+                </svg>
+              </div>
+              <span class="kpi-badge-bottom">Vista de ejemplo · datos por medir</span>
+              <p class="kpi-card-footnote">Frecuencia: semanal · Unidad: min · Responsable: encargado de bodega.</p>
+            </div>
+
+            <!-- Panel 2: Cumplimiento FEFO por rack -->
+            <div class="kpi-tracking-card">
+              <div class="kpi-card-header">
+                <h4 class="kpi-card-title">Cumplimiento FEFO por rack</h4>
+                <span class="kpi-card-sub">Porcentaje por zona</span>
+              </div>
+              <div class="kpi-chart-preview-area">
+                <svg viewBox="0 0 280 90" class="chart-svg-preview">
+                  <rect x="22" y="48" width="32" height="42" rx="4" fill="#d9f0e3" stroke="#a2d5bd" stroke-width="1.5" stroke-dasharray="3,3"/>
+                  <rect x="76" y="30" width="32" height="60" rx="4" fill="#d9f0e3" stroke="#a2d5bd" stroke-width="1.5" stroke-dasharray="3,3"/>
+                  <rect x="130" y="55" width="32" height="35" rx="4" fill="#d9f0e3" stroke="#a2d5bd" stroke-width="1.5" stroke-dasharray="3,3"/>
+                  <rect x="184" y="22" width="32" height="68" rx="4" fill="#d9f0e3" stroke="#a2d5bd" stroke-width="1.5" stroke-dasharray="3,3"/>
+                  <rect x="238" y="38" width="32" height="52" rx="4" fill="#d9f0e3" stroke="#a2d5bd" stroke-width="1.5" stroke-dasharray="3,3"/>
+                  <line x1="10" y1="90" x2="274" y2="90" stroke="#b2d8c7" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <span class="kpi-badge-bottom">Vista de ejemplo · datos por medir</span>
+              <p class="kpi-card-footnote">Fórmula: (Despachos que cumplen FEFO / Total de despachos evaluados) × 100 · Meta propuesta: 100 % (Resultado por medir).</p>
+            </div>
+
+            <!-- Panel 3: Exactitud del inventario -->
+            <div class="kpi-tracking-card">
+              <div class="kpi-card-header">
+                <h4 class="kpi-card-title">Exactitud del inventario</h4>
+                <span class="kpi-card-sub">Conteo cíclico por semana</span>
+              </div>
+              <div class="kpi-chart-preview-area">
+                <svg viewBox="0 0 280 90" class="chart-svg-preview">
+                  <line x1="10" y1="20" x2="270" y2="20" stroke="#87c7ab" stroke-width="1" stroke-dasharray="2,2"/>
+                  <text x="12" y="16" font-size="8.5" fill="#4a7d65" font-weight="600" font-family="Poppins, sans-serif">Meta técnica propuesta: ≥98 %</text>
+                  <path d="M15,70 C50,25 90,85 135,38 C175,75 220,30 265,65" fill="none" stroke="#7ebca2" stroke-width="2" stroke-dasharray="4,4"/>
+                  <circle cx="15" cy="70" r="2.5" fill="#165b40"/>
+                  <circle cx="72" cy="46" r="2.5" fill="#165b40"/>
+                  <circle cx="135" cy="38" r="2.5" fill="#165b40"/>
+                  <circle cx="196" cy="48" r="2.5" fill="#165b40"/>
+                  <circle cx="265" cy="65" r="2.5" fill="#165b40"/>
+                  <line x1="10" y1="88" x2="270" y2="88" stroke="#b2d8c7" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <span class="kpi-badge-bottom">Vista de ejemplo · datos por medir</span>
+              <p class="kpi-card-footnote">Fórmula: (Registros correctos / Total de registros auditados) × 100 · Meta propuesta: ≥98 % (Resultado por medir).</p>
+            </div>
+
+          </div>
+
+          <!-- Barra de Acciones y Ficha de Registro Dinámico del Piloto -->
+          <div class="kpi-pilot-actions-bar">
+            <button type="button" class="kpi-toggle-logger-btn" id="toggleKpiLoggerBtn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="12" y1="8" x2="12" y2="16"/>
+                <line x1="8" y1="12" x2="16" y2="12"/>
+              </svg>
+              <span>Ficha Técnica y Registro Dinámico de Mediciones del Piloto</span>
+            </button>
+            <span class="kpi-logger-hint">Permite ingresar conteos y auditorías para validar datos y calcular porcentajes automáticamente</span>
+          </div>
+
+          <div class="kpi-logger-drawer" id="kpiLoggerDrawer" style="display: none;">
+            <div class="kpi-logger-grid">
+              <!-- Columna 1: Auditoría FEFO -->
+              <div class="kpi-logger-col">
+                <h5>1. Cumplimiento FEFO (%)</h5>
+                <p class="logger-formula">Fórmula: (Despachos que cumplen FEFO / Total de despachos evaluados) × 100 [Meta propuesta: 100 %]</p>
+                <div class="logger-form-group">
+                  <label for="fefoValidCount">Despachos que cumplen FEFO:</label>
+                  <input type="number" id="fefoValidCount" min="0" placeholder="Ej. 50" class="logger-input">
+                </div>
+                <div class="logger-form-group">
+                  <label for="fefoTotalCount">Total de despachos evaluados:</label>
+                  <input type="number" id="fefoTotalCount" min="1" placeholder="Ej. 50" class="logger-input">
+                </div>
+                <div class="logger-result-row">
+                  <span>Resultado FEFO:</span>
+                  <strong id="fefoCalculatedVal">Sin calcular</strong>
+                </div>
+              </div>
+
+              <!-- Columna 2: Exactitud del Inventario -->
+              <div class="kpi-logger-col">
+                <h5>2. Exactitud del Inventario (%)</h5>
+                <p class="logger-formula">Fórmula: (Registros correctos / Total de registros auditados) × 100 [Meta propuesta: ≥98 %]</p>
+                <div class="logger-form-group">
+                  <label for="invValidUnits">Registros correctos:</label>
+                  <input type="number" id="invValidUnits" min="0" placeholder="Ej. 196" class="logger-input">
+                </div>
+                <div class="logger-form-group">
+                  <label for="invTotalUnits">Total de registros auditados:</label>
+                  <input type="number" id="invTotalUnits" min="1" placeholder="Ej. 200" class="logger-input">
+                </div>
+                <div class="logger-result-row">
+                  <span>Resultado exactitud:</span>
+                  <strong id="invCalculatedVal">Sin calcular</strong>
+                </div>
+              </div>
+
+              <!-- Columna 3: Permanencia Semanal y Acciones -->
+              <div class="kpi-logger-col">
+                <h5>3. Registro Semanal</h5>
+                <p class="logger-formula">Tiempo promedio semanal de permanencia de cajas en racks</p>
+                <div class="logger-form-group">
+                  <label for="stayRecordedMin">Permanencia observada (min):</label>
+                  <input type="number" step="0.01" id="stayRecordedMin" placeholder="Ej. 5.14" class="logger-input">
+                </div>
+                <div class="logger-actions-group">
+                  <button type="button" class="logger-btn-apply" id="applyKpiDataBtn">Registrar en Tablero</button>
+                  <button type="button" class="logger-btn-reset" id="resetKpiDataBtn">Restablecer a Línea Base</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ====================================================================
+             BLOQUE 3: MATRIZ DE RIESGOS OPERACIONALES Y ACCIONES PREVENTIVAS
+             ==================================================================== -->
+        <div class="matrix-module-wrapper" id="matrizRiesgosModule">
+
+          <!-- Encabezado -->
+          <div class="matrix-module-header">
+            <div class="matrix-title-group">
+              <div class="matrix-header-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  <path d="M9 12l2 2 4-4"/>
+                </svg>
+              </div>
+              <div class="matrix-header-text">
+                <h3>Matriz de Riesgos Operacionales y Acciones Preventivas</h3>
+                <p>
+                  Identificación, evaluación y tratamiento de riesgos asociados al almacenamiento, rotación e identificación de cajas de queso y yogur en Becerril, Cesar.
+                </p>
+              </div>
+            </div>
+
+            <div class="matrix-header-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                <line x1="12" y1="22.08" x2="12" y2="12"/>
+              </svg>
+              <span>Gestión de Contingencias</span>
+            </div>
+          </div>
+
+          <!-- Sección Superior: Tres Tarjetas Horizontales -->
+          <div class="matrix-cards-grid">
+
+            <!-- Tarjeta 1: Mapa de Calor de Riesgos -->
+            <div class="matrix-card">
+              <div class="matrix-card-title-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 20V10M12 20V4M6 20v6"/>
+                </svg>
+                <span>Mapa de calor de riesgos</span>
+              </div>
+
+              <div class="heatmap-layout">
+                <div class="heatmap-y-axis-label">Probabilidad</div>
+
+                <div class="heatmap-main-area">
+                  <div class="heatmap-rows-wrap">
+                    <!-- Etiquetas Y (Probabilidad 5 a 1) -->
+                    <div class="heatmap-y-labels">
+                      <span class="heatmap-axis-step-label">Muy alta (5)</span>
+                      <span class="heatmap-axis-step-label">Alta (4)</span>
+                      <span class="heatmap-axis-step-label">Media (3)</span>
+                      <span class="heatmap-axis-step-label">Baja (2)</span>
+                      <span class="heatmap-axis-step-label">Muy baja (1)</span>
+                    </div>
+
+                    <!-- Cuadrícula 5x5 -->
+                    <div class="heatmap-grid-5x5" id="heatmapGrid">
+                      <!-- Fila 5 (P=5) -->
+                      <div class="hm-cell lvl-bajo" data-row="5" data-col="1" title="Prob: 5, Imp: 1 (5 - Bajo)"></div>
+                      <div class="hm-cell lvl-alto" data-row="5" data-col="2" title="Prob: 5, Imp: 2 (10 - Alto)"></div>
+                      <div class="hm-cell lvl-alto" data-row="5" data-col="3" title="Prob: 5, Imp: 3 (15 - Alto)"></div>
+                      <div class="hm-cell lvl-critico" data-row="5" data-col="4" title="Prob: 5, Imp: 4 (20 - Crítico)"></div>
+                      <div class="hm-cell lvl-critico" data-row="5" data-col="5" title="Prob: 5, Imp: 5 (25 - Crítico)"></div>
+
+                      <!-- Fila 4 (P=4) -->
+                      <div class="hm-cell lvl-bajo" data-row="4" data-col="1" title="Prob: 4, Imp: 1 (4 - Bajo)"></div>
+                      <div class="hm-cell lvl-moderado" data-row="4" data-col="2" title="Prob: 4, Imp: 2 (8 - Moderado)"></div>
+                      <div class="hm-cell lvl-alto" data-row="4" data-col="3" title="Prob: 4, Imp: 3 (12 - Alto)"></div>
+                      <div class="hm-cell lvl-alto" data-row="4" data-col="4" title="Prob: 4, Imp: 4 (16 - Alto)"></div>
+                      <div class="hm-cell lvl-critico" data-row="4" data-col="5" id="cell-4-5" title="Prob: 4, Imp: 5 (20 - Crítico)">
+                        <span class="hm-risk-pin" id="pin-R1" title="R1: Acumulación prolongada y deterioro (P=4, I=5)">R1</span>
+                      </div>
+
+                      <!-- Fila 3 (P=3) -->
+                      <div class="hm-cell lvl-bajo" data-row="3" data-col="1" title="Prob: 3, Imp: 1 (3 - Bajo)"></div>
+                      <div class="hm-cell lvl-moderado" data-row="3" data-col="2" title="Prob: 3, Imp: 2 (6 - Moderado)"></div>
+                      <div class="hm-cell lvl-moderado" data-row="3" data-col="3" id="cell-3-3" title="Prob: 3, Imp: 3 (9 - Moderado)">
+                        <span class="hm-risk-pin" id="pin-R3" title="R3: Errores de ubicación e identificación (P=3, I=3)">R3</span>
+                      </div>
+                      <div class="hm-cell lvl-alto" data-row="3" data-col="4" id="cell-3-4" title="Prob: 3, Imp: 4 (12 - Alto)">
+                        <span class="hm-risk-pin" id="pin-R2" title="R2: Saturación de capacidad de los racks (P=3, I=4)">R2</span>
+                      </div>
+                      <div class="hm-cell lvl-alto" data-row="3" data-col="5" title="Prob: 3, Imp: 5 (15 - Alto)"></div>
+
+                      <!-- Fila 2 (P=2) -->
+                      <div class="hm-cell lvl-muy-bajo" data-row="2" data-col="1" title="Prob: 2, Imp: 1 (2 - Muy bajo)"></div>
+                      <div class="hm-cell lvl-bajo" data-row="2" data-col="2" title="Prob: 2, Imp: 2 (4 - Bajo)"></div>
+                      <div class="hm-cell lvl-moderado" data-row="2" data-col="3" title="Prob: 2, Imp: 3 (6 - Moderado)"></div>
+                      <div class="hm-cell lvl-moderado" data-row="2" data-col="4" title="Prob: 2, Imp: 4 (8 - Moderado)"></div>
+                      <div class="hm-cell lvl-alto" data-row="2" data-col="5" title="Prob: 2, Imp: 5 (10 - Alto)"></div>
+
+                      <!-- Fila 1 (P=1) -->
+                      <div class="hm-cell lvl-muy-bajo" data-row="1" data-col="1" title="Prob: 1, Imp: 1 (1 - Muy bajo)"></div>
+                      <div class="hm-cell lvl-muy-bajo" data-row="1" data-col="2" title="Prob: 1, Imp: 2 (2 - Muy bajo)"></div>
+                      <div class="hm-cell lvl-bajo" data-row="1" data-col="3" title="Prob: 1, Imp: 3 (3 - Bajo)"></div>
+                      <div class="hm-cell lvl-bajo" data-row="1" data-col="4" title="Prob: 1, Imp: 4 (4 - Bajo)"></div>
+                      <div class="hm-cell lvl-bajo" data-row="1" data-col="5" title="Prob: 1, Imp: 5 (5 - Bajo)"></div>
+                    </div>
+                  </div>
+
+                  <!-- Etiquetas X (Impacto 1 a 5) -->
+                  <div class="heatmap-x-labels-row">
+                    <span>Muy baja (1)</span>
+                    <span>Baja (2)</span>
+                    <span>Media (3)</span>
+                    <span>Alta (4)</span>
+                    <span>Muy alta (5)</span>
+                  </div>
+                  <div class="heatmap-x-axis-title">Impacto</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tarjeta 2: Niveles de Riesgo -->
+            <div class="matrix-card">
+              <div class="matrix-card-title-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <circle cx="12" cy="12" r="6"/>
+                  <circle cx="12" cy="12" r="2"/>
+                </svg>
+                <span>Niveles de riesgo</span>
+              </div>
+
+              <div class="risk-levels-list">
+                <div class="risk-level-item">
+                  <span class="level-badge-pill critico">Crítico</span>
+                  <span class="level-desc-text">Requiere acción inmediata (17–25).</span>
+                </div>
+                <div class="risk-level-item">
+                  <span class="level-badge-pill alto">Alto</span>
+                  <span class="level-desc-text">Mitigación prioritaria (10–16).</span>
+                </div>
+                <div class="risk-level-item">
+                  <span class="level-badge-pill moderado">Moderado</span>
+                  <span class="level-desc-text">Seguimiento y control (6–9).</span>
+                </div>
+                <div class="risk-level-item">
+                  <span class="level-badge-pill bajo">Bajo</span>
+                  <span class="level-desc-text">Control preventivo (3–5).</span>
+                </div>
+                <div class="risk-level-item">
+                  <span class="level-badge-pill muy-bajo">Muy bajo</span>
+                  <span class="level-desc-text">Riesgo aceptable (1–2).</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tarjeta 3: Resumen de Riesgos -->
+            <div class="matrix-card">
+              <div class="matrix-card-title-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 11l3 3L22 4"/>
+                  <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                </svg>
+                <span>Resumen de riesgos</span>
+              </div>
+
+              <div class="risk-summary-list">
+                <div class="risk-summary-row critico">
+                  <div class="summary-dot-group">
+                    <span class="summary-color-dot dot-critico"></span>
+                    <span>Críticos</span>
+                  </div>
+                  <span class="risk-count-num" id="summaryCountCritico">1</span>
+                </div>
+
+                <div class="risk-summary-row alto">
+                  <div class="summary-dot-group">
+                    <span class="summary-color-dot dot-alto"></span>
+                    <span>Altos</span>
+                  </div>
+                  <span class="risk-count-num" id="summaryCountAlto">1</span>
+                </div>
+
+                <div class="risk-summary-row moderado">
+                  <div class="summary-dot-group">
+                    <span class="summary-color-dot dot-moderado"></span>
+                    <span>Moderados</span>
+                  </div>
+                  <span class="risk-count-num" id="summaryCountModerado">1</span>
+                </div>
+
+                <div class="risk-summary-row bajo">
+                  <div class="summary-dot-group">
+                    <span class="summary-color-dot dot-bajo"></span>
+                    <span>Bajos</span>
+                  </div>
+                  <span class="risk-count-num" id="summaryCountBajo">0</span>
+                </div>
+
+                <div class="risk-summary-row muy-bajo">
+                  <div class="summary-dot-group">
+                    <span class="summary-color-dot dot-muy-bajo"></span>
+                    <span>Muy bajos</span>
+                  </div>
+                  <span class="risk-count-num" id="summaryCountMuyBajo">0</span>
+                </div>
+              </div>
+
+              <div style="font-size: 0.7rem; color: #5c7d70; text-align: right; margin-top: 8px; font-weight: 600;">
+                Total identificados: <strong style="color: #063F35;" id="summaryTotalRisks">3</strong>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Sección Inferior: Tabla de Gestión de Riesgos y Acciones Preventivas -->
+          <div class="matrix-table-wrap">
+            <table class="matrix-table" id="risksEvaluationTable">
+              <thead>
+                <tr>
+                  <th class="col-risk-id text-center">ID</th>
+                  <th class="col-risk-name">Riesgo identificado</th>
+                  <th class="col-risk-cause">Causa probable</th>
+                  <th class="col-risk-prob text-center">Prob.</th>
+                  <th class="col-risk-impact text-center">Impacto</th>
+                  <th class="col-risk-level text-center">Nivel</th>
+                  <th class="col-risk-control">Tratamiento / Control</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- R1: Acumulación prolongada y deterioro -->
+                <tr data-risk-id="R1">
+                  <td class="col-risk-id text-center">
+                    <span class="risk-id-pill id-critico" id="riskIdPill-R1">R1</span>
+                  </td>
+                  <td class="col-risk-name">
+                    <div class="risk-item-cell">
+                      <svg class="risk-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/>
+                      </svg>
+                      <div>
+                        <span class="risk-title-bold">Acumulación prolongada y deterioro del producto</span>
+                        <span class="risk-desc-text">Acumulación prolongada de cajas de queso y yogur en racks, con posibilidad de deterioro por demoras en la rotación.</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="col-risk-cause">
+                    <span class="risk-desc-text">Permanencia excesiva de lotes y fallas en la aplicación del método FEFO.</span>
+                  </td>
+                  <td class="col-risk-prob text-center">
+                    <select class="risk-select-score" data-risk-id="R1" data-param="prob" aria-label="Probabilidad R1">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4" selected>4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </td>
+                  <td class="col-risk-impact text-center">
+                    <select class="risk-select-score" data-risk-id="R1" data-param="impact" aria-label="Impacto R1">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5" selected>5</option>
+                    </select>
+                  </td>
+                  <td class="col-risk-level text-center">
+                    <span class="risk-level-badge badge-critico" id="riskBadge-R1">Crítico (20)</span>
+                  </td>
+                  <td class="col-risk-control">
+                    <span class="risk-desc-text">Realizar auditorías periódicas del cumplimiento FEFO, reforzar la señalización por fechas de vencimiento y verificar que los despachos prioricen los lotes con vencimiento más próximo.</span>
+                  </td>
+                </tr>
+
+                <!-- R2: Saturación de capacidad de los racks -->
+                <tr data-risk-id="R2">
+                  <td class="col-risk-id text-center">
+                    <span class="risk-id-pill id-alto" id="riskIdPill-R2">R2</span>
+                  </td>
+                  <td class="col-risk-name">
+                    <div class="risk-item-cell">
+                      <svg class="risk-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="3" width="20" height="18" rx="2"/>
+                        <line x1="2" y1="9" x2="22" y2="9"/>
+                        <line x1="2" y1="15" x2="22" y2="15"/>
+                        <line x1="12" y1="3" x2="12" y2="21"/>
+                      </svg>
+                      <div>
+                        <span class="risk-title-bold">Saturación de capacidad de los racks</span>
+                        <span class="risk-desc-text">Saturación del espacio disponible en racks por aumentos temporales en los volúmenes recibidos.</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="col-risk-cause">
+                    <span class="risk-desc-text">Desbalance entre el ingreso y salida de productos, recepción simultánea de mercancía y limitaciones de almacenamiento.</span>
+                  </td>
+                  <td class="col-risk-prob text-center">
+                    <select class="risk-select-score" data-risk-id="R2" data-param="prob" aria-label="Probabilidad R2">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3" selected>3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </td>
+                  <td class="col-risk-impact text-center">
+                    <select class="risk-select-score" data-risk-id="R2" data-param="impact" aria-label="Impacto R2">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4" selected>4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </td>
+                  <td class="col-risk-level text-center">
+                    <span class="risk-level-badge badge-alto" id="riskBadge-R2">Alto (12)</span>
+                  </td>
+                  <td class="col-risk-control">
+                    <span class="risk-desc-text">Programar la recepción escalonada de mercancía, organizar las estibas por zonas y monitorear la ocupación de los racks para prevenir congestión y sobrecarga.</span>
+                  </td>
+                </tr>
+
+                <!-- R3: Errores de ubicación e identificación -->
+                <tr data-risk-id="R3">
+                  <td class="col-risk-id text-center">
+                    <span class="risk-id-pill id-moderado" id="riskIdPill-R3">R3</span>
+                  </td>
+                  <td class="col-risk-name">
+                    <div class="risk-item-cell">
+                      <svg class="risk-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M4 16v3a1 1 0 0 0 1 1h3M16 20h3a1 1 0 0 0 1-1v-3"/>
+                        <line x1="8" y1="12" x2="16" y2="12"/>
+                      </svg>
+                      <div>
+                        <span class="risk-title-bold">Errores de ubicación e identificación</span>
+                        <span class="risk-desc-text">Ubicación incorrecta de cajas en racks o errores en la identificación de productos durante el despacho.</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="col-risk-cause">
+                    <span class="risk-desc-text">Etiquetado incorrecto, errores de registro y falta de verificación de los lotes.</span>
+                  </td>
+                  <td class="col-risk-prob text-center">
+                    <select class="risk-select-score" data-risk-id="R3" data-param="prob" aria-label="Probabilidad R3">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3" selected>3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </td>
+                  <td class="col-risk-impact text-center">
+                    <select class="risk-select-score" data-risk-id="R3" data-param="impact" aria-label="Impacto R3">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </td>
+                  <td class="col-risk-level text-center">
+                    <span class="risk-level-badge badge-moderado" id="riskBadge-R3">Moderado (9)</span>
+                  </td>
+                  <td class="col-risk-control">
+                    <span class="risk-desc-text">Capacitar periódicamente al personal, verificar la correcta ubicación de las cajas y revisar la legibilidad y correspondencia de las etiquetas antes del despacho.</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Barra de Acciones y Aclaración Académica -->
+          <div class="matrix-actions-bar">
+            <span>Nota académica: Las evaluaciones corresponden a una valoración preliminar propuesta (Puntaje = Probabilidad × Impacto) y no a estadísticas observadas en planta.</span>
+            <button type="button" class="matrix-reset-btn" id="resetRiskMatrixBtn">Restablecer Evaluación Base</button>
           </div>
 
         </div>
@@ -1324,41 +1906,92 @@
           <!-- Fuentes Bibliográficas APA -->
           <div class="apa-sources-list">
 
+            <!-- 1. Ballou: Logística y cadena de suministro -->
             <article class="apa-card">
-              <span class="apa-category-tag">Cadena de Frío y Alimentos Perecederos</span>
+              <span class="apa-category-tag">Referencia teórica</span>
+              <h4 class="apa-card-title">Logística y cadena de suministro</h4>
               <p class="apa-citation-text">
                 Ballou, R. H. (2004). <em>Logística: Administración de la cadena de suministro</em> (5.ª ed.). Pearson
                 Educación.
               </p>
-              <span class="placeholder-indicator" style="margin-top: 6px;">Referencia base del curso</span>
             </article>
 
+            <!-- 2. Bowersox et al.: Gestión logística y sostenibilidad -->
             <article class="apa-card">
-              <span class="apa-category-tag">Economía Circular y Envases Reutilizables</span>
+              <span class="apa-category-tag">Referencia académica</span>
+              <h4 class="apa-card-title">Gestión logística y sostenibilidad</h4>
               <p class="apa-citation-text">
                 Bowersox, D. J., Closs, D. J., & Cooper, M. B. (2013). <em>Supply chain logistics management</em> (4th
-                ed.). McGraw-Hill Education.
+                ed.). McGraw-Hill.
               </p>
-              <span class="placeholder-indicator" style="margin-top: 6px;">[ Fuente pendiente de formato APA definitivo
-                ]</span>
             </article>
 
+            <!-- 3. Normativa sanitaria colombiana: Resolución 2674 de 2013 -->
             <article class="apa-card">
-              <span class="apa-category-tag">Normatividad Sanitaria Colombia</span>
+              <span class="apa-category-tag">Normativa sanitaria oficial</span>
+              <h4 class="apa-card-title">Normativa sanitaria colombiana</h4>
               <p class="apa-citation-text">
-                Ministerio de Salud y Protección Social. (2013). <em>Resolución 2674 de 2013: Requisitos sanitarios para
-                  la fabricación, procesamiento y almacenamiento de alimentos</em>. Diario Oficial 48860.
+                Ministerio de Salud y Protección Social. (2013, 22 de julio). <em>Resolución 2674 de 2013: Por la cual se reglamenta el artículo 126 del Decreto Ley 019 de 2012 y se dictan otras disposiciones sobre requisitos sanitarios para alimentos</em>. Diario Oficial No. 48.862.
+                <a href="https://normograma.invima.gov.co/normograma/compilacion/docs/resolucion_minsaludps_2674_2013.htm" target="_blank" rel="noopener noreferrer" class="apa-link">Texto oficial en Normograma Invima ↗</a>
               </p>
-              <span class="placeholder-indicator" style="margin-top: 6px;">Marco regulatorio Invima</span>
             </article>
 
+            <!-- 4. Guías académicas UNAD -->
             <article class="apa-card">
-              <span class="apa-category-tag">Guías Académicas UNAD</span>
+              <span class="apa-category-tag">Guía académica UNAD</span>
+              <h4 class="apa-card-title">Guías académicas UNAD</h4>
               <p class="apa-citation-text">
                 Universidad Nacional Abierta y a Distancia [UNAD]. (2026). <em>Guía de actividades y rúbrica de
-                  evaluación: Curso Logística y Cadenas de Suministro (212029)</em>. Escuela de Ciencias Básicas,
+                  evaluación - Tarea 4: Diseño de una propuesta de mejora para un sistema logístico (Curso 212029 - Logística y Cadenas de Suministro)</em>. Escuela de Ciencias Básicas,
                 Tecnología e Ingeniería (ECBTI).
               </p>
+            </article>
+
+            <!-- Subsección: Fuentes comerciales del presupuesto -->
+            <div class="references-subheading-group">
+              <h3 class="references-subtitle">Fuentes comerciales del presupuesto</h3>
+              <p class="references-subtext">
+                Precios comerciales de referencia consultados en noviembre de 2026 en el mercado colombiano para la estimación de costos del piloto de pequeña escala en Becerril, Cesar. Estos valores corresponden a precios de venta al público en canales comerciales, diferenciados de cotizaciones corporativas formales y de costos estimados internamente.
+              </p>
+            </div>
+
+            <!-- 5. Homecenter Colombia -->
+            <article class="apa-card">
+              <span class="apa-category-tag">Fuente comercial de referencia · Precios consultados en Nov. 2026</span>
+              <h4 class="apa-card-title">Homecenter Colombia — Sodimac Colombia S.A.</h4>
+              <p class="apa-citation-text">
+                Homecenter Colombia. (2026). <em>Catálogo de precios de referencia comercial en Colombia</em>. Sodimac Colombia. Insumos y equipos consultados en noviembre de 2026:
+              </p>
+              <ul class="commercial-sources-list">
+                <li>
+                  <strong>Lector de código de barras Jaltech Jal-plus 01 2D:</strong> $ 359.900 COP.
+                  <a href="https://www.homecenter.com.co/homecenter-co/product/3108257/lector-de-codigo-de-barras-jaltech-jal-plus-01-2d/3108257/" target="_blank" rel="noopener noreferrer" class="apa-link">Ver catálogo Homecenter ↗</a>
+                </li>
+                <li>
+                  <strong>Canastillas plásticas industriales perforadas apilables Energy Plus 60 × 40 × 18 cm (set × 6 unid.):</strong> $ 234.900 COP / set.
+                  <a href="https://www.homecenter.com.co/homecenter-co/product/3090128/canastillas-plasticas-industrial-perforada-apilable-60x40x18cm-energy-plus-set-x-6-unidades/3090695/" target="_blank" rel="noopener noreferrer" class="apa-link">Ver catálogo Homecenter ↗</a>
+                </li>
+                <li>
+                  <strong>Cinta de marcación Truper de 33 m × 48 mm para delimitación de zonas:</strong> $ 32.900 COP / unid.
+                  <a href="https://www.homecenter.com.co/homecenter-co/product/574972/cinta-de-marcacion-de-33-mt-x-48-mm-para-delimitar-zonas/574972/" target="_blank" rel="noopener noreferrer" class="apa-link">Ver catálogo Homecenter ↗</a>
+                </li>
+              </ul>
+              <div class="commercial-card-footnote">
+                Valor referencial de mercado para estimación presupuestal inicial. No constituye cotización contractual formal.
+              </div>
+            </article>
+
+            <!-- 6. Haplaz Colombia -->
+            <article class="apa-card">
+              <span class="apa-category-tag">Fuente comercial de referencia · Precios consultados en Nov. 2026</span>
+              <h4 class="apa-card-title">Haplaz Colombia — Papelería y Etiquetas Especializadas</h4>
+              <p class="apa-citation-text">
+                Haplaz Colombia. (2026). <em>Papel adhesivo tamaño A4 (210 × 297 mm, paquete × 100 hojas) para etiquetas de identificación de lotes</em>. Haplaz S.A.S. Precio referencial consultado en noviembre de 2026: $ 50.000 COP / paquete.
+                <a href="https://haplaz.com/etiquetas-adhesivas/968-papel-adhesivo-tamano-a4-210x297mm-100-hojas-etiquetas.html" target="_blank" rel="noopener noreferrer" class="apa-link">Ver catálogo Haplaz ↗</a>
+              </p>
+              <div class="commercial-card-footnote">
+                Insumo periódico de rotulado estimado para el registro e identificación de cajas de queso y yogur en racks.
+              </div>
             </article>
 
           </div>
@@ -1408,13 +2041,12 @@
 
               <div class="spec-item">
                 <span class="spec-item-label">Docente / Tutora</span>
-                <span class="spec-item-value">[ Asignada en campus UNAD ]</span>
+                <span class="spec-item-value">Verónica Isabelle Deibe Blanco</span>
               </div>
 
               <div class="spec-item">
                 <span class="spec-item-label">Estado de la Entrega</span>
-                <span class="spec-item-value" style="color: var(--color-accent); font-weight: 700;">Fase 1: Estructura y
-                  Diseño Visual Aprobada</span>
+                <span class="spec-item-value" style="color: var(--color-accent); font-weight: 700;">Propuesta académica en desarrollo — 2026</span>
               </div>
 
             </div>

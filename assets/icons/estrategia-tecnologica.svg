@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88 64" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Filtro de sombra suave -->
+    <filter id="tt-blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+    <filter id="tt-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1"/>
+    </filter>
+
+    <!-- PANTALLA / TABLET DIGITAL -->
+    <linearGradient id="tt-tab-body" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="50%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="tt-tab-screen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0e2338"/>
+      <stop offset="60%" stop-color="#081a2c"/>
+      <stop offset="100%" stop-color="#030e1a"/>
+    </linearGradient>
+    <linearGradient id="tt-tab-glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.25"/>
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.05"/>
+      <stop offset="60%" stop-color="#38bdf8" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- BARRAS GRÁFICAS PANTALLA -->
+    <linearGradient id="tt-bar-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4ade80"/>
+      <stop offset="40%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#15803d"/>
+    </linearGradient>
+
+    <!-- ESCÁNER PORTÁTIL -->
+    <linearGradient id="tt-scan-dark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#475569"/>
+      <stop offset="35%" stop-color="#1e293b"/>
+      <stop offset="85%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="tt-scan-green" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4ade80"/>
+      <stop offset="30%" stop-color="#22c55e"/>
+      <stop offset="80%" stop-color="#16a34a"/>
+      <stop offset="100%" stop-color="#14532d"/>
+    </linearGradient>
+    <linearGradient id="tt-scan-trigger" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+
+    <!-- HAZ LÁSER ROJO -->
+    <linearGradient id="tt-laser-fan" x1="0" y1="0" x2="1" y2="0.6">
+      <stop offset="0%" stop-color="#ef4444" stop-opacity="0.75"/>
+      <stop offset="35%" stop-color="#f87171" stop-opacity="0.4"/>
+      <stop offset="80%" stop-color="#ef4444" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#dc2626" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="tt-laser-line" x1="0" y1="0" x2="1" y2="0.5">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="25%" stop-color="#fca5a5"/>
+      <stop offset="60%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </linearGradient>
+
+    <!-- ETIQUETA ADHESIVA BLANCA -->
+    <linearGradient id="tt-tag-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="80%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ================= SOMBRAS DE CONTACTO ================= -->
+  <ellipse cx="62" cy="57" rx="20" ry="3.5" fill="#0f172a" opacity="0.22" filter="url(#tt-blur)"/>
+  <ellipse cx="23" cy="58" rx="14" ry="3" fill="#0f172a" opacity="0.24" filter="url(#tt-blur)"/>
+  <ellipse cx="38" cy="57.5" rx="10" ry="2.2" fill="#090d16" opacity="0.2"/>
+
+  <!-- ================= TABLET / PANTALLA DIGITAL (FONDO DERECHO) ================= -->
+  <g transform="translate(46, 12)">
+    <!-- Bisel exterior metálico / carcasa negra -->
+    <rect x="0" y="0" width="37" height="44" rx="4.5" fill="url(#tt-tab-body)" stroke="#64748b" stroke-width="0.8"/>
+    <!-- Pantalla activa -->
+    <rect x="2.5" y="2.5" width="32" height="39" rx="2.5" fill="url(#tt-tab-screen)"/>
+
+    <!-- Cabecera de la pantalla: Termometría de cadena de frío -->
+    <!-- Ícono copo de nieve -->
+    <g stroke="#38bdf8" stroke-width="0.8" stroke-linecap="round">
+      <line x1="8.5" y1="6" x2="8.5" y2="12"/>
+      <line x1="5.5" y1="9" x2="11.5" y2="9"/>
+      <line x1="6.5" y1="7" x2="10.5" y2="11"/>
+      <line x1="6.5" y1="11" x2="10.5" y2="7"/>
+    </g>
+    <!-- Texto 4°C -->
+    <text x="14" y="11" fill="#e0f2fe" font-family="system-ui, -apple-system, sans-serif" font-size="7.5" font-weight="800" letter-spacing="-0.2">4°C</text>
+
+    <!-- Línea divisoria tenue -->
+    <line x1="4.5" y1="15" x2="32.5" y2="15" stroke="#1e3a5f" stroke-width="0.7"/>
+
+    <!-- Gráfica de barras de inventario / temperatura continua -->
+    <!-- Rejilla tenue -->
+    <line x1="5" y1="23" x2="32" y2="23" stroke="#1e293b" stroke-width="0.5" stroke-dasharray="1 1"/>
+    <line x1="5" y1="30" x2="32" y2="30" stroke="#1e293b" stroke-width="0.5" stroke-dasharray="1 1"/>
+
+    <!-- Barras ascendentes -->
+    <rect x="6.5" y="29" width="4.5" height="9" rx="1" fill="url(#tt-bar-grad)"/>
+    <rect x="13" y="24" width="4.5" height="14" rx="1" fill="url(#tt-bar-grad)"/>
+    <rect x="19.5" y="19" width="4.5" height="19" rx="1" fill="url(#tt-bar-grad)"/>
+    <rect x="26" y="21" width="4.5" height="17" rx="1" fill="url(#tt-bar-grad)"/>
+
+    <!-- Resplandor / reflejo de cristal diagonal -->
+    <polygon points="2.5,2.5 18,2.5 4,30 2.5,30" fill="url(#tt-tab-glass)"/>
+    <!-- Led indicador de estado verde -->
+    <circle cx="31" cy="6" r="1.2" fill="#22c55e" filter="url(#tt-glow)"/>
+    <circle cx="31" cy="6" r="0.8" fill="#ffffff"/>
+  </g>
+
+  <!-- ================= HAZ LÁSER ROJO ================= -->
+  <polygon points="25,23 27,27 47,44 45,36" fill="url(#tt-laser-fan)"/>
+  <line x1="26" y1="25" x2="46" y2="40" stroke="url(#tt-laser-line)" stroke-width="1.4" stroke-linecap="round"/>
+  <ellipse cx="46" cy="40" rx="2" ry="1.2" fill="#ef4444" filter="url(#tt-glow)"/>
+  <circle cx="46" cy="40" r="0.7" fill="#ffffff"/>
+
+  <!-- ================= ETIQUETA CON CÓDIGO DE BARRAS (CENTRO-DERECHA) ================= -->
+  <g transform="translate(34, 30) rotate(12)">
+    <!-- Sombra etiqueta -->
+    <rect x="0.5" y="1" width="20" height="23" rx="2" fill="#0f172a" opacity="0.18" filter="url(#tt-blur)"/>
+    <!-- Papel autoadhesivo blanco -->
+    <rect x="0" y="0" width="20" height="23" rx="2" fill="url(#tt-tag-bg)" stroke="#cbd5e1" stroke-width="0.7"/>
+
+    <!-- Cabecera mini de lote -->
+    <rect x="2" y="2.2" width="7" height="1.8" rx="0.4" fill="#0284c7"/>
+    <rect x="10.5" y="2.5" width="7.5" height="1.2" rx="0.3" fill="#94a3b8"/>
+
+    <!-- Código de barras vertical -->
+    <g fill="#0f172a">
+      <rect x="2.5" y="6" width="0.7" height="11"/>
+      <rect x="3.6" y="6" width="1.4" height="11"/>
+      <rect x="5.5" y="6" width="0.7" height="11"/>
+      <rect x="6.8" y="6" width="1.8" height="11"/>
+      <rect x="9.2" y="6" width="0.6" height="11"/>
+      <rect x="10.4" y="6" width="1.2" height="11"/>
+      <rect x="12.2" y="6" width="0.7" height="11"/>
+      <rect x="13.5" y="6" width="1.6" height="11"/>
+      <rect x="15.8" y="6" width="0.6" height="11"/>
+      <rect x="16.9" y="6" width="1" height="11"/>
+    </g>
+    <!-- Texto alfanumérico ficticio -->
+    <rect x="3" y="18.5" width="14" height="1" rx="0.3" fill="#64748b"/>
+  </g>
+
+  <!-- ================= ESCÁNER PORTÁTIL ERGONÓMICO (FRENTE IZQUIERDA) ================= -->
+  <g>
+    <!-- Mango / Agarre (Grip) -->
+    <path d="M 17,29 Q 19,38 18,54 C 18,56.5 12,56.5 11,54 Q 12,38 10,29 Z" fill="url(#tt-scan-dark)"/>
+    <!-- Textura de estrías antideslizantes del mango -->
+    <path d="M 12,37 Q 15,38 18,37" stroke="#334155" stroke-width="0.9" stroke-linecap="round"/>
+    <path d="M 12.5,41 Q 15.5,42 18,41" stroke="#334155" stroke-width="0.9" stroke-linecap="round"/>
+    <path d="M 13,45 Q 15.5,46 18,45" stroke="#334155" stroke-width="0.9" stroke-linecap="round"/>
+    <path d="M 13.5,49 Q 16,50 18,49" stroke="#334155" stroke-width="0.9" stroke-linecap="round"/>
+
+    <!-- Base de apoyo del mango -->
+    <ellipse cx="14.5" cy="54.5" rx="4" ry="1.8" fill="#020617"/>
+
+    <!-- Gatillo amarillo industrial -->
+    <path d="M 18,29 C 20.5,29.5 21,33 19,34 C 18,34.5 17.5,33.5 17.5,31 Z" fill="url(#tt-scan-trigger)"/>
+
+    <!-- Cabeza óptica del lector (Cabezal angular) -->
+    <!-- Carcasa principal oscura -->
+    <path d="M 7,20 C 7,16 11,14 18,13 C 25,12 28,14 29,19 C 29.5,21.5 28,24.5 25,26 C 22,27.5 16,28 12,27 C 8,26 7,23 7,20 Z" fill="url(#tt-scan-dark)"/>
+
+    <!-- Carcasa superior verde corporativo (acento tecnológico de alta visibilidad) -->
+    <path d="M 8.5,18 C 8.5,14.5 12,13 18,12 C 24,11 27,13 28,17.5 C 26,16 22,15 17,15.5 C 12,16 9.5,17 8.5,18 Z" fill="url(#tt-scan-green)"/>
+    <path d="M 10,15.5 C 13,13.5 18,13 24,13.5" stroke="#86efac" stroke-width="0.8" stroke-linecap="round"/>
+
+    <!-- Ventana frontal de emisión láser -->
+    <path d="M 27,17.5 L 30,22 L 27.5,25.5 L 24.5,21 Z" fill="#020617" stroke="#334155" stroke-width="0.6"/>
+    <!-- Cristal óptico interior -->
+    <polygon points="27.5,18.5 29.5,22 27.5,24.8 25.5,21.5" fill="#10b981"/>
+    <!-- Punto emisor de diodo rojo -->
+    <circle cx="27.5" cy="21.5" r="1" fill="#ef4444" filter="url(#tt-glow)"/>
+    <circle cx="27.5" cy="21.5" r="0.4" fill="#ffffff"/>
+
+    <!-- Brillo superior en la carcasa -->
+    <path d="M 11,18.5 Q 16,19 22,17.5" stroke="#ffffff" stroke-width="0.7" stroke-linecap="round" opacity="0.4"/>
+  </g>
+</svg>
