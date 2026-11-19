@@ -3737,6 +3737,87 @@ img {
   color: var(--color-accent);
 }
 
+/* Tarjeta de Análisis Comparativo con IA */
+.ai-analysis-card {
+  background-color: #ffffff;
+  border: 1px solid var(--color-border);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.ai-analysis-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.ai-pdf-action-row {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+}
+
+/* Animación sutil de pulso / resplandor para el botón de IA */
+@keyframes aiBtnPulseGlow {
+  0%, 100% {
+    box-shadow: 0 3px 10px rgba(6, 63, 53, 0.20), 0 0 0 0 rgba(22, 101, 74, 0.25);
+    background-color: #063F35;
+  }
+  50% {
+    box-shadow: 0 4px 16px rgba(6, 63, 53, 0.30), 0 0 14px 3px rgba(128, 212, 167, 0.45);
+    background-color: #0b5444;
+  }
+}
+
+.btn-ai-pdf {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--color-primary);
+  color: #ffffff !important;
+  text-decoration: none !important;
+  padding: 10px 20px;
+  border-radius: var(--radius-pill);
+  font-size: 0.82rem;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.2px;
+  box-shadow: 0 3px 10px rgba(6, 63, 53, 0.20);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+  animation: aiBtnPulseGlow 2.8s ease-in-out infinite;
+  position: relative;
+}
+
+.btn-ai-pdf:hover {
+  background-color: #094b3d;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(6, 63, 53, 0.35);
+  color: #ffffff !important;
+  animation-play-state: paused;
+}
+
+.btn-ai-pdf:active {
+  transform: translateY(0);
+}
+
+.btn-ai-pdf:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.btn-ai-pdf-icon {
+  width: 16px;
+  height: 16px;
+  stroke: #ffffff;
+  flex-shrink: 0;
+}
+
+.btn-ai-pdf-arrow {
+  width: 14px;
+  height: 14px;
+  stroke: #ffffff;
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
 .references-subheading-group {
   margin-top: 14px;
   margin-bottom: 4px;
@@ -4614,6 +4695,13 @@ img {
     padding: 8px 10px 105px;
   }
 
+  .btn-ai-pdf {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 14px;
+    box-sizing: border-box;
+  }
+
   .modal-window {
     padding: 20px 14px;
     max-height: 85vh;
@@ -5051,7 +5139,8 @@ img {
 
 /* Soporte para preferencias de movimiento reducido */
 @media (prefers-reduced-motion: reduce) {
-  .cow-mascot-img-wrap {
+  .cow-mascot-img-wrap,
+  .btn-ai-pdf {
     animation: none !important;
   }
 
